@@ -1,0 +1,24 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">');
+
+:root
+{
+    --vert : #536964;
+    --grisF : #8b9cb6;
+    --gris : #bfc1c2;
+    --beige : #f1efe9;
+    --brun : #e3c7af;
+    --noir : #282828;
+}
+
+
+
+html, body
+{
+    background-color: var(--beige);
+    width: 100% !important;
+    overflow-x: hidden;
+    font-family: "Bodoni Moda", serif;
+    min-height: 500px;
+    min-width: 320px;
+}
