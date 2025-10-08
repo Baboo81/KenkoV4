@@ -22,3 +22,311 @@ html, body
     min-height: 500px;
     min-width: 320px;
 }
+
+p
+{
+    font-size: clamp(1.1rem, 2vw + 0.5rem, 1.3rem);
+    line-height: 1.4em !important;
+    color: white;
+}
+
+h3
+{
+    color: white;
+    font-size: clamp(2rem, 5vw + 1rem, 6em);
+}
+
+h5
+{
+    color: white !important;
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
+}
+
+.fontBeige
+{
+    color: var(--beige);
+}
+
+.fontBlack
+{
+  color: var(--noir);
+}
+
+.fontGreen
+{
+  color: var(--vert);
+}
+
+.bg-grey
+{
+    background-color: var(--gris);
+}
+
+.bg-blue
+{
+    background-color: var(--grisF);
+}
+
+main .home
+{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Animation mainTitle */
+h1:after
+{
+    content: "";
+    animation: reveal 1.5s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes reveal
+{
+    0%
+    {
+        content: "K";
+    }
+
+    25%
+    {
+        content: "KE";
+    }
+
+    50%
+    {
+        content: "KEN";
+    }
+
+    75%
+    {
+        content: "KENK";
+    }
+
+    100%
+    {
+        content: "KENKO";
+    }
+}
+ /* END Animation mainTitle */
+
+.mainContent .mainTitle
+{
+    font-family: "Bodoni Moda", serif;
+    font-size: 16rem;
+    color: var(--noir);
+    margin-bottom: 50px;
+}
+
+.mainContent .secondTitle
+{
+    font-family: "Bodoni Moda", serif;
+    font-size: 4rem;
+    color: var(--noir);
+}
+
+.mainTitle,
+.secondTitle
+{
+    position: relative;
+    z-index: 3;
+}
+
+    /* Logo animation */
+#logoAnimation
+{
+    position: absolute;
+    width: 300px;
+    z-index: 0;
+    animation: fadeIn 1.5s infinite;
+}
+
+@keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+        transform: opacity 1;
+    }
+
+}
+
+/* END Home */
+
+/* mainSection */
+
+.mainSection .part1
+{
+    background-color: var(--grisF);
+    min-height: 1400px;
+    background-image: url(../img/services/Kenko-Ho/bgKenkoHo.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+
+.mainSection .part2
+{
+    background-color: var(--gris);
+    min-height: 1400px;
+    background-image: url(../img/services/Kenko-Web/pictos/bgKenkoWeb.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+
+.mainSection .kenkoTitles
+{
+    margin-top: 7%;
+}
+
+.mainSection .card
+{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    opacity: 85%;
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.mainSection .card:hover
+{
+  transform: scale(1.02);
+  transition: transform 330ms ease-in;
+}
+
+.button
+{
+  height: 50px;
+  width: 200px;
+  border: 1px solid var(--beige);
+  border-radius: 24px;
+  background-color: var(--vert);
+  color: var(--beige);
+}
+
+.button:hover
+{
+  background-color: var(--brun);
+  transition: 6300ms;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+/* END mainSection */
+
+/* Media queries */
+@media only screen and (min-width: 1000px) and (max-width : 1300px)
+{
+    main .mainContent
+    {
+        max-width: 100%;
+    }
+
+    main .mainTitle
+    {
+        font-size: 12rem !important;
+    }
+
+    main .secondTitle
+    {
+        font-size: 3rem !important;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width : 999px)
+{
+    main .mainContent
+    {
+        max-width: 100%;
+    }
+
+    main .mainTitle
+    {
+        font-size: 8.5rem !important;
+    }
+
+    main .secondTitle
+    {
+        font-size: 1.9rem !important;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width : 500px)
+{
+    main .mainContent
+    {
+        max-width: 100%;
+    }
+
+    main .mainTitle
+    {
+        font-size: 7rem !important;
+    }
+
+    main .secondTitle
+    {
+        font-size: 2rem !important;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width : 499px)
+{
+    main .mainContent
+    {
+        max-width: 100%;
+    }
+
+    main .mainTitle
+    {
+        font-size: 5rem !important;
+    }
+
+    main .secondTitle
+    {
+        font-size: 1.3rem !important;
+    }
+}
+
+@media only screen and (min-width : 500px) and (max-width : 620px)
+{
+    .mainSection .kenkoTitles
+    {
+        font-size: .8em;
+    }
+}
+
+@media only screen and (min-width : 400px) and (max-width : 500px)
+{
+    .mainSection .kenkoTitles
+    {
+        font-size: .6em;
+    }
+}
+
+@media only screen and (min-width : 0px) and (max-width : 400px)
+{
+    .mainSection .kenkoTitles
+    {
+        font-size: .5em;
+    }
+}
+
+@media only screen and (min-width : 470px) and (max-width : 504px)
+{
+    .card
+    {
+        width: 27rem !important;
+    }
+}
+
+@media only screen and (min-width : 0px) and (max-width : 470px)
+{
+    .card
+    {
+        width: 25rem !important;
+    }
+}

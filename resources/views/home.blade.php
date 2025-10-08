@@ -15,9 +15,11 @@
         <div class="row">
             <div class="col-md-6 mainContent">
                 <h1 class="mainTitle"></h1>
-                <span class="secondTitle text-nowrap">Bienvenue dans deux univers ...</span>
+                <span class="secondTitle text-nowrap">
+
+                </span>
                 <div class="logoContainer">
-                    <img src="./assets/img/logo/logoAnimate.svg" alt="Logo animé" id="logoAnimation">
+                    <img src="./assets/img/logo/logoKenko.png" alt="Logo animé" id="logoAnimation">
                 </div>
             </div>
         </div>
