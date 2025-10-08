@@ -1,0 +1,151 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">');
+
+:root
+{
+    --vert : #536964;
+    --grisF : #8b9cb6;
+    --gris : #bfc1c2;
+    --beige : #f1efe9;
+    --brun : #e3c7af;
+    --noir : #282828;
+    --blanc : #ffffff;
+}
+
+h5
+{
+    color: var(--vert) !important;
+    font-size: 2rem;
+}
+
+p
+{
+    font-size: 1.2rem;
+}
+
+a
+{
+    text-decoration: none;
+    color: var(--noir);
+}
+
+nav
+{
+    height: 120px;
+    opacity: 95%;
+}
+
+.navbar
+{
+    padding: 10px 20px;
+}
+
+.disabled-navbar
+{
+    pointer-events: none;
+    opacity: 0.4;
+    filter: blur(1px);
+}
+
+nav .nav-item
+{
+    margin: 0 15px;/* Réduction des marges sur mobile */
+}
+
+.navbar a.active
+{
+    color: var(--vert);
+    font-weight: bold;
+}
+
+nav .nav-link
+{
+    color: var(--noir);
+    font-size: 1.5em;
+    transition: border-bottom 0.3s ease, padding-bottom 0.3s ease;
+}
+
+nav .nav-link:hover
+{
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--noir);
+}
+
+nav .dropdown-menu
+{
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 1.7em;
+    width: 20rem;
+    left: 50%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-out, max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+nav .dropdown-menu.show
+{
+    max-height: 500px;
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+#logo
+{
+    height: 5rem;
+}
+/* END Nav */
+
+/* Media queries */
+@media only screen and (min-width : 1121px) and (max-width : 1285px)
+{
+    .nav-link
+    {
+        font-size: 1.2em !important;
+    }
+
+    .nav-item
+    {
+        margin: 2px 0;
+    }
+
+    #logo
+    {
+        width: 4em;
+        height: 4em;
+    }
+}
+
+@media only screen and (min-width : 992px) and (max-width : 1121px)
+{
+    .nav-link
+    {
+        font-size: 1em !important;
+    }
+
+    .nav-item
+    {
+        margin: 1px 0;
+    }
+
+    #logo
+    {
+        width: 3em;
+        height: 3em;
+    }
+}
+
+@media (max-width : 992px)
+{
+    .navbar-collapse
+    {
+        background-color: var(--grisF);
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
