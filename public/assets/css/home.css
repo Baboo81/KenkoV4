@@ -1,5 +1,18 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">');
+
+@font-face
+{
+  font-family: 'Dastin';
+  src : url('../fonts/Dastin.otf') format('opentype'),
+        url('../fonts/Dastin.ttf') format('trutype'),
+        url('../fonts/Dastin.woff') format('woff'),
+        url('../fonts/Dastin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root
 {
@@ -18,7 +31,7 @@ html, body
     background-color: var(--beige);
     width: 100% !important;
     overflow-x: hidden;
-    font-family: "Bodoni Moda", serif;
+    font-family: "Dastin";
     min-height: 500px;
     min-width: 320px;
 }
@@ -116,7 +129,7 @@ h1:after
 
 .mainContent .mainTitle
 {
-    font-family: "Bodoni Moda", serif;
+    font-family: "Dastin", serif;
     font-size: 16rem;
     color: var(--noir);
     margin-bottom: 50px;

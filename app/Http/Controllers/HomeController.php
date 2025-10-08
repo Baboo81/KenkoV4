@@ -9,7 +9,8 @@ class HomeController extends Controller
     public function index()
     {
          //Inclusion des datas :
-        //$data = include resource_path('data/');
+        $pageName = 'home';
+        $data = include resource_path("data/{$pageName}Data.php");
 
         //Passer les paramètres, inclure les fichiers CSS :
         return view('home', [
@@ -18,7 +19,7 @@ class HomeController extends Controller
             'metaKeyWords' => "Kenko-web, agence web, création de sites web, developer Full stack",
             'resetCss' => "assets/css/resetCss.css",
             'customCss' => "assets/css/home.css",
-            //'data' => $data,
+            'data' => $data,
         ]);
     }
 }
