@@ -19,7 +19,7 @@
 
                 </span>
                 <div class="logoContainer">
-                    <img src="./assets/img/logo/logoKenko.png" alt="Logo animé" id="logoAnimation">
+                    <img src="./assets/img/logo/logoKenko2.png" alt="Logo animé" id="logoAnimation">
                 </div>
             </div>
         </div>

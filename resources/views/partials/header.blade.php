@@ -4,62 +4,12 @@
             content=" {{ $meta['description'] ?? $metaDesc ?? '' }}">
         <meta name="keywords"
             content=" {{ $meta['keywords'] ?? $metaKeyWords ?? '' }}">
-        <!-- Google Tag Manager Google analytics-->
-        <script>(function (w, d, s, l, i) {
-                w[l] = w[l] || []; w[l].push({
-                    'gtm.start':
-                        new Date().getTime(), event: 'gtm.js'
-                }); var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-PXTDTSDJ');</script>
-        <!-- End Google Tag Manager -->
-        <!-- Configuration Klaro -->
-            <script type="application/javascript">
-                var klaroConfig = {
-                    version: 1,
-                    elementID: 'klaro',
-                    groups: [
-                        {
-                            name: 'analytics',
-                            title: 'Statistiques',
-                            description: 'Google Tag Manager et Google Analytics pour analyser l’usage du site.',
-                            purposes: ['analytics'],
-                            required: false,
-                            cookies: [],
-                        }
-                    ],
-                    services: [
-                        {
-                            name: 'google-tag-manager',
-                            title: 'Google Tag Manager',
-                            purposes: ['analytics'],
-                            cookies: [/^_ga/, /^_gid/],
-                            optOut: false,
-                            required: false,
-                            callback: function(consent, service) {
-                                if (consent) {
-                                    (function(w,d,s,l,i){
-                                        w[l]=w[l]||[];w[l].push({'gtm.start':
-                                        new Date().getTime(),event:'gtm.js'});
-                                        var f=d.getElementsByTagName(s)[0],
-                                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-                                        j.async=true;
-                                        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-                                        f.parentNode.insertBefore(j,f);
-                                    })(window,document,'script','dataLayer','GTM-PXTDTSDJ');
-                                }
-                            }
-                        }
-                    ]
-                };
-            </script>
         <!--Favicon links-->
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('') }}">
-        <link rel="manifest" href="./assets/favicon/site.webmanifest">
-        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/logo/logoKenko2.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/logo/logoKenko2.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/logo/logoKenko2.png') }}">
+        <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ asset('assets/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <!-- Klaro CSS (CDN) -->
@@ -74,7 +24,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
         <!-- css global -->
-        <link rel="stylesheet" href="{{ asset('assets/css/onePage.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
         <!-- css nav -->
         <link rel="stylesheet" href="{{ asset('assets/css/nav.css') }}">
         <!-- css footer -->
@@ -88,6 +38,8 @@
         <!--Scripts, libraries, framework JS-->
         <!-- Bootstrap JS Bundle avec Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+        <script src="{{ asset('assets/js/gtm.js') }}" defer></script>
+        <script src="{{ asset('assets/js/klaro-gtm.js') }}" defer></script>
         <script src="{{ asset('assets/js/main.js') }}" defer></script>
 
         <title>{{ $pageTitle ?? '' }}</title>

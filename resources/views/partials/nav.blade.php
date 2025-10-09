@@ -10,7 +10,7 @@
                         <div class="container-fluid d-flex align-items-center justify-content-between">
                             <!--  Logo  -->
                             <a class="navbar-brand" href="/">
-                                <img src="/assets/img/logo/logoKenko.png" alt="Logo du site" id="logo">
+                                <img src="/assets/img/logo/logoKenko2.png" alt="Logo du site" id="logo">
                             </a>
                             <!--  Btn pour mobile -->
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
