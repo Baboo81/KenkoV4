@@ -80,20 +80,61 @@ h5
     background-color: var(--grisF);
 }
 
+/*Btn : style*/
+.button
+{
+  height: 50px;
+  width: 200px;
+  border: 1px solid var(--beige);
+  border-radius: 24px;
+  background-color: var(--vert);
+  color: var(--beige);
+}
+
+.button:hover
+{
+  background-color: var(--brun);
+  transition: 6300ms;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+/*Btn : style END*/
+
+/* Section : Home */
 main .home
 {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 0 200px;
     text-align: center;
 }
 
+    /* Animation : logo */
+#logoAnimation
+{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    transform-style: preserve-3d;
+    animation: rotateYLogo 10s linear infinite;
+}
+
+@keyframes rotateYLogo
+{
+    from
+    {
+        transform: rotateY(0deg);
+    }
+    to
+    {
+        transform: rotateY(360deg);
+    }
+}
+    /* Animation : logo END*/
 /* END Home */
 
 /* mainSection */
-
 .mainSection .part1
 {
     background-color: var(--grisF);
@@ -133,23 +174,6 @@ main .home
 {
   transform: scale(1.02);
   transition: transform 330ms ease-in;
-}
-
-.button
-{
-  height: 50px;
-  width: 200px;
-  border: 1px solid var(--beige);
-  border-radius: 24px;
-  background-color: var(--vert);
-  color: var(--beige);
-}
-
-.button:hover
-{
-  background-color: var(--brun);
-  transition: 6300ms;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 /* END mainSection */
 

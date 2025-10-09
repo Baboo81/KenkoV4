@@ -14,12 +14,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 mainContent">
-                <h1 class="mainTitle"></h1>
-                <span class="secondTitle text-nowrap">
-
-                </span>
+                <h1 class="mainTitle">
+                    <span class="secondTitle text-nowrap">
+                        {{ $homeData['home'] }}
+                    </span>
+                </h1>
                 <div class="logoContainer">
-                    <img src="./assets/img/logo/logoKenko2.png" alt="Logo animé" id="logoAnimation">
+                    <img src="{{ asset('assets/img/logo/logoKenko2.png') }}" alt="Logo animé" id="logoAnimation">
                 </div>
             </div>
         </div>
@@ -31,14 +32,14 @@
 <section class="mainSection">
     <div class="container mw-100">
         <div class="row">
-            @foreach ($data['cards'] as $card)
+            @foreach ($homeData['cards'] as $card)
                 <div class="col-md-12 {{ $card['title'] === 'KENKO-HO' ? 'part1' : 'part2' }}">
                     <div class="card rounded-4 {{ $card['title'] === 'KENKO-HO' ? 'bg-grey' : 'bg-blue' }} p-3" style="max-width: 55rem;">
                         <div class="kenkoTitles">
                             <h3 class="text-center my-5">{{ $card['title'] }}</h3>
                         </div>
 
-                        <img src="{{ asset($card['img']) }}" class="card-img-top rounded-3" alt="Image représentant un jardin zen">
+                        <img src="" class="card-img-top rounded-3" alt="Image représentant un jardin zen">
 
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fs-1 text-center mb-5">{{ $card['title2'] }}</h5>

@@ -19,7 +19,7 @@ class HomeController extends Controller
             'metaKeyWords' => "Kenko-web, agence web, création de sites web, developer Full stack",
             'resetCss' => "assets/css/resetCss.css",
             'customCss' => "assets/css/home.css",
-            'data' => $data,
+            'homeData' => $data,
         ]);
     }
 }
