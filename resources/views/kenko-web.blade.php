@@ -12,8 +12,17 @@
     {{-- Section : Banner --}}
     <section class="hero">
         <div class="container">
-            <div class="row">
-
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-12">
+                    <article class="text-center">
+                        <h1 class="mainTitleHero text-muted">
+                            {{ $kenkoWebData['hero']['main_Title'] ?? '' }}
+                        </h1>
+                        <p class="subTitle text-muted">
+                            {{ $kenkoWebData['hero']['sub_Title'] ?? ''}}
+                        </p>
+                    </article>
+                </div>
             </div>
         </div>
     </section>

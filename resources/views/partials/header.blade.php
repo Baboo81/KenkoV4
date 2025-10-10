@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
         <!-- css global -->
         <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/kenko-web.css') }}">
         <!-- css nav -->
         <link rel="stylesheet" href="{{ asset('assets/css/nav.css') }}">
         <!-- css footer -->
