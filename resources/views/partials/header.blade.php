@@ -39,6 +39,7 @@
         <!-- Bootstrap JS Bundle avec Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
         <script src="https://unpkg.com/lucide@latest" defer></script>
+        <!-- Scripts : Klaro, Google Tag Manager -->
         <script src="{{ asset('assets/js/gtm.js') }}" defer></script>
         <script src="{{ asset('assets/js/klaro-gtm.js') }}" defer></script>
         <script src="{{ asset('assets/js/main.js') }}" defer></script>

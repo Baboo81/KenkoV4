@@ -21,7 +21,7 @@ class KenkoWebController extends Controller
     public function index()
     {
         //Inclusion des datas :
-        $data = $this->loadPageData('kenko-web');
+        $data = $this->loadPageData('kenkoWeb');
 
         //Passer les paramètres, inclure les fichiers CSS :
         return view('kenko-web', [
