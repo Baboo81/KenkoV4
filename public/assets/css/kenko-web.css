@@ -42,7 +42,7 @@ html, body
     min-height: 100vh; /* prend toute la hauteur de l'écran */
     background-image: url('../img/kenkoWeb/KenkoWeb_banner.svg');
     background-size: cover; /* l'image remplit le conteneur */
-    background-position: center right; /* alignée à droite */
+    background-position: center left; /* alignée à droite */
     background-repeat: no-repeat;
     padding: 0 5%;
     overflow: hidden;
