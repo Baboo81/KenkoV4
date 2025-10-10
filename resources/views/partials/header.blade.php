@@ -1,9 +1,9 @@
 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
-            content=" {{ $meta['description'] ?? $metaDesc ?? '' }}">
+            content=" {{ $homeData['metaDesc']  ?? '' }}">
         <meta name="keywords"
-            content=" {{ $meta['keywords'] ?? $metaKeyWords ?? '' }}">
+            content=" {{ $homeData['metaKeyWords']  ?? '' }}">
         <!--Favicon links-->
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/logo/logoKenko2.png') }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/logo/logoKenko2.png') }}">
@@ -43,4 +43,4 @@
         <script src="{{ asset('assets/js/klaro-gtm.js') }}" defer></script>
         <script src="{{ asset('assets/js/main.js') }}" defer></script>
 
-        <title>{{ $pageTitle ?? '' }}</title>
+        <title>{{ $homeData['pageTitle'] ?? '' }}</title>
