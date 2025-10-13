@@ -92,6 +92,67 @@ return [
         'article3' => [
             'img' => "/assets/img/kenkoWeb/pictos/localiser.svg",
             'text' => "Donnez les informations pratiques de votre entreprise",
-        ]
-    ]
+        ],
+    ],
+    'timeline' => [
+         'main_Title' => "Les étapes de la création de votre site web",
+    'steps' => [
+        [
+            'title' => "1. Prise de contact",
+            'img' => "/assets/img/kenkoWeb/pictos/frise/rdv.svg",
+            'alt' => "Picto représentant deux personnes assises à une table",
+            'text' => "Discussion initiale pour comprendre vos besoins et objectifs.",
+            'width' => 60,
+        ],
+        [
+            'title' => "2. Devis",
+            'img' => "/assets/img/kenkoWeb/pictos/frise/devis.svg",
+            'alt' => "Picto représentant un devis papier",
+            'text' => "Élaboration d'un devis gratuit détaillé en fonction de votre projet.",
+            'width' => 60,
+        ],
+        [
+            'title' => "3. Création de la maquette",
+            'img' => "/assets/img/kenkoWeb/pictos/frise/maquette.svg",
+            'alt' => "Picto représentant un crayon et une latte",
+            'text' => "Conception du design et des wireframes pour visualiser le site.",
+            'width' => 60,
+        ],
+        [
+            'title' => "4. Validation de la maquette",
+            'img' => "/assets/img/kenkoWeb/pictos/frise/validationMaquette.svg",
+            'alt' => "Picto représentant un V en vert",
+            'text' => "Ajustements et validation finale du design avant développement.",
+            'width' => 70,
+        ],
+        [
+            'title' => "5. Développement du site",
+            'img' => "/assets/img/kenkoWeb/pictos/frise/developpement.svg",
+            'alt' => "Picto représentant un ordinateur",
+            'text' => "Intégration du design et développement des fonctionnalités.",
+            'width' => 70,
+        ],
+        [
+            'title' => "6. Hébergement",
+            'img' => "/assets/img/kenkoWeb/pictos/frise/hebergement.svg",
+            'alt' => "Picto représentant un serveur et un nuage",
+            'text' => "Configuration du serveur et mise en place de l'hébergement.",
+            'width' => 70,
+        ],
+        [
+            'title' => "7. Mise en ligne",
+            'img' => "/assets/img/kenkoWeb/pictos/frise/miseEnLigne.svg",
+            'alt' => "Picto représentant une sphère avec les 3 W",
+            'text' => "Déploiement du site, tests finaux et suivi post-lancement.",
+            'width' => 70,
+        ],
+        [
+            'title' => "8. Suivi durant un mois",
+            'img' => "/assets/img/kenkoWeb/pictos/frise/suivi.svg",
+            'alt' => "Picto représentant une loupe scrutant un écran d'ordinateur avec un œil à côté",
+            'text' => "Corrections des éventuels bugs et ajustements.",
+            'width' => 100,
+        ],
+    ],
+],
 ];

@@ -137,4 +137,31 @@
         </div>
     </section>
     {{-- Section : Skills END--}}
+
+    {{-- Section : Time Line --}}
+    <section class="timeLine">
+        <div class="container">
+            <div class="row">
+                <div class="my-5">
+                    <h1 class="text-center">
+                        {{ $kenkoWebData['timeline']['main_Title'] ?? '' }}
+                    </h1>
+                </div>
+            </div>
+            <section class="container py-5">
+                <div class="timeline">
+                    @foreach($kenkoWebData['timeline']['steps'] as $step)
+                        <div class="timeline-item">
+                            <div class="timeline-content text-center">
+                                <h4 class="fw-bold my-3">{{ $step['title'] ?? '' }}</h4>
+                                <img src="{{ asset($step['img'] ?? '') }}" alt="{{ $step['alt'] ?? '' }}" class="me-3 my-2" width="{{ $step['width'] ?? 60 }}">
+                                <p class="text-muted">{{ $step['text'] ?? '' }}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </section>
+        </div>
+    </section>
+    {{-- Section : Time Line END--}}
 @endsection

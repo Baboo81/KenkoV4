@@ -202,3 +202,66 @@ section .atoutsContent
     background-position: center;
 }
 /* Section : Sikills END*/
+
+/* Section : Time Line */
+.timeLine
+{
+    min-height: 100vh;
+    background-color: var(--gris);
+}
+
+.timeline
+{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after
+{
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: var(--beige);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.timeline-item
+{
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd)
+{
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even)
+{
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-content
+{
+    background: var(--beige);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.timeline-content h4
+{
+    margin-bottom: 5px;
+    color: var(--vert);
+    font-size: 1.6rem;
+}
+/* Section : Time Line END*/
