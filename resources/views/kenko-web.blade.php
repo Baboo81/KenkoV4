@@ -171,7 +171,7 @@
             <div class="row">
                 <div class="text-center">
                     <h1>
-
+                        {{ $kenkoWeb['maintenance']['main_Title'] ?? '' }}
                     </h1>
                 </div>
             </div>
