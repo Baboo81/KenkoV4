@@ -110,4 +110,31 @@
         </div>
     </section>
     {{-- Section : Offers  END--}}
+
+    {{-- Section : Skills --}}
+    <section class="skills">
+        <div class="container">
+            <div class="row">
+                {{-- Bloc : img --}}
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="/assets/img/kenkoWeb/pictos/atouts.svg" class="pictoAtoutsPerso" alt="Picto représentant deux personnages tenant un panneau">
+                </div>
+                {{-- Bloc : articles/pictos --}}
+                <div class="col-md-6 d-flex flex-column skillsContent">
+                    @foreach(['article1', 'article2', 'article3'] as $tempSkills)
+                        @php
+                            $article = $kenkoWebData['skills'][$tempSkills];
+                        @endphp
+                        <article class="text-center">
+                            <img src="{{ asset($article['img']) ?? '' }}" class="pictoAtouts" alt="{{ $article['text'] }}">
+                            <p class="p-1">
+                                {{  $article['text'] ?? '' }}
+                            </p>
+                        </article>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- Section : Skills END--}}
 @endsection

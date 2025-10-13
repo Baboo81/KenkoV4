@@ -78,4 +78,20 @@ return [
             ],
         ],
     ],
+    'skills' => [
+        'img_content' => "/assets/img/kenkoWeb/pictos/atouts.svg",
+        'alt' => "Picto représentant deux personnages tenant un panneau",
+        'article1' => [
+            'img' => "/assets/img/kenkoWeb/pictos/work.svg",
+            'text' => "Mettre en avant et expliquez votre activité",
+        ],
+        'article2' => [
+            'img' => "/assets/img/kenkoWeb/pictos/partenaires.svg",
+            'text' => "Présentez vos partenaires",
+        ],
+        'article3' => [
+            'img' => "/assets/img/kenkoWeb/pictos/localiser.svg",
+            'text' => "Donnez les informations pratiques de votre entreprise",
+        ]
+    ]
 ];

@@ -173,3 +173,32 @@ button:hover
 
     /* Pop-up END */
 /* Section : Purposes END*/
+
+/* Section : Sikills */
+.skills
+{
+    min-height: 100vh;
+    background-color: var(--gris);
+}
+
+.blocAtouts
+{
+    margin-top: 10%;
+}
+
+.pictoAtouts
+{
+   max-height: 4em;
+}
+
+.pictoAtoutsPerso
+{
+    width: 100%;
+}
+
+section .atoutsContent
+{
+    background-size: cover;
+    background-position: center;
+}
+/* Section : Sikills END*/
