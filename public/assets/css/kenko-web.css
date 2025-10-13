@@ -34,6 +34,35 @@ html, body
     min-width: 320px;
 }
 
+button
+{
+  height: 50px;
+  width: 250px;
+  border: 1px solid var(--beige);
+  border-radius: 24px;
+  background-color: var(--vert);
+  color: var(--beige);
+  cursor: pointer;
+}
+
+button:hover
+{
+  background-color: var(--brun);
+  transition: 6300ms;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+@media (max-width: 600px)
+{
+    button
+    {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* Btn END */
+
 /* Section Hero */
 .hero
 {
@@ -76,3 +105,71 @@ html, body
     min-height: 100vh;
     background-color: var(--gris);
 }
+/* Section : Purposes END*/
+
+/* Section : Purposes */
+.offers
+{
+    min-height: 100vh;
+    background-color: var(--gris);
+}
+
+.card
+{
+    min-height: 45rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.card:hover
+{
+    transform: scale(1.02);
+    transition: transform 330ms ease-in;
+}
+
+  /* Pop-up */
+
+/* Container pop-up */
+
+.popup-container
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* Contenu pop-up */
+
+.popup
+{
+    background: var(--beige);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.popup button
+{
+    height: 50px;
+    width: 250px;
+    border: 1px solid var(--beige);
+    border-radius: 24px;
+    background-color: var(--vert);
+    color: var(--beige);
+}
+
+.pPopUp
+{
+    color: var(--vert);
+}
+
+    /* Pop-up END */
+/* Section : Purposes END*/

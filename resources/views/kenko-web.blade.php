@@ -62,5 +62,52 @@
     {{-- Section : Purposes END--}}
 
     {{-- Section : Offers  --}}
+    <section class="offers">
+        <div class="container">
+            <div class="row">
+                <div class="my-5">
+                    <h1 class="text-center">
+                        {{ $kenkoWebData['offers']['main_Title'] ?? '' }}
+                    </h1>
+                </div>
+                @foreach($kenkoWebData['offers']['cards'] as $index => $offer)
+                <div class="col-xl-4 col-xxl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card rounded-4">
+                        <img src="{{ asset($offer['img']) ?? '' }}" class="card-img-top rounded-top-4" alt="{{ $offer['alt'] }}">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title text-center fs-3 my-3">{{ $offer['title'] }}</h5>
+                            <h6 class="fontBolded fs-5 my-3">{{ $offer['price'] }}</h6>
+                            <p class="card-text">{{ $offer['text'] }}</p>
+                            <div class="button-container mt-auto justify-content-center">
+                                <button onclick="showPopup('popup{{ $index + 1 }}')" class="my-3">À qui s'adresse cette offre ?</button>
+                            </div>
+                        </div>
+
+                        {{-- Popup --}}
+                        <div class="popup-container" id="popup{{ $index + 1 }}">
+                            <div class="popup">
+                                <h4 class="fs-3 my-3">{{ $offer['popup']['title'] }}</h4>
+                                <img src="{{ asset($offer['popup']['img']) ?? '' }}" alt="">
+                                <p class="text-start my-3">{{ $offer['popup']['intro'] }}</p>
+                                <ul class="text-start">
+                                    @foreach($offer['popup']['items'] as $item)
+                                        <li class="my-2">&#9679; &nbsp;{{ $item }}</li>
+                                    @endforeach
+                                </ul>
+                                @if(!empty($offer['popup']['outro']))
+                                    <p class="pPopUp fs-6 my-3">{{ $offer['popup']['outro'] }}</p>
+                                @endif
+                                <div class="button-container justify-content-center">
+                                    <button onclick="closePopup('popup{{ $index + 1 }}')" class="my-3">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- Popup END --}}
+                    </div>
+                </div>
+            @endforeach
+            </div>
+        </div>
+    </section>
     {{-- Section : Offers  END--}}
 @endsection

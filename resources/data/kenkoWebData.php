@@ -23,4 +23,59 @@ return [
             'img' => "/assets/img/kenkoWeb/pictos/surMesure.svg",
         ],
     ],
+    'offers' => [
+    'main_Title' => "Les offres personnalisables sur devis",
+    'cards' => [
+        [
+            'title' => "Site simple",
+            'price' => "Á partir de 800€",
+            'img' => "/assets/img/kenkoWeb/cards/siteSimple.jpg",
+            'alt' => "Image représentant une maison au milieu d'un champ",
+            'text' => "Un site simple est constitué d'une page sur laquelle figurera une présentation de vos prestations, tarifs, informations pratiques (SEO inclus).",
+            'popup' => [
+                'title' => "Pourquoi choisir l'offre : site simple ?",
+                'intro' => "Vous désirez :",
+                'img' => "/assets/img/kenkoWeb/pictos/imgPopup.svg",
+                'items' => [
+                    "Un site web qui contient simplement les informations essentielles",
+                    "Un référencement de qualité (SEO)",
+                    "Un design simple et efficace",
+                ],
+                'outro' => "Un site simple pourrait être une alternative temporaire avant de passer à un site multi-pages.",
+            ],
+        ],
+        [
+            'title' => "Site vitrine",
+            'price' => "Á partir de 1600€",
+            'img' => "/assets/img/kenkoWeb/cards/siteVitrine.jpg",
+            'alt' => "Image représentant une boulangerie",
+            'text' => "Un site vitrine comprend 5 à 7 pages grâce auxquelles les internautes pourront découvrir votre activité. Avec un site vitrine, vous dévoilerez plus de détails sur les différentes facettes de votre activité.",
+            'popup' => [
+                'title' => "Pourquoi choisir l'offre : site vitrine ?",
+                'intro' => "Vous désirez :",
+                'img' => "/assets/img/kenkoWeb/pictos/imgPopup.svg",
+                'items' => [
+                    "Mettre en avant un catalogue de produits, une galerie photos, vos partenaires...",
+                    "Présenter votre entreprise grâce à des contenus personnalisés.",
+                ],
+            ],
+        ],
+        [
+            'title' => "Site XXL",
+            'price' => "Á partir de 2500€",
+            'img' => "/assets/img/kenkoWeb/cards/siteXXL2.jpg",
+            'alt' => "Image représentant des buissons",
+            'text' => "Un site XXL se compose de 8 à 12 pages ou plus. Les internautes auront une vision approfondie de vos activités.",
+            'popup' => [
+                'title' => "Pourquoi choisir l'offre : site XXL ?",
+                'intro' => "Cette option est adaptée si :",
+                'img' => "/assets/img/kenkoWeb/pictos/imgPopup.svg",
+                'items' => [
+                    "Vous proposez un large panel d'activités.",
+                    "Vous avez beaucoup de concurrence et souhaitez un référencement plus poussé.",
+                    ],
+                ],
+            ],
+        ],
+    ],
 ];
