@@ -58,4 +58,21 @@ html, body
 {
     font-size: 2rem;
 }
+/* Section Hero END*/
 
+/* Wave */
+.wave
+{
+  display:block;
+  width:100%;
+  height:80px; /* adapter la hauteur si besoin */
+  margin-top:-1px; /* pour éviter un petit trait blanc en bas */
+}
+/* Wave END*/
+
+/* Section : Purposes */
+.purposes
+{
+    min-height: 100vh;
+    background-color: var(--gris);
+}
