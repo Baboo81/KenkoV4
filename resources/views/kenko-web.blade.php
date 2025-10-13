@@ -164,4 +164,18 @@
         </div>
     </section>
     {{-- Section : Time Line END--}}
+
+    {{-- Section : Maintenance --}}
+    <section class="maintenance">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h1>
+
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- Section : Maintenance END--}}
 @endsection
