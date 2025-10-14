@@ -10,14 +10,14 @@
     {{-- Div animation : progression de la page END --}}
 
     {{-- Section : Banner --}}
-    <section class="hero">
-        <div class="hero-content">
+    <section class="heroHo">
+        <div class="heroHo-content d-flex justify-content-end">
             <article class="text-center">
                 <h1 class="mainTitleHero text-muted">
-                    {{ $kenkoWebData['hero']['main_Title'] ?? '' }}
+                    {{ $kenkoHoData['hero']['main_Title'] ?? '' }}
                 </h1>
                 <p class="subTitle text-muted">
-                    {{ $kenkoWebData['hero']['sub_Title'] ?? ''}}
+                    {{ $kenkoHoData['hero']['sub_Title'] ?? ''}}
                 </p>
             </article>
         </div>

@@ -12,6 +12,8 @@
         <link rel="mask-icon" href="{{ asset('assets/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
+        <!-- Token CSRF pour Laravel + JS-->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Klaro CSS (CDN) -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/klaro@0.7.22/dist/klaro.css" />
         <!-- CSS : Leaflet.js -->

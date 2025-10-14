@@ -18,7 +18,7 @@ class KenkoWebController extends Controller
         return include $filePath;
     }
 
-    public function index()
+    public function show()
     {
         //Inclusion des datas :
         $data = $this->loadPageData('kenkoWeb');

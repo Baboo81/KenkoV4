@@ -90,7 +90,7 @@
 </header>
 
 <!-- Modale Kenko-Ho -->
-<!--<div class="modal fade" id="kenkoHoModal" tabindex="-1" aria-labelledby="kenkoHoModalLabel" aria-hidden="true">
+<div class="modal fade" id="kenkoHoModal" tabindex="-1" aria-labelledby="kenkoHoModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -114,7 +114,7 @@
             </div>
         </div>
     </div>
-</div>-->
+</div>
 
 <script>
     // Afficher/masquer le mot de passe
@@ -134,22 +134,25 @@
     }
 
     // Vérifier le code avec PHP
-    //function checkAccess() {
-      //  let codeSaisi = document.getElementById("accessCode").value;
-        //let messageErreur = document.getElementById("error-message");
+    function checkAccess() {
+        let codeSaisi = document.getElementById("accessCode").value;
+        let messageErreur = document.getElementById("error-message");
 
-        //fetch("check_access.php", {
-           // method: "POST",
-           // headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            //body: "code=" + encodeURIComponent(codeSaisi)
-        //})
-        //.then(response => response.text())
-        //.then(data => {
-          //  if (data === "success") {
-            //    window.location.href = "kenko-ho";
-            //} else {
-              //  messageErreur.style.display = "block";
-            //}
-        //});
-    //}
+        fetch("/check-access", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content")
+        },
+        body: "code=" + encodeURIComponent(codeSaisi)
+        })
+        .then(response => response.text())
+        .then(data => {
+            if (data === "success") {
+                window.location.href = "/kenko-ho";
+            } else {
+                messageErreur.style.display = "block";
+            }
+        });
+    }
 </script>

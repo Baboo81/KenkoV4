@@ -18,7 +18,7 @@ class KenkoHoController extends Controller
         return include $filePath;
     }
 
-    public function index()
+    public function show()
     {
         //Inclusion des datas :
         $data = $this->loadPageData('kenkoHo');
@@ -30,5 +30,17 @@ class KenkoHoController extends Controller
             'kenkoHoData' => $data,
         ]);
 
+    }
+
+    public function checkAccess(Request $request)
+    {
+        $code = $request->input('code');
+        $authorizedCode = 'Zi35Fs7@';
+
+        if ($code === $authorizedCode) {
+            return response('success');
+        } else {
+            return response('error', 403);
+        }
     }
 }
