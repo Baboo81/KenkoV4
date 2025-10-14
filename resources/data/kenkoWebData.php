@@ -163,28 +163,75 @@ return [
         'title' => "Types de maintenance",
         'types' => [
             [
-                'category' => 'Maintenance technique',
+                'category' => "Maintenance technique",
                 'items' => [
-                    'Corrections de bugs et optimisation des performances',
-                    'Sauvegardes régulières',
-                    'Surveillance de la sécurité',
+                    "Corrections de bugs et optimisation des performances",
+                    "Sauvegardes régulières",
+                    "Surveillance de la sécurité",
                 ],
             ],
             [
-                'category' => 'Maintenance évolutive',
+                'category' => "Maintenance évolutive",
                 'items' => [
-                    'Ajouts ou modification de pages',
-                    'Changement de design ou d\'éléments graphiques',
-                    'Mise en conformité RGPD (cookies, mentions légales ...)',
+                    "Ajouts ou modification de pages",
+                    "Changement de design ou d\'éléments graphiques",
+                    "Mise en conformité RGPD (cookies, mentions légales ...)",
                 ],
             ],
             [
-                'category' => 'Mise à jour du contenu',
+                'category' => "Mise à jour du contenu",
                 'items' => [
-                    'Modification de textes, d\'images, de photos',
-                    'Mise à jour des tarifs et fiches de produits',
-                    'Ajout d\'articles de blog',
+                    "Modification de textes, d\'images, de photos",
+                    "Mise à jour des tarifs et fiches de produits",
+                    "Ajout d\'articles de blog",
                 ],
+            ],
+        ],
+    ],
+    'hosting' => [
+        'main_Title' => "Hébergement",
+        'img' => "/assets/img/kenkoWeb/pictos/miseEnLigne.svg",
+        'alt' => "Illustration représentant un personnage assis sur un serveur",
+        'intro' => "Pour vous assurer une tranquilité d'esprit totale, je prends en charge l'hébergement de votre site web.<br />Votre site sera hébergé sur un serveur performant et sécurisé, garantissant un accès rapide et fluide à vos visiteurs.",
+        'sections' => [
+            [
+                'title' => "Gestion du domaine et du certificat SSL",
+                'txt' => "Si vous n'avez pas encore de nom de domaine, je peux m'occuper de son achat et de son renouvellement.<br />Le certificat SSL est inclus pour sécuriser les échanges de données sur votre site.",
+            ],
+            [
+                'title' => "Sécurité et maintenance",
+                'txt' => "Je veille au bon fonctionnement du serveur, aux mises à jour de sécurité et à la protection contre les cyberattaques.",
+            ],
+            [
+                'title' => "Un forfait adapté à vos besoins",
+                'txt' => "Les frais d'hébergement seront intégrés dans un forfait choisi par vos soins. Je peux également proposer une offre personnalisée selon vos besoins spécifiques.",
+            ],
+        ],
+
+    ],
+    'trust' => [
+        'title1' => "Ils font confiance à ",
+        'title2' => "KENKO-WEB",
+        'logos' => [
+            //Soins de Soie
+            [
+                'src' => "/assets/img/logo/soinsDeSoie.svg",
+                'alt' => "Logo du site : Soins de soie",
+            ],
+            //Souffle d'équilibre
+            [
+                'src' => "/assets/img/logo/souffleDequilibre.svg",
+                'alt' => "Logo du site : Souffle d'équilibre",
+            ],
+            //Jardi Care
+            [
+                'src' => "/assets/img/logo/jardiCare.svg",
+                'alt' => "Logo Jardi : Care"
+            ],
+            //Imayah
+            [
+                'src' => "/assets/img/logo/imayah.svg",
+                'alt' => "Logo du site : Imayah"
             ],
         ],
     ],

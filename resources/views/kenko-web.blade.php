@@ -169,7 +169,7 @@
     <section class="maintenance">
         <div class="container">
             <div class="row">
-                <div class="text-center">
+                <div class="text-center my-5">
                     <h1>
                         {{ $kenkoWebData['maintenance']['main_Title'] ?? '' }}
                     </h1>
@@ -204,4 +204,78 @@
         </div>
     </section>
     {{-- Section : Maintenance END--}}
+    <section class="hosting">
+        <div class="container">
+            <div class="row">
+                <div class="text-center my-5">
+                    <h1>
+                        {{ $kenkoWebData['hosting']['main_Title'] ?? '' }}
+                    </h1>
+                </div>
+                <section class="hosting">
+                    <div class="container">
+                        <div class="row">
+                            <div class="box rounded-5 p-5 d-flex align-center justify-items-center">
+                                {{-- Bloc gauche : texte --}}
+                                <div class="col-md-6">
+                                    <article class="fontWhite">
+                                        <p class="text-center">{!! $kenkoWebData['hosting']['intro'] !!}</p>
+
+                                        @foreach($kenkoWebData['hosting']['sections'] as $section)
+                                            <div class="my-3">
+                                                <h5 class="my-2">{{ $section['title'] }}</h5>
+                                                <p>{!! $section['txt'] !!}</p>
+                                            </div>
+                                        @endforeach
+                                    </article>
+                                </div>
+
+                                {{-- Bloc droit : image --}}
+                                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                                    <img
+                                        src="{{ $kenkoWebData['hosting']['img'] ?? '' }}"
+                                        alt="{{ $kenkoWebData['hosting']['alt'] ?? '' }}"
+                                        class="img-fluid w-100"
+                                        style="object-fit:cover;"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    {{-- Section : hébergement --}}
+
+    {{-- Section : Trust --}}
+    <section class="trustSection">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="trustBox d-flex justify-content-center align-items-center">
+                    {{-- Texte à gauche --}}
+                    <div class="col-md-3 d-flex flex-column align-items-start text-md-start text-center mx-5">
+                        <article class="text-center">
+                            <p class="fs-4 fontWhite mb-3">{{ $kenkoWebData['trust']['title1'] ?? '' }}</p>
+                            <p class="fs-3 fontWhite">{{ $kenkoWebData['trust']['title2'] ?? '' }}</p>
+                        </article>
+                    </div>
+
+                    {{-- Logos à droite --}}
+                    <div class="col-md-3 d-flex justify-content-center align-items-center position-relative logo-container">
+                        @foreach($kenkoWebData['trust']['logos'] as $index => $logo)
+                            <img
+                                id="logo{{ $index + 1 }}"
+                                class="logo {{ $index === 0 ? 'active' : '' }}"
+                                src="{{ asset($logo['src']) ?? '' }}"
+                                alt="{{ $logo['alt'] ?? '' }}"
+                                style="height: 10rem;"
+                            >
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- Section : Trust END--}}
 @endsection
