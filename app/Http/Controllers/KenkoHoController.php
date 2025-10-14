@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class KenkoWebController extends Controller
+class KenkoHoController extends Controller
 {
 
     public function loadPageData($pageName)
@@ -21,13 +21,13 @@ class KenkoWebController extends Controller
     public function index()
     {
         //Inclusion des datas :
-        $data = $this->loadPageData('kenkoWeb');
+        $data = $this->loadPageData('kenkoHo');
 
         //Passer les paramètres, inclure les fichiers CSS :
-        return view('kenko-web', [
+        return view('kenko-ho', [
             'resetCss' => "assets/css/resetCss.css",
-            'customCss' => "assets/css/kenko-web.css",
-            'kenkoWebData' => $data,
+            'customCss' => "assets/css/kenko-ho.css",
+            'kenkoHoData' => $data,
         ]);
 
     }
