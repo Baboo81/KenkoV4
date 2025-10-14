@@ -46,7 +46,7 @@
                                 <h3 class="text-center my-5">{{ $card['title'] }}</h3>
                             </div>
 
-                            <img src="" class="card-img-top rounded-3" alt="Image représentant un jardin zen">
+                            <img src="{{ $card['img'] ?? '' }}" class="card-img-top rounded-3" alt="Image représentant un jardin zen">
 
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title fs-1 text-center mb-5">{{ $card['title2'] }}</h5>

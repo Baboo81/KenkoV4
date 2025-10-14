@@ -34,6 +34,12 @@ html, body
     min-width: 320px;
 }
 
+.titleH1
+{
+    color: var(--vert);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
 button
 {
   height: 50px;
@@ -68,24 +74,62 @@ button:hover
 {
     position: relative;
     width: 100%;
-    min-height: 100vh; /* prend toute la hauteur de l'écran */
+    min-height: 100vh;
     background-image: url('../img/kenkoWeb/KenkoWeb_banner.svg');
-    background-size: cover; /* l'image remplit le conteneur */
-    background-position: center left; /* alignée à droite */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     overflow: hidden;
+}
+
+.hero-content
+{
+    max-width: 700px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
 .mainTitleHero
 {
     font-size: 5rem;
-    letter-spacing: .9rem;
+    letter-spacing: 0.9rem;
+    margin-bottom: 1rem;
 }
 
 .subTitle
 {
     font-size: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 992px)
+{
+    .mainTitleHero
+    {
+        font-size: 3.5rem;
+        letter-spacing: 0.5rem;
+    }
+    .subTitle
+    {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px)
+{
+    .mainTitleHero
+    {
+        font-size: 2.5rem;
+        letter-spacing: 0.3rem;
+    }
+    .subTitle
+    {
+        font-size: 1.2rem;
+    }
 }
 /* Section Hero END*/
 
@@ -94,8 +138,8 @@ button:hover
 {
   display:block;
   width:100%;
-  height:80px; /* adapter la hauteur si besoin */
-  margin-top:-1px; /* pour éviter un petit trait blanc en bas */
+  height:80px;
+  margin-top:-1px;
 }
 /* Wave END*/
 
@@ -103,7 +147,7 @@ button:hover
 .purposes
 {
     min-height: 100vh;
-    background-color: var(--gris);
+    background-color: var(--brun);
     padding: 200px 0;
 }
 /* Section : Purposes END*/
@@ -112,7 +156,7 @@ button:hover
 .offers
 {
     min-height: 100vh;
-    background-color: var(--gris);
+    background-color: var(--brun);
     padding: 100px 0;
 }
 
@@ -180,7 +224,7 @@ button:hover
 .skills
 {
     min-height: 100vh;
-    background-color: var(--gris);
+    background-color: var(--brun);
     padding: 200px 0;
 }
 
@@ -210,7 +254,7 @@ section .atoutsContent
 .timeLine
 {
     min-height: 100vh;
-    background-color: var(--gris);
+    background-color: var(--brun);
     padding: 100px 0;
 }
 
@@ -274,7 +318,7 @@ section .atoutsContent
 .maintenance
 {
     min-height: 100vh;
-    background-color: var(--gris);
+    background-color: var(--brun);
 }
 
 .box
@@ -293,7 +337,7 @@ article li
 .hosting
 {
     min-height: 100vh;
-    background-color: var(--gris);
+    background-color: var(--brun);
     padding: 200px 0;
 }
 /* Section : Hébergement END*/
@@ -302,7 +346,7 @@ article li
 .trustSection
 {
     min-height: 100vh;
-    background-color: var(--gris);
+    background-color: var(--brun);
 }
 
 section .trustBox

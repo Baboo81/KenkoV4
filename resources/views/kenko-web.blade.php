@@ -11,27 +11,23 @@
 
     {{-- Section : Banner --}}
     <section class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <article class="text-center">
-                        <h1 class="mainTitleHero text-muted">
-                            {{ $kenkoWebData['hero']['main_Title'] ?? '' }}
-                        </h1>
-                        <p class="subTitle text-muted">
-                            {{ $kenkoWebData['hero']['sub_Title'] ?? ''}}
-                        </p>
-                    </article>
-                </div>
-            </div>
+        <div class="hero-content">
+            <article class="text-center">
+                <h1 class="mainTitleHero text-muted">
+                    {{ $kenkoWebData['hero']['main_Title'] ?? '' }}
+                </h1>
+                <p class="subTitle text-muted">
+                    {{ $kenkoWebData['hero']['sub_Title'] ?? ''}}
+                </p>
+            </article>
         </div>
     </section>
     {{-- Section : Banner END--}}
 
-      <!-- SVG WAVE -->
+    <!-- SVG WAVE -->
     <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true" role="img">
-        <path d="M0,32 C200,120 400,0 720,48 C1040,96 1240,0 1440,48 L1440 120 L0 120 Z" fill="#bfc1c2"></path>
+        <path d="M0,32 C200,120 400,0 720,48 C1040,96 1240,0 1440,48 L1440 120 L0 120 Z" fill="#e3c7af"></path>
     </svg>
 
 
@@ -40,7 +36,7 @@
         <div class="containter">
             <div class="row">
                 <div class="my5">
-                    <h1 class="text-center">
+                    <h1 class="text-center titleH1">
                         {{ $kenkoWebData['purposes']['main_Title'] ?? '' }}
                     </h1>
                 </div>
@@ -66,7 +62,7 @@
         <div class="container">
             <div class="row">
                 <div class="my-5">
-                    <h1 class="text-center">
+                    <h1 class="text-center titleH1">
                         {{ $kenkoWebData['offers']['main_Title'] ?? '' }}
                     </h1>
                 </div>
@@ -143,7 +139,7 @@
         <div class="container">
             <div class="row">
                 <div class="my-5">
-                    <h1 class="text-center">
+                    <h1 class="text-center titleH1">
                         {{ $kenkoWebData['timeline']['main_Title'] ?? '' }}
                     </h1>
                 </div>
@@ -170,7 +166,7 @@
         <div class="container">
             <div class="row">
                 <div class="text-center my-5">
-                    <h1>
+                    <h1 class="titleH1">
                         {{ $kenkoWebData['maintenance']['main_Title'] ?? '' }}
                     </h1>
                 </div>
@@ -208,7 +204,7 @@
         <div class="container">
             <div class="row">
                 <div class="text-center my-5">
-                    <h1>
+                    <h1 class="titleH1">
                         {{ $kenkoWebData['hosting']['main_Title'] ?? '' }}
                     </h1>
                 </div>

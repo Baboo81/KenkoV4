@@ -1,3 +1,9 @@
+<!-- SVG WAVE -->
+<svg class="waveFooter" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true" role="img">
+    <path d="M0,32 C200,120 400,0 720,48 C1040,96 1240,0 1440,48 L1440 120 L0 120 Z" fill="#f1efe9"></path>
+</svg>
+
 <footer class="text-center text-lg-start fontBlack py-5">
             <section class="">
               <div class="container text-center text-md-start mt-5" id="containerFooter">
