@@ -104,6 +104,7 @@ button:hover
 {
     min-height: 100vh;
     background-color: var(--gris);
+    padding: 200px 0;
 }
 /* Section : Purposes END*/
 
@@ -112,6 +113,7 @@ button:hover
 {
     min-height: 100vh;
     background-color: var(--gris);
+    padding: 100px 0;
 }
 
 .card
@@ -179,6 +181,7 @@ button:hover
 {
     min-height: 100vh;
     background-color: var(--gris);
+    padding: 200px 0;
 }
 
 .blocAtouts
@@ -208,6 +211,7 @@ section .atoutsContent
 {
     min-height: 100vh;
     background-color: var(--gris);
+    padding: 100px 0;
 }
 
 .timeline
@@ -290,6 +294,7 @@ article li
 {
     min-height: 100vh;
     background-color: var(--gris);
+    padding: 200px 0;
 }
 /* Section : Hébergement END*/
 
