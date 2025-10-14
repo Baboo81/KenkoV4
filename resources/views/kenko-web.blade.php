@@ -171,8 +171,34 @@
             <div class="row">
                 <div class="text-center">
                     <h1>
-                        {{ $kenkoWeb['maintenance']['main_Title'] ?? '' }}
+                        {{ $kenkoWebData['maintenance']['main_Title'] ?? '' }}
                     </h1>
+                </div>
+                <div class="box rounded-5 p-5 d-flex align-center justify-items-center">
+                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                        <img
+                            src="{{ $kenkoWebData['maintenance']['img'] }}"
+                            alt="{{ $kenkoWebData['maintenance']['alt'] }}"
+                            class="img-fluid w-100"
+                            style="object-fit:cover;"
+                        >
+                    </div>
+
+                    <div class="col-md-6">
+                        <article class="fontWhite">
+                            <p class="text-center">{!! $kenkoWebData['maintenance']['intro'] !!}</p>
+                            <h4 class="text-center my-3">{{ $kenkoWebData['maintenance']['title'] }}</h4>
+
+                            @foreach($kenkoWebData['maintenance']['types'] as $type)
+                                <ul class="mx-3 my-4">
+                                    <h5>{{ $type['category'] }}</h5>
+                                    @foreach($type['items'] as $item)
+                                        <li class="my-2">{{ $loop->iteration }}. {{ $item }}</li>
+                                    @endforeach
+                                </ul>
+                            @endforeach
+                        </article>
+                    </div>
                 </div>
             </div>
         </div>

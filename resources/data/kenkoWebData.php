@@ -156,8 +156,36 @@ return [
         ],
     ],
     'maintenance' => [
-        'main_Title' => "",
+        'main_Title' => "Service de maintenance",
         'img' => "/assets/img/kenkoWeb/pictos/maintenance.svg",
-
-    ]
+        'alt' => "Illustration représentant des personnages qui règlent des engrenages",
+        'intro' => "Un site web bien entretenu, c'est un site sécurisé, performant et toujours à jour !<br />Pour éviter les bugs, améliorer le référencement et assurer une expérience fluide à vos visiteurs, je propose un service de maintenance adapté à vos besoins.<br />Je propose des interventions ponctuelles ou au forfait mensuel selon vos besoins.",
+        'title' => "Types de maintenance",
+        'types' => [
+            [
+                'category' => 'Maintenance technique',
+                'items' => [
+                    'Corrections de bugs et optimisation des performances',
+                    'Sauvegardes régulières',
+                    'Surveillance de la sécurité',
+                ],
+            ],
+            [
+                'category' => 'Maintenance évolutive',
+                'items' => [
+                    'Ajouts ou modification de pages',
+                    'Changement de design ou d\'éléments graphiques',
+                    'Mise en conformité RGPD (cookies, mentions légales ...)',
+                ],
+            ],
+            [
+                'category' => 'Mise à jour du contenu',
+                'items' => [
+                    'Modification de textes, d\'images, de photos',
+                    'Mise à jour des tarifs et fiches de produits',
+                    'Ajout d\'articles de blog',
+                ],
+            ],
+        ],
+    ],
 ];
