@@ -33,7 +33,7 @@
                                 <a class="nav-link {{ $currentRoute == 'kenko-web' ? 'active' : '' }}" href="{{ route('kenko-web') }}">Kenko-Web</a>
                             </li>
                             <li class="nav-item">
-                                {{--<a class="nav-link {{ $currentRoute == 'quiSuis-je' ? 'active' : '' }}" href="{{ route('quiSuis-je') }}">Qui suis-je ?</a>--}}
+                                <a class="nav-link {{ $currentRoute == 'qui-suis-je' ? 'active' : '' }}" href="{{ route('qui-suis-je') }}">Qui suis-je ?</a>
                             </li>
                             <li class="nav-item">
                                 {{--<a class="nav-link {{ $currentRoute == 'contact' ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>--}}

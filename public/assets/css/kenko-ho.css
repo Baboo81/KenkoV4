@@ -386,6 +386,13 @@ button:hover
 /* Section : Slider END */
 
 /* Section : Témoignages */
+.commentsBox
+{
+    min-height: 100vh;
+    padding: 200px 0;
+    background-color: var(--vert);
+}
+
 #testimonials
 {
     background-color: var(--grisF);
