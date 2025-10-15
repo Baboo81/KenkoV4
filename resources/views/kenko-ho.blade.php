@@ -43,7 +43,7 @@
                     <p class="fontPink">
                         {{ $kenkoHoData['presentation']['doterra']['texte'] ?? '' }}
                     </p>
-                    <div class="text-center mt-3">
+                    <div class="text-center my-5">
                         <a href="{{ $kenkoHoData['presentation']['doterra']['url'] ?? '#' }}" target="_blank"
                             rel="noopener noreferrer">
                             <button class="button">
