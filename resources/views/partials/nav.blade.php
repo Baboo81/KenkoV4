@@ -138,7 +138,7 @@
         let codeSaisi = document.getElementById("accessCode").value;
         let messageErreur = document.getElementById("error-message");
 
-        fetch("/check-access", {
+        fetch("{{ route('check-access') }}", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
@@ -155,4 +155,6 @@
             }
         });
     }
+
+    window.checkAccess = checkAccess;
 </script>
