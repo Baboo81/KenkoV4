@@ -384,3 +384,78 @@ button:hover
     font-size: 2rem;
 }
 /* Section : Slider END */
+
+/* Section : Témoignages */
+#testimonials
+{
+    background-color: var(--grisF);
+    padding: 50px 20px;
+    color: var(--beige);
+    font-size: 1.2em;
+    border-radius: 18px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.rating
+{
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.rating i
+{
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.rating i.active,
+.rating i:hover,
+.rating i:hover ~ i
+{
+    color: gold;
+}
+
+textarea
+{
+    padding-top: 2.2rem !important;
+    line-height: 1.5;
+}
+
+textarea::placeholder
+{
+    color: var(--gris) !important;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 0.6;
+}
+
+input::placeholder
+{
+    color: var(--gris) !important;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 0.6;
+}
+
+/*Caroussel*/
+.carousel-inner
+{
+    text-align: center;
+}
+
+.carousel-item
+{
+    padding: 20px;
+    font-size: italic;
+}
+
+.carousel-item h5
+{
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* Section : Témoignages END*/

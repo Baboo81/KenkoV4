@@ -133,4 +133,92 @@
 </section>
 {{-- Section : Slider END --}}
 
+{{-- Section : Témoignages --}}
+<section class="my-5 commentsBox px-3 px-sm-5">
+    <div class="container my-5" id="testimonials">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach ($kenkoHoData['testimonials'] as $index => $testimonial)
+                        <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                            <div class="testimonial p-3 mb-3 border rounded shadow-sm">
+                                <div class="testimonial-rating">
+                                    @for ($i = 1; $i <= 5; $i++)
+                                        <span class="star {{ $i <= $testimonial['rating'] ? 'filled' : '' }}">★</span>
+                                    @endfor
+                                </div>
+                                <div class="testimonial-comment">
+                                    <p class="mb-1"><strong>{{ $testimonial['name'] }}</strong></p>
+                                    <p>{{ $testimonial['comment'] }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form d'ajout d'avis -->
+        <div class="row mt-5">
+            <div class="col-md-8 mx-auto">
+                <h3 class="text-center">Laissez votre avis</h3>
+
+                @if (!empty($message))
+                <div class="alert alert-{{ $message['type'] }} alert-dismissible fade show text-center" role="alert">
+                    {{ $message['text'] }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
+
+                <form id="testimonialForm" method="POST" action="{{ route('testimonials.store') }}">
+                    @csrf
+                    <div class="col-md-12 d-flex align-items-center justify-content-center">
+                        <img src="{{ asset('assets/img/form/commentsBox.svg') }}" alt="Illustration commentsBox" class="img-fluid w-100" style="object-fit:cover;">
+                    </div>
+                    <div class="col-md-12">
+                        <div class="my-4">
+                            <label for="userName" class="form-label mb-3">Votre Nom</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                <input type="text" class="form-control" id="userName" name="name" placeholder="Inscrivez votre nom" required>
+                            </div>
+                        </div>
+
+                        <div class="my-4">
+                            <label class="form-label mb-3">Votre Note : cliquez sur l'un des ronds, pour évaluer mon service !</label>
+                            <div class="rating">
+                                @for ($i = 1; $i <= 5; $i++)
+                                    <input type="radio" id="star{{ $i }}" name="rating" value="{{ $i }}" required>
+                                    <label for="star{{ $i }}">★</label>
+                                @endfor
+                            </div>
+                        </div>
+
+                        <div class="my-4">
+                            <label for="testimonialMessage" class="form-label mb-3">Votre Témoignage</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-chat-text"></i></span>
+                                <textarea class="form-control" id="testimonialMessage" name="comment" rows="3" placeholder="Laissez-moi un commentaire" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="my-5">
+                            <button type="submit" class="button w-100">Envoyer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{{-- Section : Témoignages END --}}
+
 @endsection
