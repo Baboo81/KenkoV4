@@ -28,6 +28,12 @@ return [
             ['label' => "La douleur & les HE", 'url' => "../kenko-ho-themes/douleur"],
             ['label' => "Établir des bonnes bases", 'url' => "../kenko-ho-themes/nutriments"],
         ],
+        // 🪷 Bloc dōTERRA ajouté ici
+        'doterra' => [
+            'texte' => "Découvrez le monde fascinant des huiles essentielles dōTERRA, une entreprise engagée pour la pureté, la transparence et le bien-être naturel.",
+            'url' => "https://www.doterra.com/ME/fr_ME",
+            'btn' => "Visiter le site dōTERRA",
+        ],
     ],
     'slider' => [
         [

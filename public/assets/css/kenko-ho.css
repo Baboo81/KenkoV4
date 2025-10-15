@@ -34,10 +34,11 @@ html, body
     min-width: 320px;
 }
 
-.titleH1
+.fontPink
 {
-    color: var(--vert);
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    color: var(--violet);
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 button
@@ -390,7 +391,7 @@ button:hover
 {
     min-height: 100vh;
     padding: 200px 0;
-    background-color: var(--vert);
+    background-color: var(--beige);
 }
 
 #testimonials
