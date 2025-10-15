@@ -23,7 +23,7 @@ function closePopup(popupId) {
 }
 
 // ----------------------------
-// Trust Section : logos animation
+// Kenko-Web : Trust Section : logos animation
 // ----------------------------
 document.addEventListener("DOMContentLoaded", () => {
     const logos = document.querySelectorAll(".logo");
@@ -36,3 +36,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 3000);
     }
 });
+
+// ----------------------------
+// Kenko-Ho : Slider
+// ----------------------------
+let next = document.querySelector('.next');
+let prev = document.querySelector('.prev');
+
+if (next && prev) {
+    next.addEventListener('click', () => {
+        let items = document.querySelectorAll('.item');
+        document.querySelector('.slide').appendChild(items[0]);
+    });
+
+    prev.addEventListener('click', () => {
+        let items = document.querySelectorAll('.item');
+        document.querySelector('.slide').prepend(items[items.length - 1]);
+    });
+
+    // Auto run slider
+    setInterval(() => {
+        let items = document.querySelectorAll('.item');
+        document.querySelector('.slide').appendChild(items[0]);
+    }, 3000);
+}

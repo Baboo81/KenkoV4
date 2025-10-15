@@ -31,34 +31,106 @@
     </svg>
 
     {{-- Section : Présentation --}}
-    <section class="presentation">
-        <div class="container">
-            <div class="row">
-                <img src="{{ asset('assets/img/kenkoHo/logoDoterra.svg') }}" alt="logo conseillère dōTerra" class="doterra">
-            </div>
-            <div class="row">
-                <div class="bloc1 my-5">
-                    <div class="mainTitleContent my-5">
-                        <h2 class="mainSectionTitle text-muted text-center p-5">Que vous propose votre conseillère dōTERRA ?</h2>
-                            <div class="underLine">
-                                <div class="line"><span></span></div>
-                            </div>
+<section class="presentation">
+    <div class="container">
+
+        {{-- Logo --}}
+        <div class="row">
+            <img src="{{ asset($kenkoHoData['presentation']['logo']) ?? ''}}"
+                 alt="logo conseillère dōTERRA"
+                 class="doterra">
+        </div>
+
+        {{-- Titre principal --}}
+        <div class="row">
+            <div class="bloc1 my-5">
+                <div class="mainTitleContent my-5">
+                    <h2 class="mainSectionTitle text-muted text-center p-5">
+                        {{ $kenkoHoData['presentation']['title'] ?? '' }}
+                    </h2>
+                    <div class="underLine">
+                        <div class="line"><span></span></div>
                     </div>
-                    <section class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-center myself my-5">
-                        <article class="col-md-6 my-5">
-                            <div class="box text-center rounded-5 p-5">
-                                <p class="text-muted">Mon objectif est de vous aider à améliorer votre bien-être en incorporant les huiles essentielles à votre quotidien, en établissant de nouvelles bases solides grâces aux nutriments et en adoptant des routines saines.</p>
-                                <p class="text-muted my-2">Ce suivi va vous permettre d'apprendre à utiliser et connaître les différentes huiles essentielles en toute simplicité, je serai là pour vous donner toutes les informations nécessaires ainsi que des astuces qui vous guideront sur la voie de l'autonomie et du bien-être.</p>
-                                <p class="text-muted my-2">Avec le Reiki, je pourrai équilibrer la sphère énergétique de votre être, le Reiki est un art mais aussi une philosophie de vie qui a vu le jour au Japon à la fin du XIXe siècle.</p>
-                            </div>
-                        </article>
-                        <div class="col-md-6 mx-5 my-3">
-                            <img src="/assets/img/kenkoHo/Chris.jpg" alt="Photo de moi-même dans un labyrinthe de maîs" class="img-fluid rounded-5">
+                </div>
+
+                {{-- Texte + Image --}}
+                <section class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-center myself my-5">
+                    <article class="col-md-6 my-5">
+                        <div class="box text-center rounded-5 p-5">
+                            @foreach ($kenkoHoData['presentation']['paragraphs'] as $paragraph)
+                                <p class="text-muted my-2">{{ $paragraph }}</p>
+                            @endforeach
                         </div>
-                    </section>
+                    </article>
+                    <div class="col-md-6 mx-5 my-3">
+                        <img src="{{ asset($kenkoHoData['presentation']['image']) ?? '' }}"
+                             alt="{{ $kenkoHoData['presentation']['alt_image'] ?? ''}}"
+                             class="img-fluid rounded-5">
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        {{-- Thématiques --}}
+        <div class="row">
+            <div class="mainTitleContent mb-5">
+                <h2 class="mainSectionTitle text-muted text-center p-5">
+                    {{ $kenkoHoData['presentation']['themes_title'] ?? '' }}
+                </h2>
+                <div class="line"><span></span></div>
+            </div>
+
+            <section class="my-5 btnBloc">
+                <div class="row justify-content-center g-3">
+                    @foreach ($kenkoHoData['presentation']['themes'] as $index => $theme)
+                        <div class="col-6 col-md-2 d-flex justify-content-center">
+                            <button onclick="window.location.href='{{ $theme['url'] }}';" class="button">
+                                {{ $theme['label'] }}
+                            </button>
+                        </div>
+
+                        {{-- Saut de ligne après 5 boutons --}}
+                        @if (($index + 1) % 5 == 0)
+                            <div class="w-100"></div>
+                        @endif
+                    @endforeach
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{{-- Section : Présentation END --}}
+
+{{-- Section : Slider --}}
+<section class="w-100 slider">
+    <div class="sliderSection w-100">
+        <div class="sliderContent w-100">
+            <div class="slide">
+                @foreach ($kenkoHoData['slider'] as $slide)
+                    <div class="item {{ $slide['image_class'] }}">
+                        <div class="content text-center">
+                            <div class="name {{ $slide['color_class'] }} my-5">{{ $slide['title'] }}</div>
+                            <div class="description {{ $slide['color_class'] }}">{{ $slide['description'] }}</div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            {{-- Btn --}}
+            <div class="btn-prev-next justify-content-center d-flex flex-wrap">
+                <div class="mx-2 mx-md-5">
+                    <button class="button prev">
+                        <i data-lucide="chevron-left" class="me-2" style="width: 34px; height: 34px"></i>
+                    </button>
+                </div>
+                <div class="mx-2 mx-md-5">
+                    <button class="button next">
+                        <i data-lucide="chevron-right" class="me-2" style="width: 34px; height: 34px"></i>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
-    {{-- Section : Présentation END--}}
+    </div>
+</section>
+{{-- Section : Slider END --}}
+
 @endsection
