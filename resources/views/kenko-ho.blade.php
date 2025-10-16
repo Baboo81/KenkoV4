@@ -13,6 +13,9 @@
     <section class="heroHo">
         <div class="heroHo-content d-flex justify-content-end">
             <article class="text-center">
+                <div class="logoContainer">
+                    <img src="./assets/img/logo/logoAnimate.svg" alt="Logo animé" id="logoAnimation">
+                </div>
                 <h1 class="mainTitleHero text-muted">
                     {{ $kenkoHoData['hero']['main_Title'] ?? '' }}
                 </h1>

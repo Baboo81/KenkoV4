@@ -40,6 +40,13 @@ html, body
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
+.fontWhite
+{
+    color: var(--beige);
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
 button
 {
   height: 50px;
@@ -75,10 +82,11 @@ button:hover
 
 .whoIam
 {
-    margin-top: 10%;
+    padding: 0;
     min-height: 100% !important;
     background-size: cover;
     background-position: center;
+    background-color: var(--brun);
     position: relative; /*pour les ajustements*/
 }
 
@@ -96,11 +104,22 @@ article img
 
 .pictoBloc
 {
-    margin-top: 10% !important;
-    margin-bottom: 10% !important;
+    padding: 100px 0;
 }
 
-section .box
+.pictoBloc img
+{
+    transition: transform 0.3s ease, filter 0.3 ease;
+    filter: grayscale(100%) brightness(0.7);
+}
+
+.pictoBloc img:hover
+{
+    transform: scale(1.1);
+    filter: grayscale(0%) brightness(1);
+}
+
+section .boxWhoIam
 {
     background-color: var(--grisF);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
