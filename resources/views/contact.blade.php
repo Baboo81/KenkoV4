@@ -16,7 +16,7 @@
 
             {{-- Formulaire --}}
             <div class="col-md-6 col-12">
-                <form class="rounded-4 shadow-lg p-4 bg-light" action="{{ url('contact.send') }}" method="POST">
+                <form class="rounded-4 shadow-lg p-4 bg-light" action="{{ route('contact.send') }}" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label fw-semibold">Nom</label>

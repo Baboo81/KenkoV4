@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
@@ -38,7 +39,7 @@ class ContactController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'firsName' => 'required|string|max:255',
+            'firstName' => 'required|string|max:255',
             'tel' => 'nullable|string|max:20',
             'email' => 'required|email',
             'message' => 'required|string',
@@ -47,11 +48,14 @@ class ContactController extends Controller
         // Enregistrer dans la DB :
         $contact = Contact::create($validated);
 
+        Log::info('Contact enregistré', $contact->toArray());
+
         // Envoi de l'email :
-        Mail::send('email', ['contact' => $contact], function ($message) use ($contact) {
+        Mail::send('emails.email', ['contact' => $contact], function ($message) use ($contact) {
             $message->to('info@kenko-web.be')
                     ->subject('Nouveau message du formulaire sur Kenko');
         });
+        Log::info('Mail envoyé');
 
         return redirect()->back()->with('success', 'Merci pour votre message ! Je vous répondrai dés que possible !');
     }
