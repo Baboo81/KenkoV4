@@ -36,7 +36,7 @@
                                 <a class="nav-link {{ $currentRoute == 'qui-suis-je' ? 'active' : '' }}" href="{{ route('qui-suis-je') }}">Qui suis-je ?</a>
                             </li>
                             <li class="nav-item">
-                                {{--<a class="nav-link {{ $currentRoute == 'contact' ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>--}}
+                                <a class="nav-link {{ $currentRoute == 'contact' ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>
                             </li>
                         </ul>
 

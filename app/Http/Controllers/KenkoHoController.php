@@ -32,6 +32,7 @@ class KenkoHoController extends Controller
 
     }
 
+    //Gestion de l'accès à Kenko-Ho :
     public function checkAccess(Request $request)
     {
         $code = $request->input('code');

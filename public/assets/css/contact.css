@@ -1,0 +1,73 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">');
+
+@font-face
+{
+  font-family: 'Dastin';
+  src : url('../fonts/Dastin.otf') format('opentype'),
+        url('../fonts/Dastin.ttf') format('trutype'),
+        url('../fonts/Dastin.woff') format('woff'),
+        url('../fonts/Dastin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root
+{
+    --vert : #536964;
+    --grisF : #8b9cb6;
+    --gris : #bfc1c2;
+    --beige : #f1efe9;
+    --brun : #e3c7af;
+    --noir : #282828;
+}
+
+
+
+html, body
+{
+    background-color: var(--beige);
+    width: 100% !important;
+    overflow-x: hidden;
+    font-family: "Dastin";
+    min-height: 500px;
+    min-width: 320px;
+}
+
+
+form
+{
+    background-color: var(--grisF);
+    color: var(--beige);
+    font-size: 1.2em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+textarea
+{
+    padding-top: 1.5rem !important;
+}
+
+textarea::placeholder
+{
+    color: var(--gris) !important;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 0.6;
+}
+
+input::placeholder
+{
+    color: var(--gris) !important;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 0.6;
+}
+
+/* Media Queries */
+
+
