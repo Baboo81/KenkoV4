@@ -45,18 +45,22 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
 
-        // Enregistrer dans la DB :
-        $contact = Contact::create($validated);
+        try {
+            // Enregistrer dans la DB :
+            $contact = Contact::create($validated);
 
-        Log::info('Contact enregistré', $contact->toArray());
-
-        // Envoi de l'email :
-        Mail::send('emails.email', ['contact' => $contact], function ($message) use ($contact) {
+            // Envoi de l'email :
+            Mail::send('emails.email', ['contact' => $contact], function ($message) use ($contact) {
             $message->to('info@kenko-web.be')
-                    ->subject('Nouveau message du formulaire sur Kenko');
-        });
-        Log::info('Mail envoyé');
+                    ->subject('Nouveau message de Kenko');
+                });
 
-        return redirect()->back()->with('success', 'Merci pour votre message ! Je vous répondrai dés que possible !');
-    }
+             return redirect()->back()->with('success', 'Merci pour votre message ! Je vous répondrai dés que possible !');
+
+            } catch (\Exception $e) {
+                Log::error("Erreur lors de l'envoidu formulaire : " . $e->getMessage());
+
+                return redirect()->back()->with('error', 'Une erreur est survenue ! Veuillez réessayer plus tard !');
+            }
+         }
 }
