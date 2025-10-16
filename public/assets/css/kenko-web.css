@@ -79,7 +79,7 @@ button:hover
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 0 5%;
+    padding: 0% 5%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -147,7 +147,7 @@ button:hover
 .purposes
 {
     min-height: 100vh;
-    background-color: var(--brun);
+    background-color: #fff;
     padding: 200px 0;
 }
 /* Section : Purposes END*/
@@ -156,7 +156,7 @@ button:hover
 .offers
 {
     min-height: 100vh;
-    background-color: var(--brun);
+    background-color: #fff;
     padding: 100px 0;
 }
 
@@ -224,7 +224,7 @@ button:hover
 .skills
 {
     min-height: 100vh;
-    background-color: var(--brun);
+    background-color: #fff;
     padding: 200px 0;
 }
 
@@ -254,7 +254,7 @@ section .atoutsContent
 .timeLine
 {
     min-height: 100vh;
-    background-color: var(--brun);
+    background-color: #fff;
     padding: 100px 0;
 }
 
@@ -318,7 +318,7 @@ section .atoutsContent
 .maintenance
 {
     min-height: 100vh;
-    background-color: var(--brun);
+    background-color: #fff;
 }
 
 .box
@@ -337,7 +337,7 @@ article li
 .hosting
 {
     min-height: 100vh;
-    background-color: var(--brun);
+    background-color: #fff;
     padding: 200px 0;
 }
 /* Section : Hébergement END*/
@@ -346,7 +346,7 @@ article li
 .trustSection
 {
     min-height: 100vh;
-    background-color: var(--brun);
+    background-color: #fff;
 }
 
 section .trustBox

@@ -10,7 +10,7 @@
                 <div class="container-fluid d-flex align-items-center justify-content-between">
                     <!-- Logo -->
                     <a class="navbar-brand" href="{{ route('home') }}">
-                        <img src="/assets/img/logo/logoKenko2.png" alt="Logo du site" id="logo">
+                        <img src="/assets/img/logo/logo.svg" alt="Logo du site" id="logo">
                     </a>
 
                     <!-- Bouton mobile -->

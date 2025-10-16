@@ -9,6 +9,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// ----------------------------
+// Logo animation
+// ----------------------------
+let logo = document.getElementById('logoAnimation');
+let largeurEcran = window.innerWidth - 50;
+let hauteurEcran = window.innerHeight - 50;
+
+if (logo) {
+    setInterval(() => {
+        const x = Math.random() * largeurEcran;
+        const y = Math.random() * hauteurEcran;
+        logo.style.left = x + 'px';
+        logo.style.top = y + 'px';
+    }, 3000);
+}
+
 //---------------------------
 // Kenko-web : cards-popup
 //---------------------------

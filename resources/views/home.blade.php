@@ -14,14 +14,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mainContent">
-                    <h1 class="mainTitle">
+                    <h1 class="mainTitle"></h1>
                         <span class="secondTitle text-nowrap">
                             {{ $homeData['home'] }}
                         </span>
-                    </h1>
-                    <div class="logoContainer">
-                        <img src="{{ asset('assets/img/logo/logoKenko2.png') }}" alt="Logo animé" id="logoAnimation">
-                    </div>
                 </div>
             </div>
         </div>

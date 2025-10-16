@@ -110,28 +110,55 @@ main .home
     text-align: center;
 }
 
-    /* Animation : logo */
-#logoAnimation
+/* Animation mainTitle */
+.home .mainTitle
 {
-    display: block;
-    margin: 0 auto;
-    width: 300px;
-    transform-style: preserve-3d;
-    animation: rotateYLogo 10s linear infinite;
+    font-size: clamp(4rem, 12vw + 2rem, 10rem) !important;
+    letter-spacing: .8rem;
 }
 
-@keyframes rotateYLogo
+h1.mainTitle:after
 {
-    from
+    content: "";
+    animation: reveal 1.5s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes reveal
+{
+    0%
     {
-        transform: rotateY(0deg);
+        content: "K";
     }
-    to
+
+    25%
     {
-        transform: rotateY(360deg);
+        content: "KE";
+    }
+
+    50%
+    {
+        content: "KEN";
+    }
+
+    75%
+    {
+        content: "KENK";
+    }
+
+    100%
+    {
+        content: "KENKO";
     }
 }
-    /* Animation : logo END*/
+ /* END Animation mainTitle */
+
+.home .secondTitle
+{
+    font-size: clamp(1rem, 3vw + 1rem, 2.5rem);
+}
+
+
 /* END Home */
 
 .wave
