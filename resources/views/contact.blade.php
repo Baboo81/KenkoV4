@@ -18,7 +18,7 @@
         <div class="row align-items-center g-5">
             {{-- Illustration --}}
             <div class="col-md-6 d-none d-md-flex justify-content-center">
-                <img src="{{ asset($contactData['illustration']['src']) }}"
+                <img src="{{ asset($contactData['illustration']['src']) ?? '' }}"
                      alt="{{ $contactData['illustration']['alt'] }}"
                      class="img-fluid rounded-4 shadow-sm"
                      style="object-fit: cover;">
