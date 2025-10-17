@@ -47,7 +47,7 @@
                                     {{--<a class="nav-link {{ $currentRoute == 'signup' ? 'active' : '' }}" href="{{ route('signup') }}">S'inscrire</a>--}}
                                 </li>
                                 <li class="nav-item">
-                                    {{--<a class="nav-link {{ $currentRoute == 'foireAuxQuestions' ? 'active' : '' }}" href="{{ route('foireAuxQuestions') }}">FAQ</a>--}}
+                                    <a class="nav-link {{ $currentRoute == 'faq' ? 'active' : '' }}" href="{{ route('faq') }}">FAQ</a>
                                 </li>
                             @endunless
 

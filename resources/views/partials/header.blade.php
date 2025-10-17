@@ -30,6 +30,8 @@
         <link rel="stylesheet" href="{{ asset('assets/css/kenko-web.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/kenko-ho.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/quiSuisJe.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/faq.css') }}">
         <!-- css nav -->
         <link rel="stylesheet" href="{{ asset('assets/css/nav.css') }}">
         <!-- css footer -->
