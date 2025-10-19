@@ -100,9 +100,9 @@
                     <div class="row justify-content-center g-3">
                         @foreach ($kenkoHoData['presentation']['themes'] as $index => $theme)
                             <div class="col-6 col-md-2 d-flex justify-content-center">
-                                <button onclick="window.location.href='{{ $theme['url'] }}';" class="button">
+                                <a href="{{ $theme['url'] }}"  class="button text-center d-inline-block p-2">
                                     {{ $theme['label'] }}
-                                </button>
+                                </a>
                             </div>
 
                             {{-- Saut de ligne après 5 boutons --}}

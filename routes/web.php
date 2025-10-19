@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Themes\DixHuilesController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KenkoWebController;
@@ -16,6 +17,12 @@ Route::get('/kenko-ho', [KenkoHoController::class, 'show'])->name('kenko-ho');
 Route::get('/qui-suis-je', [QuiSuisJeController::class, 'show'])->name('qui-suis-je');
 Route::get('/contact', [ContactController::class, 'show'])->name('contact');
 Route::get('/faq', [FaqController::class, 'show'])->name('faq');
+
+//Routes : pages thématiques :
+Route::prefix('themes')->group(function () {
+    Route::get('/dix-huiles', [DixHuilesController::class, 'show'])->name('themes.dix-huiles');
+});
+
 
 //Route : vérification du code d'acces à Kenko-ho :
 Route::post('/check-access', [KenkoHoController::class, 'checkAccess'])->name('check-access');
