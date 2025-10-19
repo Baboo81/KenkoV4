@@ -32,6 +32,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/quiSuisJe.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/faq.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/themes/dix-huiles.css') }}">
         <!-- css nav -->
         <link rel="stylesheet" href="{{ asset('assets/css/nav.css') }}">
         <!-- css footer -->

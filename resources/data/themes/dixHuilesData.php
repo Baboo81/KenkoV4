@@ -13,7 +13,7 @@ return [
                 'Faire un masque sec avec les mains : 1 goutte sur la paume, frotter les mains et ensuite placer les mains sur le nez et inhaler.',
                 'Photosensibilisant.'
             ],
-            'img' => '/assets/img/services/Kenko-Ho/pageDixHuiles/Air.jpg'
+            'img' => '/assets/img/kenkoHo/pageDixHuiles/Air.jpg'
         ],
 
         'menthe_poivree' => [
@@ -24,7 +24,7 @@ return [
                 'En cas de d\'inconfort digestif : 1 à 2 gttes dans de l\'eau',
                 'En diffusion : 2 gttes pour retrouver optimisme, vivacité et joie'
             ],
-            'img' => '/assets/img/services/Kenko-Ho/pageDixHuiles/MenthePoivrée.jpg'
+            'img' => '/assets/img/kenkoHo/pageDixHuiles/MenthePoivrée.jpg'
         ],
 
         'on_guard' => [
@@ -37,7 +37,7 @@ return [
                 'En massage dilué dans une HV quand le corps faiblit',
             ],
             'danger' => 'Photosensibilisant, dermocaustique.',
-            'img' => '/assets/img/services/Kenko-Ho/pageDixHuiles/OnGuard.jpg'
+            'img' => '/assets/img/kenkoHo/pageDixHuiles/OnGuard.jpg'
         ],
 
         'origan' => [
@@ -49,7 +49,7 @@ return [
                 'En topique : antifongique, virucide',
             ],
             'danger' => 'Dermocaustique à diluer impérativement.',
-            'img' => '/assets/img/services/Kenko-Ho/pageDixHuiles/Origan.jpg'
+            'img' => '/assets/img/kenkoHo/pageDixHuiles/Origan.jpg'
         ],
 
         'zen_gest' => [
@@ -61,7 +61,7 @@ return [
                 'Sur le plan émotionnel, il aide à digérer les expériences de la vie',
                 'En interne, 2 gttes dans de l\'eau chaude en dessous de 60°C pour améliorer la digestion après un repas copieux ou trop arrosé.'
             ],
-            'img' => '/assets/img/services/Kenko-Ho/pageDixHuiles/ZenGest.jpg'
+            'img' => '/assets/img/kenkoHo/pageDixHuiles/ZenGest.jpg'
         ],
 
         'lavande' => [
@@ -72,7 +72,7 @@ return [
                 'En diffusion, la lavande est calmante, relaxante',
                 'Efficace contre les inconforts saisonniers en association avec la menthe poivrée et le citron.'
             ],
-            'img' => '/assets/img/services/Kenko-Ho/pageDixHuiles/Lavande.jpg'
+            'img' => '/assets/img/kenkoHo/pageDixHuiles/Lavande.jpg'
         ],
 
         'deep_blue' => [
@@ -84,7 +84,7 @@ return [
                 'Idéale pour préparer les muscles des jambes avant le sport.'
             ],
             'danger' => 'À éviter s\'il y a des allergies aux salicylés (aspirine).',
-            'img' => '/assets/img/services/Kenko-Ho/pageDixHuiles/DeepBlue.jpg'
+            'img' => '/assets/img/kenkoHo/pageDixHuiles/DeepBlue.jpg'
         ],
 
         'encens' => [
@@ -95,7 +95,7 @@ return [
                 'En topique dans une crème, elle permet d\'éliminer les tâches, anti-rides (anti-oxydant).',
                 'En interne : 1 gtte en bouche pour un effet relaxant.'
             ],
-            'img' => '/assets/img/services/Kenko-Ho/pageDixHuiles/Encens.jpg'
+            'img' => '/assets/img/kenkoHo/pageDixHuiles/Encens.jpg'
         ],
 
         'tea_tree' => [
@@ -106,7 +106,7 @@ return [
                 'Soutien les défenses naturelles.'
             ],
             'danger' => 'En diffusion : à proscrire en présence de chats.',
-            'img' => '/assets/img/services/Kenko-Ho/pageDixHuiles/TeaTree.jpg'
+            'img' => '/assets/img/kenkoHo/pageDixHuiles/TeaTree.jpg'
         ],
 
         'citron' => [
@@ -118,7 +118,7 @@ return [
                 'En diffusion : donne un coup de fouet avec la menthe poivrée.'
             ],
             'danger' => 'Photosensibilisant.',
-            'img' => '/assets/img/services/Kenko-Ho/pageDixHuiles/Citron.jpg'
+            'img' => '/assets/img/kenkoHo/pageDixHuiles/Citron.jpg'
         ],
     ],
 
