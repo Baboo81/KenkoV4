@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="mainSection">
+    <section class="dixHuiles">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -11,36 +11,49 @@
                     </div>
                 </div>
             </div>
-            <div class="box rounded-5 p-4 my-5">
+            <div class="box rounded-5 p-3 my-5">
                 @foreach ($dixHuilesData['huiles'] as $key => $huile)
-                <div class="row flex-column-reverse flex-md-row d-flex align-items-center my-5">
-                    <article class="col-md-8">
-                        <div class="text-center my-5">
-                            <h3>{{ $huile['title'] }}</h3>
+                    <div class="row d-flex align-items-center justify-content-center my-5
+            {{ $loop->iteration % 2 == 0 ? 'flex-column flex-md-row-reverse' : 'flex-column-reverse flex-md-row' }}">
+
+                        {{-- Image --}}
+                        <div class="col-md-4 text-center">
+                            <img class="img-fluid rounded-4 shadow-sm" src="{{ $huile['img'] }}"
+                                alt="Image représentant {{ $huile['title'] }}">
                         </div>
 
-                        @isset($huile['composition'])
-                            <div class="text-start mb-3">
-                                <h4>Composition :</h4>
+                        {{-- Texte --}}
+                        <article class="col-md-8">
+                            <div class="text-center my-5">
+                                <h3>
+                                    {{ $huile['title'] }}
+                                </h3>
                             </div>
-                            <p class="text-muted">{{ $huile['composition'] }}</p>
-                        @endisset
 
-                        @isset($huile['usages'])
-                            <div class="text-start my-3">
-                                <h4>Usages :</h4>
-                            </div>
-                            @foreach ($huile['usages'] as $usage)
-                                <p class="text-muted my-1"><i class="mx-3">&#8226;</i>{{ $usage }}</p>
-                            @endforeach
-                        @endisset
-                    </article>
+                            @isset($huile['composition'])
+                                <div class="text-start mb-3">
+                                    <h4>
+                                        Composition :
+                                    </h4>
+                                </div>
+                                <p class="text-muted">{{ $huile['composition'] }}</p>
+                            @endisset
 
-                    <div class="col-md-4 text-center">
-                        <img class="img-fluid" src="{{ $huile['img'] }}" alt="Image représentant {{ $huile['title'] }}">
+                            @isset($huile['usages'])
+                                <div class="text-start my-3">
+                                    <h4>
+                                        Usages :
+                                    </h4>
+                                </div>
+                                @foreach ($huile['usages'] as $usage)
+                                    <p class="text-muted my-1">
+                                        <i class="mx-3">&#8226;</i>{{ $usage }}
+                                    </p>
+                                @endforeach
+                            @endisset
+                        </article>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
             </div>
 
             <div class="text-center my-5">

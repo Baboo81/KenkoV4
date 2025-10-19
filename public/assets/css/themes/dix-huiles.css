@@ -103,7 +103,7 @@ html, body
 }
 
 /* mainSection */
-.mainSection
+.dixHuiles
 {
     min-height: 1500px;
     margin-top: 10%;
@@ -113,6 +113,7 @@ html, body
 
 .mainTitleContent
 {
+    padding: 50px 0;
     position: relative;
 }
 
@@ -137,7 +138,7 @@ html, body
     bottom: 0.5px;
 }
 
-.mainSection .box
+.dixHuiles .box
 {
     background-color: var(--violet);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -147,7 +148,7 @@ html, body
 .box h3
 {
     font-size: 2rem;
-    color: var(--beige);
+    color: var(--vert);
     margin-bottom: 10px;
 }
 
