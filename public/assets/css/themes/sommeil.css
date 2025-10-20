@@ -1,0 +1,99 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">');
+
+@font-face
+{
+  font-family: 'Dastin';
+  src : url('../fonts/Dastin.otf') format('opentype'),
+        url('../fonts/Dastin.ttf') format('trutype'),
+        url('../fonts/Dastin.woff') format('woff'),
+        url('../fonts/Dastin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root
+{
+    --vert : #536964;
+    --grisF : #8b9cb6;
+    --gris : #bfc1c2;
+    --beige : #f1efe9;
+    --brun : #e3c7af;
+    --noir : #282828;
+}
+
+html, body
+{
+    background-color: var(--beige);
+    width: 100% !important;
+    overflow-x: hidden;
+    font-family: "Dastin";
+    min-height: 500px;
+    min-width: 320px;
+}
+
+.sommeil
+{
+    min-height: 1500px;
+    margin-top: 10%;
+    padding-bottom: 50px;
+}
+
+.mainTitleContent
+{
+    position: relative;
+}
+
+.line
+{
+    position: absolute;
+    width: 100%;
+    background: var(--vert);
+    height: 3px;
+    margin: auto;
+    margin-top: -1%;
+}
+
+.line span
+{
+    display: block;
+    width: 70%;
+    height: 4px;
+    background: var(--violet);
+    margin: auto;
+    position: relative;
+    bottom: 0.5px;
+}
+
+.sommeil .box
+{
+    background-color: var(--bleu);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    font-size: 1.3em;
+}
+
+.box h3
+{
+    font-size: 2rem;
+    color: var(--vert);
+    margin-bottom: 10px;
+}
+
+button
+{
+    height: 50px;
+    width: 200px;
+    border: 1px solid var(--beige);
+    border-radius: 24px;
+    background-color: var(--vert);
+    color: var(--beige);
+}
+
+button:hover
+{
+    background-color: var(--brun);
+    transition: 6300ms;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}

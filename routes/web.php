@@ -10,6 +10,7 @@ use App\Http\Controllers\QuiSuisJeController;
 use App\Http\Controllers\TestimonialsController;
 use App\Http\Controllers\Themes\CuisineController;
 use App\Http\Controllers\Themes\EmotionsController;
+use App\Http\Controllers\Themes\SommeilController;
 use Illuminate\Support\Facades\Route;
 
 //Routes principales :
@@ -25,6 +26,7 @@ Route::prefix('themes')->group(function () {
     Route::get('/dix-huiles', [DixHuilesController::class, 'show'])->name('themes.dix-huiles');
     Route::get('/cuisine', [CuisineController::class, 'show'])->name('themes.cuisine');
     Route::get('/emotions', [EmotionsController::class, 'show'])->name('theme.emotions');
+    Route::get('/sommeil', [SommeilController::class, 'show'])->name('theme.sommeil');
 });
 
 
