@@ -8,6 +8,7 @@ use App\Http\Controllers\KenkoWebController;
 use App\Http\Controllers\KenkoHoController;
 use App\Http\Controllers\QuiSuisJeController;
 use App\Http\Controllers\TestimonialsController;
+use App\Http\Controllers\Themes\BasesController;
 use App\Http\Controllers\Themes\CuisineController;
 use App\Http\Controllers\Themes\DouleursController;
 use App\Http\Controllers\Themes\EmotionsController;
@@ -37,6 +38,7 @@ Route::prefix('themes')->group(function () {
     Route::get('/microbiome', [MicrobiomeController::class, 'show'])->name('theme.microbiome');
     Route::get('/douleurs', [DouleursController::class, 'show'])->name('theme.douleurs');
     Route::get('/reiki', [ReikiController::class, 'show'])->name('theme.reiki');
+    Route::get('/bases', [BasesController::class, 'show'])->name('theme.bases');
 });
 
 
