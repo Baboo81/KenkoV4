@@ -33,6 +33,15 @@
         <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/faq.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/themes/dix-huiles.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/themes/emotions.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/themes/cuisine.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/themes/enfants.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/themes/peau.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/themes/sommeil.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/themes/microbiome.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/themes/douleurs.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/themes/reiki.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/themes/bases.css') }}">
         <!-- css nav -->
         <link rel="stylesheet" href="{{ asset('assets/css/nav.css') }}">
         <!-- css footer -->

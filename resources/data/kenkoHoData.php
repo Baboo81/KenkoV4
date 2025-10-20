@@ -25,7 +25,7 @@ return [
             ['label' => "Les H.E dans la cuisine", 'url' => "/themes/cuisine"],
             ['label' => "Le sommeil & les HE", 'url' => "/themes/sommeil"],
             ['label' => "La peau & les HE", 'url' => "/themes/peau"],
-            ['label' => "La douleur & les HE", 'url' => "/themes/douleur"],
+            ['label' => "La douleur & les HE", 'url' => "/themes/douleurs"],
             ['label' => "Établir des bonnes bases", 'url' => "/themes/nutriments"],
         ],
         // 🪷 Bloc dōTERRA ajouté ici
