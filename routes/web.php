@@ -11,6 +11,8 @@ use App\Http\Controllers\TestimonialsController;
 use App\Http\Controllers\Themes\CuisineController;
 use App\Http\Controllers\Themes\EmotionsController;
 use App\Http\Controllers\Themes\EnfantsController;
+use App\Http\Controllers\Themes\MicrobiomeController;
+use App\Http\Controllers\Themes\PeauController;
 use App\Http\Controllers\Themes\SommeilController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,7 +30,9 @@ Route::prefix('themes')->group(function () {
     Route::get('/cuisine', [CuisineController::class, 'show'])->name('themes.cuisine');
     Route::get('/emotions', [EmotionsController::class, 'show'])->name('theme.emotions');
     Route::get('/sommeil', [SommeilController::class, 'show'])->name('theme.sommeil');
-    Route::get('/enfants', [EnfantsController::class, 'show'])->name('enfants');
+    Route::get('/enfants', [EnfantsController::class, 'show'])->name('theme.enfants');
+    Route::get('/peau', [PeauController::class, 'show'])->name('theme.peau');
+    Route::get('/microbiome', [MicrobiomeController::class, 'show'])->name('theme.microbiome');
 });
 
 
