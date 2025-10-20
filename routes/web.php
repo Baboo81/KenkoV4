@@ -27,9 +27,6 @@ Route::get('/contact', [ContactController::class, 'show'])->name('contact');
 Route::get('/faq', [FaqController::class, 'show'])->name('faq');
 
 
-// Route POST pour vérifier le code d'accès Kenko-Ho (hors middleware)
-Route::post('/check-access', [KenkoHoController::class, 'checkAccess'])->name('check-access');
-
 //Routes : pages thématiques + Routes vers Kenko-ho et pages à thèmes protégées :
 Route::middleware(['kenko.access'])->group(function () {
     Route::get('/kenko-ho', [KenkoHoController::class, 'show'])->name('kenko-ho');

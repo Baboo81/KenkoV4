@@ -24,36 +24,44 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item">
-                                <a class="nav-link {{ $currentRoute == 'home' ? 'active' : '' }}" href="{{ route('home') }}">Accueil</a>
+                                <a class="nav-link {{ $currentRoute == 'home' ? 'active' : '' }}"
+                                    href="{{ route('home') }}">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ $currentRoute == 'kenko-ho' ? 'active' : '' }}" href="#" data-bs-toggle="modal" data-bs-target="#kenkoHoModal">Kenko-Ho</a>
+                                <a class="nav-link {{ $currentRoute == 'kenko-ho' ? 'active' : '' }}" href="#"
+                                    data-bs-toggle="modal" data-bs-target="#kenkoHoModal">Kenko-Ho</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ $currentRoute == 'kenko-web' ? 'active' : '' }}" href="{{ route('kenko-web') }}">Kenko-Web</a>
+                                <a class="nav-link {{ $currentRoute == 'kenko-web' ? 'active' : '' }}"
+                                    href="{{ route('kenko-web') }}">Kenko-Web</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ $currentRoute == 'qui-suis-je' ? 'active' : '' }}" href="{{ route('qui-suis-je') }}">Qui suis-je ?</a>
+                                <a class="nav-link {{ $currentRoute == 'qui-suis-je' ? 'active' : '' }}"
+                                    href="{{ route('qui-suis-je') }}">Qui suis-je ?</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ $currentRoute == 'contact' ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>
+                                <a class="nav-link {{ $currentRoute == 'contact' ? 'active' : '' }}"
+                                    href="{{ route('contact') }}">Contact</a>
                             </li>
                         </ul>
 
                         <!-- Menu utilisateur -->
                         <ul class="navbar-nav">
-                            @unless(isset($_SESSION['user']))
+                            @unless (isset($_SESSION['user']))
                                 <li class="nav-item">
-                                    {{--<a class="nav-link {{ $currentRoute == 'signup' ? 'active' : '' }}" href="{{ route('signup') }}">S'inscrire</a>--}}
+                                    {{-- <a class="nav-link {{ $currentRoute == 'signup' ? 'active' : '' }}" href="{{ route('signup') }}">S'inscrire</a> --}}
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {{ $currentRoute == 'faq' ? 'active' : '' }}" href="{{ route('faq') }}">FAQ</a>
+                                    <a class="nav-link {{ $currentRoute == 'faq' ? 'active' : '' }}"
+                                        href="{{ route('faq') }}">FAQ</a>
                                 </li>
                             @endunless
 
                             <li class="nav-item dropdown">
-                                <a href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="/assets/img/icons/user-icon.svg" alt="Img user" class="rounded-circle" width="50">
+                                <a href="#" id="userMenu" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="/assets/img/icons/user-icon.svg" alt="Img user" class="rounded-circle"
+                                        width="50">
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="userMenu">
                                     <p class="fs-5 text-muted my-3 text-center">Compte utilisateur</p>
@@ -63,7 +71,7 @@
                                         </a>
                                     </li>
 
-                                    @unless(isset($_SESSION['user']))
+                                    @unless (isset($_SESSION['user']))
                                         <li>
                                             <a class="dropdown-item" href="/login">
                                                 <i class="bi bi-box-arrow-in-right"></i>&nbsp;Se connecter
@@ -98,7 +106,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p class="text-muted">Espace réservé aux clients dōTERRA. Pour plus d’infos, contactez-moi via le formulaire de contact sur la page : contact ou par téléphone</p>
+                <p class="text-muted">Espace réservé aux clients dōTERRA. Pour plus d’infos, contactez-moi via le
+                    formulaire de contact sur la page : contact ou par téléphone</p>
                 <p class="text-muted">Si vous possédez un code d'accès, veuillez l'introduire ci-dessous :</p>
                 <div class="my-3">
                     <input type="password" id="accessCode" class="form-control" placeholder="Entrez le code ici">
@@ -139,21 +148,25 @@
         let messageErreur = document.getElementById("error-message");
 
         fetch("{{ route('check-access') }}", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content")
-        },
-        body: "code=" + encodeURIComponent(codeSaisi)
-        })
-        .then(response => response.text())
-        .then(data => {
-            if (data === "success") {
-                window.location.href = "/kenko-ho";
-            } else {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content")
+                },
+                body: "code=" + encodeURIComponent(codeSaisi)
+            })
+            .then(response => response.json()) // Lire le JSON
+            .then(data => {
+                if (data.status === "success") {
+                    window.location.href = "/kenko-ho";
+                } else {
+                    messageErreur.style.display = "block";
+                }
+            })
+            .catch(error => {
+                console.error("Erreur :", error);
                 messageErreur.style.display = "block";
-            }
-        });
+            });
     }
 
     window.checkAccess = checkAccess;

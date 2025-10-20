@@ -4,6 +4,7 @@ namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
+
 class Kernel extends HttpKernel
 {
     /**
@@ -43,7 +44,7 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
        // 'auth' => \App\Http\Middleware\Authenticate::class,
-        'kenko.access' => \App\Http\Middleware\CheckKenkoAccess::class, // ton middleware perso
+        'kenko.access' => \App\Http\Middleware\CheckKenkoAccess::class,
         // ... ajoute d'autres middleware ici si nécessaire
     ];
 }

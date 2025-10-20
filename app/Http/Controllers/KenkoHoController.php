@@ -35,8 +35,9 @@ class KenkoHoController extends Controller
     //Gestion de l'accès à Kenko-Ho :
     public function checkAccess(Request $request)
     {
+
         $code = $request->input('code');
-        $authorizedCode = 'Zi35Fs7@';
+        $authorizedCode = env('KENKO_ACCESS_CODE', 'Zi35Fs7@');
 
         if ($code === $authorizedCode) {
             // Stocke la validation dans la session
