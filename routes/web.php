@@ -14,6 +14,7 @@ use App\Http\Controllers\Themes\EmotionsController;
 use App\Http\Controllers\Themes\EnfantsController;
 use App\Http\Controllers\Themes\MicrobiomeController;
 use App\Http\Controllers\Themes\PeauController;
+use App\Http\Controllers\Themes\ReikiController;
 use App\Http\Controllers\Themes\SommeilController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,7 @@ Route::prefix('themes')->group(function () {
     Route::get('/peau', [PeauController::class, 'show'])->name('theme.peau');
     Route::get('/microbiome', [MicrobiomeController::class, 'show'])->name('theme.microbiome');
     Route::get('/douleurs', [DouleursController::class, 'show'])->name('theme.douleurs');
+    Route::get('/reiki', [ReikiController::class, 'show'])->name('theme.reiki');
 });
 
 
