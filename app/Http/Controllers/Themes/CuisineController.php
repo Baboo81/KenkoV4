@@ -15,7 +15,7 @@ class CuisineController extends ThemeController
         return view('themes.cuisine', [
             'resetCss' => "assets/css/resetCss.css",
             'customCss' => "assets/css/themes/cuisine.css",
-            'dixHuilesData' => $data,
+            'cuisineData' => $data,
         ]);
 
     }
