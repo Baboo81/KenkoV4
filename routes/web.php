@@ -22,13 +22,19 @@ use Illuminate\Support\Facades\Route;
 //Routes principales :
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/kenko-web', [KenkoWebController::class, 'show'])->name('kenko-web');
-Route::get('/kenko-ho', [KenkoHoController::class, 'show'])->name('kenko-ho');
 Route::get('/qui-suis-je', [QuiSuisJeController::class, 'show'])->name('qui-suis-je');
 Route::get('/contact', [ContactController::class, 'show'])->name('contact');
 Route::get('/faq', [FaqController::class, 'show'])->name('faq');
 
-//Routes : pages thématiques :
-Route::prefix('themes')->group(function () {
+
+// Route POST pour vérifier le code d'accès Kenko-Ho (hors middleware)
+Route::post('/check-access', [KenkoHoController::class, 'checkAccess'])->name('check-access');
+
+//Routes : pages thématiques + Routes vers Kenko-ho et pages à thèmes protégées :
+Route::middleware(['kenko.access'])->group(function () {
+    Route::get('/kenko-ho', [KenkoHoController::class, 'show'])->name('kenko-ho');
+
+    Route::prefix('themes')->group(function () {
     Route::get('/dix-huiles', [DixHuilesController::class, 'show'])->name('themes.dix-huiles');
     Route::get('/cuisine', [CuisineController::class, 'show'])->name('themes.cuisine');
     Route::get('/emotions', [EmotionsController::class, 'show'])->name('theme.emotions');
@@ -39,6 +45,9 @@ Route::prefix('themes')->group(function () {
     Route::get('/douleurs', [DouleursController::class, 'show'])->name('theme.douleurs');
     Route::get('/reiki', [ReikiController::class, 'show'])->name('theme.reiki');
     Route::get('/bases', [BasesController::class, 'show'])->name('theme.bases');
+
+    });
+
 });
 
 

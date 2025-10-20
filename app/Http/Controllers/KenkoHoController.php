@@ -39,9 +39,12 @@ class KenkoHoController extends Controller
         $authorizedCode = 'Zi35Fs7@';
 
         if ($code === $authorizedCode) {
-            return response('success');
+            // Stocke la validation dans la session
+            $request->session()->put('kenko_access', true);
+
+            return response()->json(['status' => 'success']);
         } else {
-            return response('error', 403);
+            return response()->json(['status' => 'error'], 403);
         }
     }
 }
