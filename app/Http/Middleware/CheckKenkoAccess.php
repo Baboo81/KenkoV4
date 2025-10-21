@@ -13,8 +13,7 @@ class CheckKenkoAccess
      */
     public function handle(Request $request, Closure $next): Response
     {
-        dd('Middleware ok'); // <-- si tu vois ce message, le middleware est chargé
-            return $next($request);
+
         // Vérifie si la session "kenko_access" est active
         if (!$request->session()->has('kenko_access') || $request->session()->get('kenko_access') !== true) {
             // Si non, redirige vers la page de connexion Kenko-Ho (ou une autre selon ton projet)

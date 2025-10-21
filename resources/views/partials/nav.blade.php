@@ -49,7 +49,7 @@
                         <ul class="navbar-nav">
                             @unless (isset($_SESSION['user']))
                                 <li class="nav-item">
-                                    {{-- <a class="nav-link {{ $currentRoute == 'signup' ? 'active' : '' }}" href="{{ route('signup') }}">S'inscrire</a> --}}
+                                    <a class="nav-link {{ $currentRoute == 'signup' ? 'active' : '' }}" href="{{ route('signup') }}">S'inscrire</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link {{ $currentRoute == 'faq' ? 'active' : '' }}"
