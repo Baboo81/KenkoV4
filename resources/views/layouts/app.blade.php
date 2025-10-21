@@ -1,21 +1,24 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-    @include('partials.header') {{-- Ton header avec meta, CSS, etc. --}}
-    @yield('styles')           {{-- Pour ajouter du CSS spécifique à certaines pages --}}
-</head>
-<body class="font-sans antialiased">
-    {{-- Navigation --}}
-    <header>
-        @include('partials.navigation') {{-- On inclut ton nav adapté à Breeze --}}
-    </header>
+    <head>
+        @include('partials.header')
+        @yield('styles')
+    </head>
+    <body class="font-sans antialiased">
+        {{-- Navigation --}}
+        <header>
+            @include('partials.navigation')
+        </header>
 
-    {{-- Contenu principal --}}
-    <main>
-        @yield('content')
-    </main>
-
-    {{-- Scripts supplémentaires --}}
-    @yield('scripts')
-</body>
+        {{-- Contenu principal --}}
+        <main>
+            @yield('content')
+        </main>
+        {{-- Footer --}}
+        <footer>
+            @include('partials.footer')
+        </footer>
+        {{-- Scripts supplémentaires --}}
+        @yield('scripts')
+    </body>
 </html>

@@ -44,16 +44,16 @@ Route::post('/testimonials', [TestimonialsController::class, 'store'])->name('te
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/kenko-ho', [KenkoHoController::class, 'show'])->name('kenko-ho');
-    Route::get('/dix-huiles', [DixHuilesController::class, 'show'])->name('theme.dix-huiles');
-    Route::get('/cuisine', [CuisineController::class, 'show'])->name('theme.cuisine');
-    Route::get('/bases', [BasesController::class, 'show'])->name('theme.bases');
-    Route::get('/douleurs', [DouleursController::class, 'show'])->name('theme.douleurs');
-    Route::get('/emotions', [EmotionsController::class, 'show'])->name('theme.emotions');
-    Route::get('/enfants', [EnfantsController::class, 'show'])->name('theme.enfants');
-    Route::get('/microbiome', [MicrobiomeController::class, 'show'])->name('theme.microbiome');
-    Route::get('/peau', [PeauController::class, 'show'])->name('theme.peau');
-    Route::get('/reiki', [ReikiController::class, 'show'])->name('theme.reiki');
-    Route::get('/sommeil', [SommeilController::class, 'show'])->name('theme.sommeil');
+    Route::get('/themes/dix-huiles', [DixHuilesController::class, 'show'])->name('theme.dix-huiles');
+    Route::get('/themes/cuisine', [CuisineController::class, 'show'])->name('theme.cuisine');
+    Route::get('/themes/bases', [BasesController::class, 'show'])->name('theme.bases');
+    Route::get('/themes/douleurs', [DouleursController::class, 'show'])->name('theme.douleurs');
+    Route::get('/themes/emotions', [EmotionsController::class, 'show'])->name('theme.emotions');
+    Route::get('/themes/enfants', [EnfantsController::class, 'show'])->name('theme.enfants');
+    Route::get('/themes/microbiome', [MicrobiomeController::class, 'show'])->name('theme.microbiome');
+    Route::get('/themes/peau', [PeauController::class, 'show'])->name('theme.peau');
+    Route::get('/themes/reiki', [ReikiController::class, 'show'])->name('theme.reiki');
+    Route::get('/themes/sommeil', [SommeilController::class, 'show'])->name('theme.sommeil');
 });
 
 
