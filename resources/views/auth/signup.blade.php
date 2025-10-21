@@ -19,7 +19,7 @@
                                     <label for="username" class="form-label mb-3">Nom d'utilisateur :</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-person"></i></span>
-                                        <input type="text" class="form-control" id="username" name="username"
+                                        <input type="text" class="form-control" id="username" name="name"
                                             autocomplete="off" placeholder="Veuillez indiquer votre nom" required>
                                     </div>
                                     @error('name')
