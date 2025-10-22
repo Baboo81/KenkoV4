@@ -40,15 +40,15 @@
                         {{ $kenkoWebData['purposes']['main_Title'] ?? '' }}
                     </h1>
                 </div>
-                <div class="d-flex pictoBloc">
+                <div class="d-flex pictoBlocWeb">
                     @foreach(['article1', 'article2', 'article3'] as $tempPurposes)
                         @php $articles = $kenkoWebData['purposes'][$tempPurposes] @endphp
                         <article class="col-xl-4 col-xxl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
                             <img src="{{ asset($articles['img']) ?? '' }} " class="img-fluid" alt="Pictos représentant les différentes propositions du suivi">
-                            <h4>
+                            <h4 class="mb-5">
                                 {{ $articles['sub_Title'] ?? '' }}
                             </h4>
-                            <p>
+                            <p class="text-muted">
                                 {{ $articles['txt'] ?? '' }}
                             </p>
                         </article>
@@ -69,7 +69,7 @@
                     </h1>
                 </div>
                 @foreach($kenkoWebData['offers']['cards'] as $index => $offer)
-                <div class="col-xl-4 col-xxl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-xl-4 col-xxl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-5">
                     <div class="card rounded-4">
                         <img src="{{ asset($offer['img']) ?? '' }}" class="card-img-top rounded-top-4" alt="{{ $offer['alt'] }}">
                         <div class="card-body d-flex flex-column text-center">
@@ -125,7 +125,7 @@
                         @endphp
                         <article class="text-center">
                             <img src="{{ asset($article['img']) ?? '' }}" class="pictoAtouts" alt="{{ $article['text'] }}">
-                            <p class="p-1">
+                            <p class="text-muted p-1">
                                 {{  $article['text'] ?? '' }}
                             </p>
                         </article>
@@ -172,7 +172,7 @@
                         {{ $kenkoWebData['maintenance']['main_Title'] ?? '' }}
                     </h1>
                 </div>
-                <div class="box rounded-5 p-5 d-flex align-center justify-items-center">
+                <div class="boxWeb rounded-5 p-5 d-flex align-center justify-items-center">
                     <div class="col-md-6 d-flex align-items-center justify-content-center">
                         <img
                             src="{{ $kenkoWebData['maintenance']['img'] }}"
@@ -213,7 +213,7 @@
                 <section class="hosting">
                     <div class="container">
                         <div class="row">
-                            <div class="box rounded-5 p-5 d-flex align-center justify-items-center">
+                            <div class="boxWeb rounded-5 p-5 d-flex align-center justify-items-center">
                                 {{-- Bloc gauche : texte --}}
                                 <div class="col-md-6">
                                     <article class="fontWhite">

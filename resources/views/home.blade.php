@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mainContent">
-                    <h1 class="mainTitle"></h1>
+                    <h1 class="mainTitleHome"></h1>
                         <span class="secondTitle text-nowrap">
                             {{ $homeData['home'] }}
                         </span>

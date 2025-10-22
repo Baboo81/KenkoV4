@@ -211,13 +211,25 @@ h1.mainTitleHero:after
     padding: 200px 0;
 }
 
-.pictoBloc img
+.pictoBlocWeb h4
 {
-    transition: transform 0.3s ease, filter 0.3 ease;
-    /*filter: grayscale(100%) brightness(0.7);*/
+    font-weight: bolder;
+    font-size: 1.8rem;
+    color: var(--grisF);
 }
 
-.pictoBloc img:hover
+.pictoBlocWeb p
+{
+    font-size: 1.3rem;
+}
+
+.pictoBlocWeb img
+{
+    transition: transform 0.3s ease, filter 0.3 ease;
+    filter: grayscale(100%) brightness(0.7);
+}
+
+.pictoBlocWeb img:hover
 {
     transform: scale(1.1);
     filter: grayscale(0%) brightness(1);
@@ -296,9 +308,14 @@ h1.mainTitleHero:after
 /* Section : Sikills */
 .skills
 {
-    min-height: 100vh;
+    min-height: 50vh;
     background-color: #fff;
     padding: 200px 0;
+}
+
+.skillsContent p
+{
+    font-size: 1.3rem;
 }
 
 .blocAtouts
@@ -308,7 +325,7 @@ h1.mainTitleHero:after
 
 .pictoAtouts
 {
-   max-height: 4em;
+   max-height: 6em;
 }
 
 .pictoAtoutsPerso
@@ -392,11 +409,12 @@ section .atoutsContent
 {
     min-height: 100vh;
     background-color: #fff;
+    padding: 100px 0;
 }
 
-.box
+.boxWeb
 {
-    background-color: var(--beige);
+    background-color: var(--brun);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
@@ -411,7 +429,7 @@ article li
 {
     min-height: 100vh;
     background-color: #fff;
-    padding: 200px 0;
+    padding: 00px 0;
 }
 /* Section : Hébergement END*/
 

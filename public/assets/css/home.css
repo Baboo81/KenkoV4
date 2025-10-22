@@ -111,20 +111,20 @@ main .home
 }
 
 /* Animation mainTitle */
-.home .mainTitle
+.home .mainTitleHome
 {
     font-size: clamp(4rem, 12vw + 2rem, 10rem) !important;
     letter-spacing: .8rem;
 }
 
-h1.mainTitle:after
+h1.mainTitleHome:after
 {
     content: "";
-    animation: reveal 1.5s linear 1;
+    animation: revealHome 1.5s linear 1;
     animation-fill-mode: forwards;
 }
 
-@keyframes reveal
+@keyframes revealHome
 {
     0%
     {
