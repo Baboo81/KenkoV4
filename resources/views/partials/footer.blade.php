@@ -1,55 +1,49 @@
 <!-- SVG WAVE -->
-<svg class="waveFooter" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true" role="img">
+<svg class="waveFooter" viewBox="0 0 1440 120" preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
     <path d="M0,32 C200,120 400,0 720,48 C1040,96 1240,0 1440,48 L1440 120 L0 120 Z" fill="#f1efe9"></path>
 </svg>
 
-<footer class="text-center text-lg-start fontBlack py-5">
-            <section class="">
-              <div class="container text-center text-md-start mt-5" id="containerFooter">
-                <div class="row mt-3">
-                  <div class="col-md-12 col-xs-12 text-center mb-4">
-                    <p class="text-uppercase text-center fontWhite fw-bold fs-2 spaceLetter mb-5">
-                      <i class="fas fa-gem me-3"></i>Adresse
-                    </p>
-                    <p class="fontWhite fs-4 my-5">
-                        Rue Champ Rodange 14, Waterloo 1410
-                    </p>
-                   <!-- <div id="mapid" class="container-fluid rounded-5 my-3"></div>-->
-                  </div>
-                  <div class="col-md-12 col-xs-12 text-center mb-5">
-                    <p class="text-uppercase text-center fontWhite fw-bold spaceLetter fs-2 mb-5">
-                      Horaires
-                    </p>
-                    <div class="text-center fontWhite fs-4">
-                        <p class="mb-3">Du lundi au vendredi  de  09h00 à 17h00</p>
-                    </div>
-                  </div>
-                  <div class="col-md-12 col-xs-12 text-center mb-4">
-                        <p class="text-uppercase fontWhite fw-bold fs-2 spaceLetter mb-5">
-                            Réseaux Sociaux
-                        </p>
-                        <div class="text-center">
-                            <a href="https://www.linkedin.com/in/chris-rodriguez-perez-609716100/"><img class="icons" src="/assets/img/icons/linkedin.svg" alt="Icône Instagram"></a>
-                        </div>
-                  </div>
-                  <div class="col-md-12 col-xs-12 text-center mb-4">
-                    <p class="text-uppercase fontWhite fw-bold fs-2 spaceLetter mb-5">Coordonnées</p>
-                    <div class="">
-                        <p class="text-center fontWhite fs-3">Envoyez-moi un mail en cliquant ci-dessous</p>
-                        <a href="mailto:chrisrodriguez@hotmail.be"><img class="icons" src="/assets/img/icons/email.svg" alt="Icône email"></a>
-                    </div>
-                    <p class="text-center fontWhite fs-3">0470/35.05.87</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-                <div class="text-center fontWhite fw-bolder mt-5">
-                    <p>&copy; Kenko - 2025</p>
-                </div>
-          </footer>
-            <script>
-              lucide.createIcons();
-            </script>
-    </body>
-</html>
+<footer class="footer text-center text-lg-start py-5">
+    <div class="container py-5">
+        <div class="row gy-5">
+            <!-- Adresse -->
+            <div class="col-lg-4 col-md-12 text-center">
+                <h2 class="footer-title">
+                    <i class="fas fa-location-dot me-2"></i>Adresse
+                </h2>
+                <p class="footer-text">Rue Champ Rodange 14, Waterloo 1410</p>
+                <div id="mapid" class="rounded-5 my-3"></div>
+            </div>
+
+            <!-- Horaires -->
+            <div class="col-lg-4 col-md-12 text-center">
+                <h2 class="footer-title">
+                    <i class="fas fa-calendar-days me-2"></i>Horaires
+                </h2>
+                <p class="footer-text mb-3">Du lundi au vendredi</p>
+                <p class="footer-text">09h00 à 17h00</p>
+            </div>
+
+            <!-- Coordonnées -->
+            <div class="col-lg-4 col-md-12 text-center">
+                <h2 class="footer-title">
+                    <i class="fas fa-comment-dots me-2"></i>Coordonnées
+                </h2>
+                <p class="footer-text mb-3">Envoyez-moi un mail en cliquant sur l'envoleppe ci-dessous :</p>
+                <a href="mailto:info@kenko-web.be" class="footer-icon-link">
+                    <img class="footer-icon" src="/assets/img/footer/email.svg" alt="Icône email">
+                </a>
+                <p class="footer-text mt-3">0470 / 35.05.87</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; Kenko-web - 2025</p>
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+</script>

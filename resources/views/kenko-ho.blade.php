@@ -13,11 +13,8 @@
     <section class="heroHo">
         <div class="heroHo-content d-flex justify-content-end">
             <article class="text-center">
-                <div class="logoContainer">
-                    <img src="./assets/img/logo/logoAnimate.svg" alt="Logo animé" id="logoAnimation">
-                </div>
-                <h1 class="mainTitleHero text-muted">
-                    {{ $kenkoHoData['hero']['main_Title'] ?? '' }}
+                <h1 class="mainTitleHeroHo text-muted">
+
                 </h1>
                 <p class="subTitle text-muted">
                     {{ $kenkoHoData['hero']['sub_Title'] ?? '' }}
@@ -30,7 +27,7 @@
     <!-- SVG WAVE -->
     <svg class="waveKenkoHo" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true" role="img">
-        <path d="M0,32 C200,120 400,0 720,48 C1040,96 1240,0 1440,48 L1440 120 L0 120 Z" fill="#f1efe9"></path>
+        <path d="M0,32 C200,120 400,0 720,48 C1040,96 1240,0 1440,48 L1440 120 L0 120 Z" fill="#e3c7af"></path>
     </svg>
 
     {{-- Section : Présentation --}}
@@ -203,7 +200,7 @@
                         @csrf
                         <div class="col-md-12 d-flex align-items-center justify-content-center">
                             <img src="{{ asset('assets/img/form/commentsBox.svg') }}" alt="Illustration commentsBox"
-                                class="img-fluid w-100" style="object-fit:cover;">
+                                class="img-fluid">
                         </div>
                         <div class="col-md-12">
                             <div class="my-4">

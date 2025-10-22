@@ -96,11 +96,71 @@ button:hover
     top: -100px;
 }
 
-.mainTitleHero
+.mainTitleHeroHo
 {
-    font-size: 5rem;
-    letter-spacing: 0.9rem;
+    font-size: clamp(2rem, 6vw + 1rem, 5rem) !important;
+    letter-spacing: .8rem;
     margin-bottom: 1rem;
+}
+
+h1.mainTitleHeroHo:after
+{
+    content: "";
+    animation: revealHo 2s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes revealHo
+{
+    0%
+    {
+        content: "K";
+    }
+
+    10%
+    {
+        content: "KE";
+    }
+
+    20%
+    {
+        content: "KEN";
+    }
+
+    30%
+    {
+        content: "KENK";
+    }
+
+    40%
+    {
+        content: "KENKO";
+    }
+
+    50%
+    {
+        content: "KENKO-";
+    }
+
+    60%
+    {
+        content: "KENKO-H";
+    }
+
+    70%
+    {
+        content: "KENKO-HO";
+    }
+
+    80%
+    {
+        content: "KENKO-HO";
+    }
+
+    100%
+    {
+        content: "KENKO-HO";
+    }
 }
 
 .subTitle
@@ -140,8 +200,9 @@ button:hover
 {
   display:block;
   width:100%;
-  height:80px; /* adapter la hauteur si besoin */
-  margin-top:-1px; /* pour éviter un petit trait blanc en bas */
+  height:80px;
+  margin-top:-1px;
+  transform: scaleY(-1);
 }
 
 /* Section : Présentation */
