@@ -76,7 +76,7 @@ button:hover
     width: 100%;
     min-height: 100vh;
     background-image: url('../img/home/KenkoWeb_banner.svg');
-    background-size: cover;
+    background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
     padding: 0% 5%;
@@ -95,9 +95,69 @@ button:hover
 
 .mainTitleHero
 {
-    font-size: 5rem;
-    letter-spacing: 0.9rem;
+    font-size: clamp(2rem, 6vw + 1rem, 5rem) !important;
+    letter-spacing: .8rem;
     margin-bottom: 1rem;
+}
+
+h1.mainTitleHero:after
+{
+    content: "";
+    animation: reveal 2s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes reveal
+{
+    0%
+    {
+        content: "K";
+    }
+
+    10%
+    {
+        content: "KE";
+    }
+
+    20%
+    {
+        content: "KEN";
+    }
+
+    30%
+    {
+        content: "KENK";
+    }
+
+    40%
+    {
+        content: "KENKO";
+    }
+
+    50%
+    {
+        content: "KENKO-";
+    }
+
+    60%
+    {
+        content: "KENKO-W";
+    }
+
+    70%
+    {
+        content: "KENKO-WE";
+    }
+
+    80%
+    {
+        content: "KENKO-WEB";
+    }
+
+    100%
+    {
+        content: "KENKO-WEB";
+    }
 }
 
 .subTitle
@@ -149,6 +209,19 @@ button:hover
     min-height: 100vh;
     background-color: #fff;
     padding: 200px 0;
+}
+
+.pictoBloc img
+{
+    transition: transform 0.3s ease, filter 0.3 ease;
+    /*filter: grayscale(100%) brightness(0.7);*/
+}
+
+.pictoBloc img:hover
+{
+    transform: scale(1.1);
+    filter: grayscale(0%) brightness(1);
+    color: var(--brun) !important;
 }
 /* Section : Purposes END*/
 

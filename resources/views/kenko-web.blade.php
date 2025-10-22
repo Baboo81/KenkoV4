@@ -14,7 +14,7 @@
         <div class="hero-content">
             <article class="text-center">
                 <h1 class="mainTitleHero text-muted">
-                    {{ $kenkoWebData['hero']['main_Title'] ?? '' }}
+
                 </h1>
                 <p class="subTitle text-muted">
                     {{ $kenkoWebData['hero']['sub_Title'] ?? ''}}
@@ -40,18 +40,20 @@
                         {{ $kenkoWebData['purposes']['main_Title'] ?? '' }}
                     </h1>
                 </div>
-                @foreach(['article1', 'article2', 'article3'] as $tempPurposes)
-                    @php $articles = $kenkoWebData['purposes'][$tempPurposes] @endphp
-                    <article class="col-xl-4 col-xxl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
-                        <img src="{{ asset($articles['img']) ?? '' }} " alt="Pictos représentant les différentes propositions du suivi">
-                        <h4>
-                            {{ $articles['sub_Title'] ?? '' }}
-                        </h4>
-                        <p>
-                            {{ $articles['txt'] ?? '' }}
-                        </p>
-                    </article>
-                @endforeach
+                <div class="d-flex pictoBloc">
+                    @foreach(['article1', 'article2', 'article3'] as $tempPurposes)
+                        @php $articles = $kenkoWebData['purposes'][$tempPurposes] @endphp
+                        <article class="col-xl-4 col-xxl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
+                            <img src="{{ asset($articles['img']) ?? '' }} " class="img-fluid" alt="Pictos représentant les différentes propositions du suivi">
+                            <h4>
+                                {{ $articles['sub_Title'] ?? '' }}
+                            </h4>
+                            <p>
+                                {{ $articles['txt'] ?? '' }}
+                            </p>
+                        </article>
+                    @endforeach
+                </div>
             </div>
         </div>
     </section>
