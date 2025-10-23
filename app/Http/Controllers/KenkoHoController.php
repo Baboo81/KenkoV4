@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Testimonial;
 
 class KenkoHoController extends Controller
 {
@@ -22,6 +23,16 @@ class KenkoHoController extends Controller
     {
         //Inclusion des datas :
         $data = $this->loadPageData('kenkoHo');
+
+        //Récupération des témoignages depuis la DB :
+        $testimonialsFromDB = Testimonial::latest()->get(['name', 'comment', 'rating'])->toArray();
+
+        //Fusionner les témoignages :
+        $data['testimonials'] = array_merge(
+            $data['testimonials'] ?? [],
+            $testimonialsFromDB
+        );
+
 
         //Passer les paramètres, inclure les fichiers CSS :
         return view('kenko-ho', [

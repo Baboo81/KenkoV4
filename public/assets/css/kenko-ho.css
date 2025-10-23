@@ -527,4 +527,23 @@ input::placeholder
     font-weight: bold;
     margin-top: 10px;
 }
+
+.custom-control {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.custom-control:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+
 /* Section : Témoignages END*/

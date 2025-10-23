@@ -43,7 +43,7 @@
                                 <a class="nav-link {{ $currentRoute == 'contact' ? 'active' : '' }}"
                                     href="{{ route('contact') }}">Contact</a>
                             </li>
-                             <li class="nav-item">
+                            <li class="nav-item">
                                 <a class="nav-link {{ $currentRoute == 'faq' ? 'active' : '' }}"
                                     href="{{ route('faq') }}">FAQ</a>
                             </li>
@@ -51,18 +51,11 @@
 
                         <!-- Menu utilisateur -->
                         <ul class="navbar-nav">
-                            @guest
-                                <li class="nav-item">
-                                    <a class="nav-link {{ $currentRoute == 'signup.show' ? 'active' : '' }}" href="{{ route('signup.show') }}">S'inscrire</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link {{ $currentRoute == 'login' ? 'active' : '' }}" href="{{ route('login') }}">Se connecter</a>
-                                </li>
-                            @else
+                            @auth
                                 <li class="nav-item dropdown">
                                     <a href="#" id="userMenu" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
-                                        <img src="/assets/img/icons/user-icon.svg" alt="Img user" class="rounded-circle"
+                                        <img src="/assets/img/nav/user-icon.svg" alt="Img user" class="rounded-circle"
                                             width="50">
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="userMenu">
@@ -84,6 +77,17 @@
                                             <i class="bi bi-person-circle"></i> {{ Auth::user()->name }}
                                         </li>
                                     </ul>
+                                </li>
+                            @endauth
+
+                            @guest
+                                <li class="nav-item">
+                                    <a class="nav-link {{ $currentRoute == 'signup.show' ? 'active' : '' }}"
+                                        href="{{ route('signup.show') }}">S'inscrire</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link {{ $currentRoute == 'login' ? 'active' : '' }}"
+                                        href="{{ route('login') }}">Se connecter</a>
                                 </li>
                             @endguest
                         </ul>
@@ -152,7 +156,7 @@
                 },
                 body: "code=" + encodeURIComponent(codeSaisi)
             })
-            .then(response => response.json()) // Lire le JSON
+            .then(response => response.json())
             .then(data => {
                 if (data.status === "success") {
                     window.location.href = "/kenko-ho";
