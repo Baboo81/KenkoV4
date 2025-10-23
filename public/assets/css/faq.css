@@ -20,6 +20,7 @@
     --violet : #bd8bca;
     --grisF : #8b9cb6;
     --gris : #bfc1c2;
+    --or : #FFFFF0;
     --beige : #f1efe9;
     --brun : #e3c7af;
     --noir : #282828;
@@ -38,6 +39,11 @@ html, body
 {
     color: var(--vert);
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.faq
+{
+    background-color: var(--or);
 }
 
 section .contactUs

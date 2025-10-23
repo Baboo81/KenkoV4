@@ -19,6 +19,7 @@
     --vert : #536964;
     --grisF : #8b9cb6;
     --gris : #bfc1c2;
+    --or : #FFFFF0;
     --beige : #f1efe9;
     --brun : #e3c7af;
     --noir : #282828;
@@ -28,7 +29,7 @@
 
 html, body
 {
-    background-color: var(--beige);
+    background-color: var(--or);
     width: 100% !important;
     overflow-x: hidden;
     font-family: "Dastin";
@@ -36,6 +37,11 @@ html, body
     min-width: 320px;
 }
 
+.contact
+{
+    min-height: 100vh;
+    background-color: var(--or);
+}
 
 form
 {

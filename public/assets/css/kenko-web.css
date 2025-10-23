@@ -27,7 +27,6 @@
 
 html, body
 {
-    background-color: var(--beige);
     width: 100% !important;
     overflow-x: hidden;
     font-family: "Dastin";
@@ -195,12 +194,14 @@ h1.mainTitleHero:after
 /* Section Hero END*/
 
 /* Wave */
-.wave
+.waveWeb
 {
   display:block;
+  position: relative;
   width:100%;
   height:80px;
-  margin-top:-1px;
+  top: 60px;
+  transform: scaleY(-1);
 }
 /* Wave END*/
 
@@ -208,7 +209,7 @@ h1.mainTitleHero:after
 .purposes
 {
     min-height: 100vh;
-    background-color: var(--or);
+    background-color: var(--beige);
     padding: 200px 0;
 }
 

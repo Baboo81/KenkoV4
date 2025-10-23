@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="mt-5 text-center">
+    <section class="mt-5 text-center faq">
         <div class="container">
             <div class="blob-container mx-auto mb-5">
                 <img src="/assets/img/FAQ/faq.svg" alt="Illustration de personnages absorbés par leurs écrans"
