@@ -1,6 +1,4 @@
-@extends('layouts.guest')
-
-@section('content')
+<x-guest-layout>
 <section class="mainSection">
     <div class="container">
         <div class="row justify-content-center align-items-center">
@@ -13,7 +11,7 @@
                         {{ session('status') }}
                     </div>
                 @endif
-
+                <x-auth-session-status class="mb-4" :status="session('status')" />
                 <form class="rounded-5 p-5 d-flex align-center justify-items-center"
                       method="POST"
                       action="{{ route('login') }}">
@@ -95,4 +93,4 @@
         </div>
     </div>
 </section>
-@endsection
+</x-guest-layout>

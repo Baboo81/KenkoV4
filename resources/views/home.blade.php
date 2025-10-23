@@ -13,6 +13,13 @@
     <section class="home">
         <div class="container">
             <div class="row">
+                <div class="col-md-6">
+                    @if($user)
+                        <p>Bienvenue, {{ $user->name }}</p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-6 mainContent">
                     <h1 class="mainTitleHome"></h1>
                         <span class="secondTitle text-nowrap">
