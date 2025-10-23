@@ -185,9 +185,9 @@
             </div>
 
             <!-- Form d'ajout d'avis -->
-            <div class="row mt-5">
+            <div class="row mt-5 headTestimonials">
                 <div class="col-md-8 mx-auto">
-                    <h3 class="text-center">Laissez votre avis</h3>
+                    <h3 class="text-center">Laissez votre avis ci-dessous</h3>
 
                     @if (!empty($message))
                         <div class="alert alert-{{ $message['type'] }} alert-dismissible fade show text-center"

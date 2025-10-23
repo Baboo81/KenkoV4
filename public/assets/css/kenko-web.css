@@ -18,6 +18,7 @@
 {
     --vert : #536964;
     --grisF : #8b9cb6;
+    --or : #FFFFF0;
     --gris : #bfc1c2;
     --beige : #f1efe9;
     --brun : #e3c7af;
@@ -207,7 +208,7 @@ h1.mainTitleHero:after
 .purposes
 {
     min-height: 100vh;
-    background-color: #fff;
+    background-color: var(--or);
     padding: 200px 0;
 }
 
@@ -240,7 +241,7 @@ h1.mainTitleHero:after
 .offers
 {
     min-height: 100vh;
-    background-color: #fff;
+    background-color: var(--or);
     padding: 100px 0;
 }
 
@@ -308,7 +309,7 @@ h1.mainTitleHero:after
 .skills
 {
     min-height: 50vh;
-    background-color: #fff;
+    background-color: var(--or);
     padding: 200px 0;
 }
 
@@ -343,7 +344,7 @@ section .atoutsContent
 .timeLine
 {
     min-height: 100vh;
-    background-color: #fff;
+    background-color: var(--or);
     padding: 100px 0;
 }
 
@@ -407,7 +408,7 @@ section .atoutsContent
 .maintenance
 {
     min-height: 100vh;
-    background-color: #fff;
+    background-color: var(--or);
     padding: 100px 0;
 }
 
@@ -427,7 +428,7 @@ article li
 .hosting
 {
     min-height: 100vh;
-    background-color: #fff;
+    background-color: var(--or);
     padding: 00px 0;
 }
 /* Section : Hébergement END*/
@@ -436,7 +437,7 @@ article li
 .trustSection
 {
     min-height: 100vh;
-    background-color: #fff;
+    background-color: var(--or);
 }
 
 section .trustBox

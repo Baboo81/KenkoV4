@@ -455,6 +455,13 @@ h1.mainTitleHeroHo:after
     background-color: var(--beige);
 }
 
+.headTestimonials h3
+{
+    font-size: 2rem;
+    color: var(--vert);
+    font-weight: bolder;
+}
+
 #testimonials
 {
     background-color: var(--grisF);
