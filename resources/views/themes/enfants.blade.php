@@ -3,14 +3,16 @@
 @section('content')
     <section class="enfants py-5">
         <div class="container">
-            <header class="text-center mb-5">
-                <h2 class="text-muted">{{ $enfantsData['title'] }}</h2>
-                <div class="line"><span></span></div>
-            </header>
+            <div class="text-center mb-5">
+                <div class="blocTitleEnfants my-5">
+                    <h2 class="text-muted">{{ $enfantsData['title'] }}</h2>
+                    <div class="line my-2"><span></span></div>
+                </div>
+            </div>
 
             <div class="box rounded-5 p-4 my-5">
                 <div class="row align-items-center">
-                    <article class="col-md-6">
+                    <article class="col-md-6 text-center">
                         @foreach ($enfantsData['intro'] as $paragraph)
                             <p class="text-muted">{{ $paragraph }}</p>
                         @endforeach

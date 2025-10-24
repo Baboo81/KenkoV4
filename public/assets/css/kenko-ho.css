@@ -43,8 +43,12 @@ html, body
     font-size: 1.5rem;
 }
 
-button
+/*.button
 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px !important;
   height: 50px;
   width: 250px;
   border: 1px solid var(--beige);
@@ -54,7 +58,7 @@ button
   cursor: pointer;
 }
 
-button:hover
+.button:hover
 {
   background-color: var(--brun);
   transition: 6300ms;
@@ -68,7 +72,7 @@ button:hover
         font-size: 14px;
         padding: 10px 20px;
     }
-}
+}*/
 
 /* Btn END */
 
@@ -226,35 +230,34 @@ h1.mainTitleHeroHo:after
     font-size: 2.5em;
 }
 
-.mainTitleContent
+.blocTitleCuisine
 {
-    position: relative;
+  position: relative;
+  display: inline-block;
 }
 
-.underLine
+.blocTitleHo
 {
-    justify-content: center;
+  position: relative;
+  display: inline-block;
 }
 
 .line
 {
-    position: relative;
-    width: 70%;
-    background: var(--vert);
-    height: 3px;
-    margin: auto;
-    margin-top: -1%;
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background: var(--vert);
+  margin: 10px auto 0;
 }
 
 .line span
 {
-    display: block;
-    width: 70%;
-    height: 4px;
-    background: var(--violet);
-    margin: auto;
-    position: relative;
-    bottom: 0.5px;
+  display: block;
+  width: 70%;
+  height: 4px;
+  background: var(--violet);
+  margin: auto;
 }
 
 .mainSection .doTERRA

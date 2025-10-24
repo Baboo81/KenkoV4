@@ -56,14 +56,12 @@
 
             {{-- Titre principal --}}
             <div class="row">
-                <div class="bloc1 my-5">
-                    <div class="mainTitleContent my-5">
-                        <h2 class="mainSectionTitle text-muted text-center p-5">
+                <div class="bloc1 text-center my-5">
+                    <div class="blocTitleHo my-5">
+                        <h2 class="text-muted text-center my-3">
                             {{ $kenkoHoData['presentation']['title'] ?? '' }}
                         </h2>
-                        <div class="underLine">
-                            <div class="line"><span></span></div>
-                        </div>
+                        <div class="line my-2"><span></span></div>
                     </div>
 
                     {{-- Texte + Image --}}
@@ -86,18 +84,18 @@
 
             {{-- Thématiques --}}
             <div class="row">
-                <div class="mainTitleContent mb-5">
-                    <h2 class="mainSectionTitle text-muted text-center p-5">
+                <div class="blocTitleHo my-5">
+                    <h2 class="text-muted text-center my-3">
                         {{ $kenkoHoData['presentation']['themes_title'] ?? '' }}
                     </h2>
-                    <div class="line"><span></span></div>
+                    <div class="line my-2"><span></span></div>
                 </div>
 
-                <section class="my-5 btnBloc">
+                <section class="my-5">
                     <div class="row justify-content-center g-3">
                         @foreach ($kenkoHoData['presentation']['themes'] as $index => $theme)
                             <div class="col-6 col-md-2 d-flex justify-content-center">
-                                <a href="{{ $theme['url'] }}"  class="button text-center d-inline-block p-2">
+                                <a href="{{ $theme['url'] }}"  class="button text-center">
                                     {{ $theme['label'] }}
                                 </a>
                             </div>
