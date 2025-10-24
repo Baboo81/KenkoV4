@@ -26,7 +26,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
         <!-- css global -->
-        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/kenko-web.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/kenko-ho.css') }}">
@@ -43,6 +42,8 @@
         <link rel="stylesheet" href="{{ asset('assets/css/themes/douleurs.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/themes/reiki.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/themes/bases.css') }}">
+        <!-- main css -->
+        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
         <!-- css nav -->
         <link rel="stylesheet" href="{{ asset('assets/css/nav.css') }}">
         <!-- css footer -->
