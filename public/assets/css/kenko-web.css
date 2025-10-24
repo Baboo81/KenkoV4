@@ -361,7 +361,7 @@ section .atoutsContent
     content: "";
     position: absolute;
     width: 4px;
-    background-color: var(--beige);
+    background-color: var(--grisF);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -391,7 +391,7 @@ section .atoutsContent
 
 .timeline-content
 {
-    background: var(--beige);
+    background: var(--grisF);
     padding: 15px;
     border-radius: 15px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -400,7 +400,7 @@ section .atoutsContent
 .timeline-content h4
 {
     margin-bottom: 5px;
-    color: var(--vert);
+    color: var(--beige);
     font-size: 1.6rem;
 }
 /* Section : Time Line END*/
