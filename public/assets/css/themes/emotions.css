@@ -46,28 +46,6 @@ html, body
     position: relative;
 }
 
-/*.line
-{
-    position: absolute;
-    width: 100%;
-    background: var(--vert);
-    height: 3px;
-    margin: auto;
-    margin-top: -1%;
-}
-
-.line span
-{
-    display: block;
-    width: 70%;
-    height: 4px;
-    background: var(--violet);
-    margin: auto;
-    position: relative;
-    bottom: 0.5px;
-}
-*/
-
 .blocTitleEmotions
 {
   position: relative;
@@ -115,20 +93,4 @@ html, body
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-button
-{
-    height: 50px;
-    width: 200px;
-    border: 1px solid var(--beige);
-    border-radius: 24px;
-    background-color: var(--vert);
-    color: var(--beige);
-}
-
-button:hover
-{
-    background-color: var(--brun);
-    transition: 6300ms;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
 
