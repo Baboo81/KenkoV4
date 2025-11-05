@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'La douleur & les huiles essentielles',
+    'title' => "La douleur & les huiles essentielles",
 
     'intro' => [
         'paragraphs' => [
@@ -11,17 +11,17 @@ return [
     ],
 
     'guide' => [
-        'title' => 'Guide des huiles essentielles pour gérer la douleur',
-        'description' => 'Téléchargez notre guide sur la douleur et les huiles essentielles.',
+        'title' => "Guide des huiles essentielles pour gérer la douleur",
+        'description' => "Téléchargez notre guide sur la douleur et les huiles essentielles.",
     ],
 
     'images' => [
-        'main' => '/../assets/img/kenkoHo/pageDouleurs/douleur.jpg',
-        'alt' => 'Image représentant une personne en souffrance',
+        'main' => "/../assets/img/kenkoHo/pageDouleurs/douleur.jpg",
+        'alt' => "Image représentant une personne en souffrance",
     ],
 
     'pdf' => [
-        'path' => '/../assets/doc/pageDouleurs/douleurs.pdf',
-        'filename' => 'La douleur et les HE',
+        'path' => "/../assets/doc/pageDouleurs/douleurs.pdf",
+        'filename' => "La douleur et les HE",
     ],
 ];

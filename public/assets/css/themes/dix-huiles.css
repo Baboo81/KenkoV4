@@ -76,6 +76,18 @@ html, body
 }
 /* Symboles: usages END */
 
+/* Légende */
+.legend small
+{
+    color: #555;
+    font-size: 0.9rem;
+}
+.legend span
+{
+    font-size: 0.9rem;
+    margin-right: 0.2rem;
+}
+/* Légende END*/
 
 .fontBeige
 {

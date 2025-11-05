@@ -4,9 +4,9 @@
 <section class="mainSection">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="mainTitleContent my-5">
-                    <h2 class="text-muted text-center mb-5">{{ $douleursData['title'] }}</h2>
+            <div class="text-center">
+                <div class="mainTitleContent blocTitleHo my-5">
+                    <h2 class="text-muted text-center mb-4">{{ $douleursData['title'] }}</h2>
                     <div class="line"><span></span></div>
                 </div>
             </div>
@@ -14,9 +14,9 @@
 
         <div class="row">
             <div class="col-md-12 my-5">
-                <div class="box rounded-5 p-4 my-5">
+                <div class="box rounded-5 p-5 my-5">
                     <div class="row">
-                        <article class="col-md-6">
+                        <article class="col-md-6 text-center">
                             @foreach ($douleursData['intro']['paragraphs'] as $paragraph)
                                 <p class="text-muted">{{ $paragraph }}</p>
                             @endforeach

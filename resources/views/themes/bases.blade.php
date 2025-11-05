@@ -5,9 +5,9 @@
         <div class="container">
             {{-- Titre principal --}}
             <div class="row">
-                <div class="col-md-12">
-                    <div class="mainTitleContent my-5">
-                        <h2 class="text-muted text-center mb-5">{{ $basesData['title'] }}</h2>
+                <div class="text-center">
+                    <div class="mainTitleContent blocTitleHo my-5">
+                        <h2 class="text-muted text-center mb-4">{{ $basesData['title'] }}</h2>
                         <div class="line"><span></span></div>
                     </div>
                 </div>
@@ -16,11 +16,11 @@
             {{-- Contenu principal --}}
             <div class="row">
                 <div class="col-md-12 my-5">
-                    <div class="box rounded-5 p-4 my-5">
+                    <div class="box rounded-5 p-5 my-5">
                         <div class="row">
                             {{-- Texte + liste --}}
                             <article class="col-md-6">
-                                <p class="text-muted">{{ $basesData['intro'] }}</p>
+                                <p class="text-muted text-center">{{ $basesData['intro'] }}</p>
                                 <ul class="mx-5">
                                     @foreach ($basesData['pillars'] as $pillar)
                                         <li class="my-3 fs-3 fontBeige">{{ $pillar }}</li>
@@ -30,7 +30,7 @@
                                 <div class="text-center my-4">
                                     <h3>{{ $basesData['guides_title'] }}</h3>
                                 </div>
-                                <p class="text-muted mb-3">{{ $basesData['guides_intro'] }}</p>
+                                <p class="text-muted text-center mb-3">{{ $basesData['guides_intro'] }}</p>
                             </article>
 
                             {{-- Image --}}

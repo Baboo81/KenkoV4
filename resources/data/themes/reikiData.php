@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Le Reiki & ses bienfaits',
+    'title' => "Le Reiki & ses bienfaits",
 
     'intro' => [
         'title' => "Qu'est-ce que le Reiki ?",
@@ -19,7 +19,7 @@ return [
     ],
 
     'history' => [
-        'title' => 'Histoire du Reiki',
+        'title' => "Histoire du Reiki",
         'paragraphs' => [
             "L'histoire du Reiki a commencé il y a près d'une centaine d'années au Japon grâce à Mikao Usui Sensei, né le 15 août 1865. Issu d'une famille de samouraïs, il a très tôt développé un intérêt pour l'utilisation des énergies et la spiritualité.",
             "Dès l'âge de huit ans, il pratique le Kiko (Qi Gong japonais) et développe des capacités énergétiques surprenantes. Il poursuit ses études tout en s'intéressant aux arts martiaux et à l'utilisation du Ki (énergie vitale).",
@@ -30,19 +30,19 @@ return [
     ],
 
     'session' => [
-        'title' => 'En quoi consiste une séance de soin ?',
+        'title' => "En quoi consiste une séance de soin ?",
         'paragraphs' => [
             "Le receveur s’installe confortablement sur une table de soin, en restant habillé. Le praticien passe ses mains à distance sur différentes zones du corps afin de rééquilibrer les structures énergétiques. Plusieurs séances rapprochées peuvent être nécessaires pour un résultat optimal.",
         ],
         'warning' => "Le Reiki ne se substitue en aucun cas à un traitement médical ou à un suivi professionnel si nécessaire.",
-        'price_title' => 'Tarifs',
-        'price' => '60,00 € / séance',
+        'price_title' => "Tarifs",
+        'price' => "60,00 € / séance",
     ],
 
     'images' => [
-        'intro' => '/../assets/img/kenkoHo/pageReiki/ReikiTitre.svg',
-        'alt_intro' => 'Image représentant une personne qui reçoit un soin Reiki',
-        'session' => '/../assets/img/kenkoHo/pageReiki/Reiki.jpg',
-        'alt_session' => 'Image représentant une personne recevant un soin Reiki',
+        "intro' => '/../assets/img/kenkoHo/pageReiki/ReikiTitre.svg",
+        "alt_intro' => 'Image représentant une personne qui reçoit un soin Reiki",
+        "session' => '/../assets/img/kenkoHo/pageReiki/Reiki.jpg",
+        "alt_session' => 'Image représentant une personne recevant un soin Reiki",
     ],
 ];

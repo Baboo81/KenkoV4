@@ -12,6 +12,19 @@
                 </div>
             </div>
             <div class="box rounded-5 p-5 my-5">
+                {{-- Légende --}}
+                <div class="legend d-flex align-items-center gap-3 flex-wrap my-3">
+                    <div class="d-flex align-items-center gap-1">
+                        <span class="circleI">I</span><small>Interne</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <span class="circleT">T</span><small>Topique</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <span class="circleA">D</span><small>Diffusion</small>
+                    </div>
+                </div>
+                {{-- Légende END--}}
                 @foreach ($dixHuilesData['huiles'] as $key => $huile)
                     <div
                         class="row d-flex align-items-center justify-content-center my-5

@@ -3,14 +3,15 @@
 @section('content')
     <section class="peau py-5">
         <div class="container">
-            <header class="text-center mb-5">
-                <h2 class="text-muted">{{ $peauData['title'] }}</h2>
-                <div class="line"><span></span></div>
-            </header>
-
-            <div class="box rounded-5 p-4 my-5 shadow-sm">
-                <div class="row align-items-center">
-                    <article class="col-md-6">
+            <div class="text-center">
+                <div class="mainTitleContent blocTitleHo mb-5">
+                    <h2 class="text-muted text-center mb-4">{{ $peauData['title'] }}</h2>
+                    <div class="line"><span></span></div>
+                </div>
+            </div>
+            <div class="box rounded-5 p-5 my-5 shadow-sm">
+                <div class="row justify-content-center align-items-center">
+                    <article class="col-md-6 text-center">
                         @foreach ($peauData['intro'] as $paragraph)
                             <p class="text-muted">{{ $paragraph }}</p>
                         @endforeach

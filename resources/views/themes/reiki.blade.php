@@ -5,9 +5,9 @@
         <div class="container">
             {{-- Titre principal --}}
             <div class="row">
-                <div class="col-md-12">
-                    <div class="mainTitleContent my-5">
-                        <h2 class="text-muted text-center mb-5">{{ $reikiData['title'] }}</h2>
+                <div class="text-center">
+                    <div class="mainTitleContent blocTitleHo my-5">
+                        <h2 class="text-muted text-center mb-4">{{ $reikiData['title'] }}</h2>
                         <div class="line"><span></span></div>
                     </div>
                 </div>
@@ -16,16 +16,18 @@
             {{-- Première partie : Qu'est-ce que le Reiki ? --}}
             <div class="row">
                 <div class="col-md-12 my-5">
-                    <div class="box rounded-5 p-4 my-5">
+                    <div class="box rounded-5 p-5 my-5">
                         <div class="row">
                             <article class="col-md-6">
                                 <h3 class="text-center my-4">{{ $reikiData['intro']['title'] }}</h3>
 
                                 @foreach ($reikiData['intro']['paragraphs'] as $paragraph)
-                                    <p class="text-muted mb-3">{{ $paragraph }}</p>
+                                <article class="my-3">
+                                    <p class="text-muted text-center mb-3">{{ $paragraph }}</p>
+                                </article>
                                 @endforeach
 
-                                <ul>
+                                <ul class="my-5">
                                     @foreach ($reikiData['intro']['precepts'] as $precept)
                                         <li class="my-2">{{ $precept }}</li>
                                     @endforeach
@@ -41,18 +43,18 @@
                             </article>
 
                             <div class="col-md-6">
-                                <img class="img-fluid rounded-4" src="{{ $reikiData['images']['intro'] }}"
+                                <img class="img-fluid rounded-0 shadow-none reikiImg" src="{{ $reikiData['images']['intro'] }}"
                                     alt="{{ $reikiData['images']['alt_intro'] }}">
                             </div>
                         </div>
 
                         {{-- Deuxième partie : Séance de soin --}}
                         <div class="row mt-5">
-                            <article class="col-md-6">
+                            <article class="col-md-6 text-center">
                                 <h3 class="text-center my-4">{{ $reikiData['session']['title'] }}</h3>
 
                                 @foreach ($reikiData['session']['paragraphs'] as $paragraph)
-                                    <p class="text-muted">{{ $paragraph }}</p>
+                                    <p class="text-muted text-center">{{ $paragraph }}</p>
                                 @endforeach
 
                                 <p class="fw-bold my-2">{{ $reikiData['session']['warning'] }}</p>

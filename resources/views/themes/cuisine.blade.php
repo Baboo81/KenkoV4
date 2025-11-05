@@ -10,14 +10,14 @@
                 </div>
             </div>
 
-            <div class="box rounded-5 text-center p-3 shadow-sm">
+            <div class="box rounded-5 text-center p-5 shadow-sm">
                 <div class="row align-items-center g-4 flex-column-reverse flex-md-row">
                     <article class="col-md-6 text-center">
                         @foreach ($cuisineData['intro']['paragraphs'] as $paragraph)
                             <p class="text-muted mb-4">{{ $paragraph }}</p>
                         @endforeach
 
-                        <div class="text-center text-md-start my-5">
+                        <div class="text-center my-5">
                             <h3 class="h4 fw-bold mb-3">{{ $cuisineData['guide']['title'] }}</h3>
                             <p class="text-muted mb-4">{{ $cuisineData['guide']['description'] }}</p>
                             <a href="{{ $cuisineData['guide']['pdf'] }}" download="{{ $cuisineData['guide']['pdf_name'] }}"

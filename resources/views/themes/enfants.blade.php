@@ -10,7 +10,7 @@
                 </div>
             </div>
 
-            <div class="box rounded-5 p-4 my-5">
+            <div class="box rounded-5 p-5 my-5">
                 <div class="row align-items-center">
                     <article class="col-md-6 text-center">
                         @foreach ($enfantsData['intro'] as $paragraph)
