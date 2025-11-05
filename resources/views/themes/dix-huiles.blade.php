@@ -13,7 +13,8 @@
             </div>
             <div class="box rounded-5 p-5 my-5">
                 @foreach ($dixHuilesData['huiles'] as $key => $huile)
-                    <div class="row d-flex align-items-center justify-content-center my-5
+                    <div
+                        class="row d-flex align-items-center justify-content-center my-5
             {{ $loop->iteration % 2 == 0 ? 'flex-column flex-md-row-reverse' : 'flex-column-reverse flex-md-row' }}">
 
                         {{-- Image --}}
@@ -40,16 +41,29 @@
                             @endisset
 
                             @isset($huile['usages'])
-                                <div class="text-start my-3">
-                                    <h4>
-                                        Usages :
-                                    </h4>
+                                <div class="text-start my-3 d-flex align-items-center gap-2">
+                                    <h4 class="mb-0">Usages :</h4>
+
+                                    {{-- Cercles à côté du titre --}}
+                                    @foreach ($huile['types'] as $type)
+                                        @php
+                                            $typeClass = match ($type) {
+                                                'I' => 'circleI',
+                                                'D' => 'circleA',
+                                                'T' => 'circleT',
+                                                default => 'circleA',
+                                            };
+                                        @endphp
+                                        <span class="{{ $typeClass }}">{{ $type }}</span>
+                                    @endforeach
                                 </div>
-                                @foreach ($huile['usages'] as $usage)
-                                    <p class="text-muted my-1 usages-p">
-                                        <i class="mx-3">&#8226;</i>{{ $usage }}
-                                    </p>
-                                @endforeach
+
+                                {{-- Liste des usages --}}
+                                <ul class="list-unstyled mt-2">
+                                    @foreach ($huile['usages'] as $usage)
+                                        <li class="text-muted my-1">{{ $usage }}</li>
+                                    @endforeach
+                                </ul>
                             @endisset
                         </article>
                     </div>

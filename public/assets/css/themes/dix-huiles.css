@@ -43,10 +43,10 @@ html, body
     height: 37px;
     line-height: 33px;
     text-align: center;
-    border: 1px solid orange;
+    border: 1px solid var(--grisF);
     border-radius: 50%;
     font-style: normal;
-    color: orange;
+    color: var(--grisF);
 }
 
 .circleT
@@ -56,10 +56,10 @@ html, body
     height: 37px;
     line-height: 33px;
     text-align: center;
-    border: 1px solid rgb(84, 212, 244);
+    border: 1px solid var(--vert);
     border-radius: 50%;
     font-style: normal;
-    color: rgb(84, 212, 244);
+    color: var(--vert);
 }
 
 .circleI
@@ -69,10 +69,10 @@ html, body
     height: 37px;
     line-height: 33px;
     text-align: center;
-    border: 1px solid rgb(44, 235, 130);
+    border: 1px solid var(--violet);
     border-radius: 50%;
     font-style: normal;
-    color:rgb(44, 235, 130);
+    color: var(--violet);
 }
 /* Symboles: usages END */
 
