@@ -154,8 +154,8 @@ h1.mainTitleHome:after
 /* mainSection */
 .mainSection .part1
 {
-    background-color: var(--grisF);
-    min-height: 1400px;
+    background-color: var(--or);
+    min-height: 100vh;
     background-image: url(../img/services/Kenko-Ho/bgKenkoHo.svg);
     background-size: cover;
     background-position: center;
@@ -165,7 +165,7 @@ h1.mainTitleHome:after
 .mainSection .part2
 {
     background-color: var(--gris);
-    min-height: 1400px;
+    min-height: 100vh;
     background-image: url(../img/services/Kenko-Web/pictos/bgKenkoWeb.svg);
     background-size: cover;
     background-position: center;

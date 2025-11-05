@@ -26,7 +26,7 @@ return [
             ['label' => "Le sommeil & les HE", 'url' => "/themes/sommeil"],
             ['label' => "La peau & les HE", 'url' => "/themes/peau"],
             ['label' => "La douleur & les HE", 'url' => "/themes/douleurs"],
-            ['label' => "Établir des bonnes bases", 'url' => "/themes/bases"],
+            ['label' => "Les nutriments", 'url' => "/themes/bases"],
         ],
         // 🪷 Bloc dōTERRA ajouté ici
         'doterra' => [
