@@ -84,11 +84,13 @@
 
             {{-- Thématiques --}}
             <div class="row">
-                <div class="blocTitleHo my-5">
-                    <h2 class="text-muted text-center my-3">
-                        {{ $kenkoHoData['presentation']['themes_title'] ?? '' }}
-                    </h2>
-                    <div class="line my-2"><span></span></div>
+                <div class="bloc1 text-center">
+                    <div class="blocTitleHo my-5">
+                        <h2 class="text-muted text-center my-3">
+                            {{ $kenkoHoData['presentation']['themes_title'] ?? '' }}
+                        </h2>
+                        <div class="line my-2"><span></span></div>
+                    </div>
                 </div>
 
                 <section class="my-5">
@@ -120,8 +122,8 @@
                     @foreach ($kenkoHoData['slider'] as $slide)
                         <div class="item {{ $slide['image_class'] }}">
                             <div class="content text-center">
-                                <div class="name {{ $slide['color_class'] }} my-5">{{ $slide['title'] }}</div>
-                                <div class="description {{ $slide['color_class'] }}">{{ $slide['description'] }}</div>
+                                <div class="name fontDastinSliderTitle my-5">{{ $slide['title'] }}</div>
+                                <div class="description fontDastinDesc">{{ $slide['description'] }}</div>
                             </div>
                         </div>
                     @endforeach
@@ -145,7 +147,17 @@
     {{-- Section : Slider END --}}
 
     {{-- Section : Témoignages --}}
-    <section class="my-5 commentsBox px-3 px-sm-5">
+    <div class="row">
+        <div class="bloc1 text-center my-5">
+            <div class="blocTitleHo my-5">
+                <h2 class="text-muted text-center my-3">
+                    {{ $kenkoHoData['testimonials_title'] ?? '' }}
+                </h2>
+                <div class="line my-2"><span></span></div>
+            </div>
+        </div>
+    </div>
+    <section class="commentsBox px-3 px-sm-5">
         <div class="container my-5" id="testimonials">
             <div class="row">
                 <div class="col-md-8 mx-auto">

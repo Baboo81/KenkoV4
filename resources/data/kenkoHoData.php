@@ -73,6 +73,7 @@ return [
             'color_class' => "fontWhite",
         ],
     ],
+    'testimonials_title' => "Votre avis compte !",
     'testimonials' => [
         [
             'name' => ",Julie L.",

@@ -74,7 +74,7 @@ if (next && prev) {
     setInterval(() => {
         let items = document.querySelectorAll('.item');
         document.querySelector('.slide').appendChild(items[0]);
-    }, 3000);
+    }, 8000);
 }
 
 // ----------------------------
