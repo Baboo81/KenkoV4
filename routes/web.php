@@ -21,6 +21,8 @@ use App\Http\Controllers\Themes\ReikiController;
 use App\Http\Controllers\Themes\SommeilController;
 use App\Http\Middleware\CheckKenkoAccess;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 
 // =======================
 // ROUTES PUBLIQUES / LANDING
@@ -76,5 +78,15 @@ Route::post('/check-access', [KenkoHoController::class, 'checkAccess'])->name('c
 
 Route::get('/signup', [SignupController::class, 'show'])->name('signup.show');
 Route::post('/signup', [SignupController::class, 'store'])->name('signup.store');
+
+// =======================
+// MP oublié :
+// =======================
+
+Route::get('/forgot-password', [ForgotPasswordController::class, 'show'])->name('password.request');
+Route::post('/forgot-password', [ForgotPasswordController::class, 'send'])->name('password.email');
+
+Route::get('/reset-password/{token}', [ResetPasswordController::class, 'show'])->name('password.reset');
+Route::post('/reset-password', [ResetPasswordController::class, 'update'])->name('password.update');
 
 require __DIR__.'/auth.php';

@@ -94,6 +94,82 @@ nav .dropdown-menu.show
     opacity: 1;
 }
 
+ /* Btn version mobile */
+ .navbar-toggler
+ {
+  outline: none;
+  background: var(--vert);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Effet au survol */
+.navbar-toggler:hover
+{
+  background: var(--grisF);
+  transform: scale(1.05);
+}
+
+/* Icône personnalisée : 3 barres  */
+.navbar-toggler-icon
+{
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--beige);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background-color: var(--beige);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before
+{
+  top: -7px;
+}
+
+.navbar-toggler-icon::after
+{
+  top: 7px;
+}
+
+/* Animation quand le menu est ouvert */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon
+{
+  background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before
+{
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after
+{
+  transform: rotate(-45deg);
+  top: 0;
+}
+  /* Btn version mobile END*/
+
 #logo
 {
     height: 3rem;
@@ -143,7 +219,7 @@ nav .dropdown-menu.show
 {
     .navbar-collapse
     {
-        background-color: var(--grisF);
+        background-color: var(--gris);
         padding: 10px;
         border-radius: 10px;
     }
