@@ -10,20 +10,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ----------------------------
-// Logo animation
+// Sticky navbar
 // ----------------------------
-let logo = document.getElementById('logoAnimation');
-let largeurEcran = window.innerWidth - 50;
-let hauteurEcran = window.innerHeight - 50;
+window.addEventListener('scroll', function() {
+    let scroll = window.scrollY;
+    const nav = document.querySelector('nav');
 
-if (logo) {
-    setInterval(() => {
-        const x = Math.random() * largeurEcran;
-        const y = Math.random() * hauteurEcran;
-        logo.style.left = x + 'px';
-        logo.style.top = y + 'px';
-    }, 3000);
-}
+    if (scroll > 200) {
+        nav.classList.add('sticky');
+    } else {
+        nav.classList.remove('sticky');
+    }
+});
 
 //---------------------------
 // Kenko-web : cards-popup
