@@ -2,25 +2,32 @@
     <section class="mainSection">
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <h1 class="text-center text-muted mb-5">Mot de passe oublié ?</h1>
 
-                <div class="col-md-8 my-5">
+                <div class="col-md-5 text-center mb-4 mb-md-0">
+                    <img src="{{ asset('assets/img/form/forgotPassword.svg') }}"
+                         alt="Illustration mot de passe oublié"
+                         class="img-fluid rounded-4 shadow-sm">
+                </div>
+
+                <div class="col-md-6">
                     @if (session('status'))
                         <div class="alert alert-success text-center mb-4">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    <form class="rounded-5 p-5" method="POST" action="{{ route('password.email') }}">
+                    <form class="rounded-5 p-5 bg-white" method="POST" action="{{ route('password.email') }}">
                         @csrf
 
                         <div class="mb-4">
-                            <label for="email" class="form-label mb-3">Adresse e-mail</label>
+                            <label for="email" class="form-label mb-3 fontDastin">Adresse e-mail</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                    id="email" name="email" placeholder="Entrez votre adresse e-mail"
-                                    value="{{ old('email') }}" required>
+                                <input type="email"
+                                       class="form-control @error('email') is-invalid @enderror"
+                                       id="email" name="email"
+                                       placeholder="Entrez votre adresse e-mail"
+                                       value="{{ old('email') }}" required>
                             </div>
                             @error('email')
                                 <div class="text-danger mt-2">{{ $message }}</div>
@@ -36,7 +43,9 @@
                         </div>
                     </form>
                 </div>
+
             </div>
         </div>
     </section>
 </x-guest-layout>
+

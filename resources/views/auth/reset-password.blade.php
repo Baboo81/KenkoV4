@@ -5,8 +5,9 @@
                 <h1 class="text-center text-muted mb-5">Réinitialiser le mot de passe</h1>
 
                 <div class="col-md-8 my-5">
-                    <form class="rounded-5 p-5" method="POST" action="{{ route('password.update') }}">
+                    <form class="rounded-5 p-5" method="POST" action="{{ route('password.store') }}">
                         @csrf
+
                         <input type="hidden" name="token" value="{{ $token }}">
 
                         <!-- Email -->
