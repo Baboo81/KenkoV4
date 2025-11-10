@@ -61,7 +61,8 @@
                                     <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="userMenu">
                                         <p class="fs-5 text-muted my-3 text-center">Compte utilisateur</p>
                                         <li>
-                                            <a class="dropdown-item" href="{{ route('profile.edit') }}">
+                                            <a class="dropdown-item {{ $currentRoute == 'settings.edit' ? 'active' : '' }}"
+                                                href="{{ route('settings.edit') }}">
                                                 <i class="bi bi-gear"></i>&nbsp;Paramètres
                                             </a>
                                         </li>

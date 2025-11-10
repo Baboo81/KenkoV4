@@ -23,6 +23,8 @@ use App\Http\Middleware\CheckKenkoAccess;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\SettingsController;
+
 
 // =======================
 // ROUTES PUBLIQUES / LANDING
@@ -59,14 +61,13 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
 Route::middleware([CheckKenkoAccess::class])->group(function () {
     Route::get('/kenko-ho', [KenkoHoController::class, 'show'])->name('kenko-ho');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/settings', [SettingsController::class, 'edit'])->name('settings.edit');
+    Route::post('/settings', [SettingsController::class, 'update'])->name('settings.update');
 });
 
 // Route : vérification du MP vers kenko-ho :
