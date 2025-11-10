@@ -99,9 +99,6 @@
                             <span class="input-group-text"><i class="bi bi-image"></i></span>
                             <input type="file" class="form-control" id="avatar" name="avatar">
                         </div>
-                        @if(auth()->user()->avatar)
-                            <img src="{{ asset(auth()->user()->avatar) }}" alt="Avatar" class="mt-3 rounded-circle" width="100">
-                        @endif
                     </div>
 
                     <!-- Bouton Sauvegarder -->

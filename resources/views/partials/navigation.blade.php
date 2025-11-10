@@ -55,8 +55,13 @@
                                 <li class="nav-item dropdown">
                                     <a href="#" id="userMenu" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
-                                        <img src="/assets/img/nav/user-icon.svg" alt="Img user" class="rounded-circle"
-                                            width="50">
+                                        @if (Auth::user()->avatar)
+                                            <img src="{{ asset(Auth::user()->avatar) }}" alt="Avatar"
+                                                class="avatar" width="50" style="object-fit: cover;">
+                                        @else
+                                            <img src="/assets/img/nav/user-icon.svg" alt="Img user" class="rounded-circle"
+                                                width="50">
+                                        @endif
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="userMenu">
                                         <p class="fs-5 text-muted my-3 text-center">Compte utilisateur</p>
