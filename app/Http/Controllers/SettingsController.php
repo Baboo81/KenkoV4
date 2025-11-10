@@ -36,11 +36,12 @@ class SettingsController extends Controller
 
         // Si un avatar est uploadé
         if ($request->hasFile('avatar')) {
-            // Supprime l'ancien avatar si existant
-            if ($user->avatar) {
-                Storage::delete($user->avatar);
+            // Supprime l'ancien avatar si existant et présent sur le disque
+            if ($user->avatar && Storage::disk('public')->exists(str_replace('/storage/', '', $user->avatar))) {
+                Storage::disk('public')->delete(str_replace('/storage/', '', $user->avatar));
             }
 
+            // Stocke le nouveau fichier
             $avatarPath = $request->file('avatar')->store('avatars', 'public');
             $user->avatar = '/storage/' . $avatarPath;
         }
