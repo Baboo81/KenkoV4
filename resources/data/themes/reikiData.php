@@ -40,9 +40,9 @@ return [
     ],
 
     'images' => [
-        "intro' => '/../assets/img/kenkoHo/pageReiki/ReikiTitre.svg",
-        "alt_intro' => 'Image représentant une personne qui reçoit un soin Reiki",
-        "session' => '/../assets/img/kenkoHo/pageReiki/Reiki.jpg",
-        "alt_session' => 'Image représentant une personne recevant un soin Reiki",
+        'intro' => "/../assets/img/kenkoHo/pageReiki/ReikiTitre.svg",
+        'alt_intro' => "Image représentant une personne qui reçoit un soin Reiki",
+        'session' => "/../assets/img/kenkoHo/pageReiki/Reiki.jpg",
+        'alt_session' => "Image représentant une personne recevant un soin Reiki",
     ],
 ];
