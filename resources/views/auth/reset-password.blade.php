@@ -5,8 +5,10 @@
                 <h1 class="text-center text-muted mb-5">Réinitialiser le mot de passe</h1>
 
                 <div class="col-md-8 my-5">
-                    <form class="rounded-5 p-5" method="POST" action="{{ route('password.store') }}">
+                    <form class="rounded-5 p-5" method="POST" action="{{ route('password.update') }}">
                         @csrf
+                        @method('PUT')
+
 
                         <input type="hidden" name="token" value="{{ $token }}">
 
@@ -15,7 +17,8 @@
                             <label for="email" class="form-label mb-3">Adresse e-mail</label>
                             <input type="email" id="email" name="email"
                                 class="form-control @error('email') is-invalid @enderror"
-                                placeholder="Votre adresse e-mail" value="{{ old('email') }}" required>
+                                placeholder="Votre adresse e-mail"
+                                value="{{ request()->query('email') ?? old('email') }}" required>
                             @error('email')
                                 <div class="text-danger mt-2">{{ $message }}</div>
                             @enderror

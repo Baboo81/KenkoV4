@@ -152,6 +152,15 @@
 </div>
 @endif
 
+@if(session('showKenkoModal'))
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var kenkoModal = new bootstrap.Modal(document.getElementById('kenkoHoModal'));
+    kenkoModal.show();
+});
+</script>
+@endif
+
 <script>
     function togglePassword() {
         let input = document.getElementById("accessCode");
