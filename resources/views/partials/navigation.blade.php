@@ -1,6 +1,7 @@
 @php
     use Illuminate\Support\Facades\Route;
     $currentRoute = Route::currentRouteName();
+    $kenkoAccess = session('kenko_access', false); // Vérifie si l'utilisateur a déjà accès
 @endphp
 
 <header>
@@ -24,28 +25,48 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item">
-                                <a class="nav-link {{ $currentRoute == 'home' ? 'active' : '' }}"
-                                    href="{{ route('home') }}">Accueil</a>
+                                <a class="nav-link {{ $currentRoute == 'home' ? 'active' : '' }}" href="{{ route('home') }}">
+                                    Accueil
+                                </a>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link {{ $currentRoute == 'kenko-ho' ? 'active' : '' }}" href="#"
-                                    data-bs-toggle="modal" data-bs-target="#kenkoHoModal">Kenko-Ho</a>
+                                @if($kenkoAccess)
+                                    <!-- Lien direct si accès validé -->
+                                    <a class="nav-link {{ $currentRoute == 'kenko-ho' ? 'active' : '' }}" href="{{ route('kenko-ho') }}">
+                                        Kenko-Ho
+                                    </a>
+                                @else
+                                    <!-- Sinon, ouvre la modal -->
+                                    <a class="nav-link {{ $currentRoute == 'kenko-ho' ? 'active' : '' }}" href="#"
+                                        data-bs-toggle="modal" data-bs-target="#kenkoHoModal">
+                                        Kenko-Ho
+                                    </a>
+                                @endif
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link {{ $currentRoute == 'kenko-web' ? 'active' : '' }}"
-                                    href="{{ route('kenko-web') }}">Kenko-Web</a>
+                                <a class="nav-link {{ $currentRoute == 'kenko-web' ? 'active' : '' }}" href="{{ route('kenko-web') }}">
+                                    Kenko-Web
+                                </a>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link {{ $currentRoute == 'qui-suis-je' ? 'active' : '' }}"
-                                    href="{{ route('qui-suis-je') }}">Qui suis-je ?</a>
+                                <a class="nav-link {{ $currentRoute == 'qui-suis-je' ? 'active' : '' }}" href="{{ route('qui-suis-je') }}">
+                                    Qui suis-je ?
+                                </a>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link {{ $currentRoute == 'contact' ? 'active' : '' }}"
-                                    href="{{ route('contact') }}">Contact</a>
+                                <a class="nav-link {{ $currentRoute == 'contact' ? 'active' : '' }}" href="{{ route('contact') }}">
+                                    Contact
+                                </a>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link {{ $currentRoute == 'faq' ? 'active' : '' }}"
-                                    href="{{ route('faq') }}">FAQ</a>
+                                <a class="nav-link {{ $currentRoute == 'faq' ? 'active' : '' }}" href="{{ route('faq') }}">
+                                    FAQ
+                                </a>
                             </li>
                         </ul>
 
@@ -53,21 +74,17 @@
                         <ul class="navbar-nav">
                             @auth
                                 <li class="nav-item dropdown">
-                                    <a href="#" id="userMenu" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
+                                    <a href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         @if (Auth::user()->avatar)
-                                            <img src="{{ asset(Auth::user()->avatar) }}" alt="Avatar"
-                                                class="avatar" width="50" style="object-fit: cover;">
+                                            <img src="{{ asset(Auth::user()->avatar) }}" alt="Avatar" class="avatar" width="50" style="object-fit: cover;">
                                         @else
-                                            <img src="/assets/img/nav/user-icon.svg" alt="Img user" class="rounded-circle"
-                                                width="50">
+                                            <img src="/assets/img/nav/user-icon.svg" alt="Img user" class="rounded-circle" width="50">
                                         @endif
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="userMenu">
                                         <p class="fs-5 text-muted my-3 text-center">Compte utilisateur</p>
                                         <li>
-                                            <a class="dropdown-item {{ $currentRoute == 'settings.edit' ? 'active' : '' }}"
-                                                href="{{ route('settings.edit') }}">
+                                            <a class="dropdown-item {{ $currentRoute == 'settings.edit' ? 'active' : '' }}" href="{{ route('settings.edit') }}">
                                                 <i class="bi bi-gear"></i>&nbsp;Paramètres
                                             </a>
                                         </li>
@@ -88,12 +105,14 @@
 
                             @guest
                                 <li class="nav-item">
-                                    <a class="nav-link {{ $currentRoute == 'signup.show' ? 'active' : '' }}"
-                                        href="{{ route('signup.show') }}">S'inscrire</a>
+                                    <a class="nav-link {{ $currentRoute == 'signup.show' ? 'active' : '' }}" href="{{ route('signup.show') }}">
+                                        S'inscrire
+                                    </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link {{ $currentRoute == 'login' ? 'active' : '' }}"
-                                        href="{{ route('login') }}">Se connecter</a>
+                                    <a class="nav-link {{ $currentRoute == 'login' ? 'active' : '' }}" href="{{ route('login') }}">
+                                        Se connecter
+                                    </a>
                                 </li>
                             @endguest
                         </ul>
@@ -105,6 +124,7 @@
 </header>
 
 <!-- Modale Kenko-Ho -->
+@if(!$kenkoAccess)
 <div class="modal fade" id="kenkoHoModal" tabindex="-1" aria-labelledby="kenkoHoModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -113,8 +133,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p class="text-muted">Espace réservé aux clients dōTERRA. Pour plus d’infos, contactez-moi via le
-                    formulaire de contact sur la page : contact ou par téléphone</p>
+                <p class="text-muted">Espace réservé aux clients dōTERRA. Pour plus d’infos, contactez-moi via le formulaire de contact ou par téléphone.</p>
                 <p class="text-muted">Si vous possédez un code d'accès, veuillez l'introduire ci-dessous :</p>
                 <div class="my-3">
                     <input type="password" id="accessCode" class="form-control" placeholder="Entrez le code ici">
@@ -131,9 +150,9 @@
         </div>
     </div>
 </div>
+@endif
 
 <script>
-    // Afficher/masquer le mot de passe
     function togglePassword() {
         let input = document.getElementById("accessCode");
         let eyeIcon = document.getElementById("eyeIcon");
@@ -149,31 +168,31 @@
         }
     }
 
-    // Vérifier le code avec PHP
     function checkAccess() {
         let codeSaisi = document.getElementById("accessCode").value;
         let messageErreur = document.getElementById("error-message");
 
         fetch("{{ route('check-access') }}", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content")
-                },
-                body: "code=" + encodeURIComponent(codeSaisi)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === "success") {
-                    window.location.href = "/kenko-ho";
-                } else {
-                    messageErreur.style.display = "block";
-                }
-            })
-            .catch(error => {
-                console.error("Erreur :", error);
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content")
+            },
+            body: "code=" + encodeURIComponent(codeSaisi),
+            credentials: "same-origin"
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "success") {
+                window.location.href = "{{ route('kenko-ho') }}";
+            } else {
                 messageErreur.style.display = "block";
-            });
+            }
+        })
+        .catch(error => {
+            console.error("Erreur :", error);
+            messageErreur.style.display = "block";
+        });
     }
 
     window.checkAccess = checkAccess;

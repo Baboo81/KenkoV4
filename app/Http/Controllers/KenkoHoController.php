@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Testimonial;
+use Illuminate\Support\Facades\Log;
 
 class KenkoHoController extends Controller
 {
@@ -54,9 +55,13 @@ class KenkoHoController extends Controller
             // Stocke la validation dans la session
             $request->session()->put('kenko_access', true);
 
+            //Debug
+            Log::info('Session après checkAccess : ', session()->all());
+
             return response()->json(['status' => 'success']);
         } else {
             return response()->json(['status' => 'error'], 403);
         }
+
     }
 }

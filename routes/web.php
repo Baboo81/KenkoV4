@@ -47,7 +47,6 @@ Route::post('/testimonials', [TestimonialsController::class, 'store'])->name('te
 // =======================
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/kenko-ho', [KenkoHoController::class, 'show'])->name('kenko-ho');
     Route::get('/themes/dix-huiles', [DixHuilesController::class, 'show'])->name('theme.dix-huiles');
     Route::get('/themes/cuisine', [CuisineController::class, 'show'])->name('theme.cuisine');
     Route::get('/themes/bases', [BasesController::class, 'show'])->name('theme.bases');
@@ -60,8 +59,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/themes/sommeil', [SommeilController::class, 'show'])->name('theme.sommeil');
 });
 
-
-Route::middleware([CheckKenkoAccess::class])->group(function () {
+Route::middleware(['auth', CheckKenkoAccess::class])->group(function () {
     Route::get('/kenko-ho', [KenkoHoController::class, 'show'])->name('kenko-ho');
 });
 
