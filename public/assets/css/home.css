@@ -82,65 +82,79 @@ h5
 }
 
 /* Section : Home */
-main .home
-{
+main .home {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 200px;
     text-align: center;
+    flex-direction: column;
+}
+
+/* Réduction du padding sur petits écrans */
+@media (max-width: 1200px) {
+    main .home {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    main .home {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    main .home {
+        padding: 0 20px;
+    }
+
+    .home .mainTitleHome {
+        font-size: 3rem !important;
+        letter-spacing: 0.4rem;
+    }
+
+    .home .secondTitle {
+        font-size: 1.5rem;
+        display: block;
+        white-space: normal; /* évite que le texte dépasse l’écran */
+    }
+}
+
+@media (max-width: 480px) {
+    .home .mainTitleHome {
+        font-size: 2.5rem !important;
+    }
+
+    .home .secondTitle {
+        font-size: 1.2rem;
+    }
 }
 
 /* Animation mainTitle */
-.home .mainTitleHome
-{
+.home .mainTitleHome {
     font-size: clamp(4rem, 12vw + 2rem, 10rem) !important;
     letter-spacing: .8rem;
 }
 
-h1.mainTitleHome:after
-{
+h1.mainTitleHome:after {
     content: "";
     animation: revealHome 1.5s linear 1;
     animation-fill-mode: forwards;
 }
 
-@keyframes revealHome
-{
-    0%
-    {
-        content: "K";
-    }
-
-    25%
-    {
-        content: "KE";
-    }
-
-    50%
-    {
-        content: "KEN";
-    }
-
-    75%
-    {
-        content: "KENK";
-    }
-
-    100%
-    {
-        content: "KENKO";
-    }
+@keyframes revealHome {
+    0% { content: "K"; }
+    25% { content: "KE"; }
+    50% { content: "KEN"; }
+    75% { content: "KENK"; }
+    100% { content: "KENKO"; }
 }
- /* END Animation mainTitle */
 
-.home .secondTitle
-{
+.home .secondTitle {
     font-size: clamp(1rem, 3vw + 1rem, 2.5rem);
 }
-
-
 /* END Home */
 
 .wave
