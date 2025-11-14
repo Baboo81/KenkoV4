@@ -179,34 +179,74 @@ h1.mainTitleHero:after
 /* Section : Purposes */
 .purposes
 {
-    min-height: 100vh;
     background-color: var(--beige);
-    padding: 200px 0;
+    padding: 250px 0;            /* plus équilibré */
 }
 
+/* Titres et textes */
 .pictoBlocWeb h4
 {
-    font-weight: bolder;
+    font-weight: 700;
     font-size: 1.8rem;
     color: var(--grisF);
 }
 
 .pictoBlocWeb p
 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
+/* Images */
 .pictoBlocWeb img
 {
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: grayscale(100%) brightness(0.7);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%) brightness(0.8);
+    max-width: 350px;
+    margin-bottom: 1rem;
 }
 
 .pictoBlocWeb img:hover
 {
-  transform: scale(1.1);
-  filter: sepia(80%) saturate(250%) hue-rotate(330deg) brightness(1.05);
+    transform: scale(1.1);
+    filter: sepia(80%) saturate(250%) hue-rotate(330deg) brightness(1.05);
 }
+
+/* ------------------- */
+/*     Responsive      */
+/* ------------------- */
+@media (max-width: 992px)
+{
+    .purposes
+    {
+        padding: 80px 0;
+    }
+    .pictoBlocWeb p
+    {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px)
+{
+    .purposes
+    {
+        padding: 60px 0;
+    }
+    .pictoBlocWeb img
+    {
+        max-width: 130px;
+    }
+    .pictoBlocWeb h4
+    {
+        font-size: 1.5rem;
+    }
+    .pictoBlocWeb p
+    {
+        font-size: 1rem;
+    }
+}
+
 /* Section : Purposes END*/
 
 /* Section : Purposes */

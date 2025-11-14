@@ -35,12 +35,12 @@
     <section class="purposes">
         <div class="containter">
             <div class="row">
-                <div class="my5">
+                <div class="my-5 p-3">
                     <h1 class="text-center titleH1">
                         {{ $kenkoWebData['purposes']['main_Title'] ?? '' }}
                     </h1>
                 </div>
-                <div class="d-flex pictoBlocWeb">
+                <div class="row pictoBlocWeb justify-content-center g-5">
                     @foreach(['article1', 'article2', 'article3'] as $tempPurposes)
                         @php $articles = $kenkoWebData['purposes'][$tempPurposes] @endphp
                         <article class="col-xl-4 col-xxl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
