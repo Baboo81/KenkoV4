@@ -47,18 +47,19 @@ html, body
     width: 100%;
     min-height: 100vh;
     background-image: url('../img/home/KenkoWeb_banner.svg');
-    background-size: 70%;
+    background-size: contain; /* meilleur scaling */
     background-position: center;
     background-repeat: no-repeat;
-    padding: 0% 5%;
+
+    padding: 0 5%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: hidden;
 }
 
 .hero-content
 {
+    position: absolute;
+    top: 19%;
+    right: 31%;
     max-width: 700px;
     color: #fff;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
@@ -80,55 +81,16 @@ h1.mainTitleHero:after
 
 @keyframes reveal
 {
-    0%
-    {
-        content: "K";
-    }
-
-    10%
-    {
-        content: "KE";
-    }
-
-    20%
-    {
-        content: "KEN";
-    }
-
-    30%
-    {
-        content: "KENK";
-    }
-
-    40%
-    {
-        content: "KENKO";
-    }
-
-    50%
-    {
-        content: "KENKO-";
-    }
-
-    60%
-    {
-        content: "KENKO-W";
-    }
-
-    70%
-    {
-        content: "KENKO-WE";
-    }
-
-    80%
-    {
-        content: "KENKO-WEB";
-    }
-
-    100%
-    {
-        content: "KENKO-WEB";
-    }
+     0%   { content: "K"; }
+    10%  { content: "KE"; }
+    20%  { content: "KEN"; }
+    30%  { content: "KENK"; }
+    40%  { content: "KENKO"; }
+    50%  { content: "KENKO-"; }
+    60%  { content: "KENKO-W"; }
+    70%  { content: "KENKO-WE"; }
+    80%  { content: "KENKO-WEB"; }
+    100% { content: "KENKO-WEB"; }
 }
 
 .subTitle
@@ -136,30 +98,57 @@ h1.mainTitleHero:after
     font-size: 2rem;
 }
 
-/* Responsive */
+/* ------------------- */
+/*     Responsive      */
+/* ------------------- */
+/* TABLETTES */
 @media (max-width: 992px)
 {
+
+    .hero
+    {
+        justify-content: center;
+        background-size: 90%; /* image plus visible */
+        padding-top: 80px;
+    }
+
     .mainTitleHero
     {
-        font-size: 3.5rem;
-        letter-spacing: 0.5rem;
+        font-size: 3rem;
+        letter-spacing: 0.4rem;
     }
+
     .subTitle
     {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
 
+/* MOBILES */
 @media (max-width: 576px)
 {
+
+    .hero
+    {
+        min-height: 100vh; /* évite un scroll inutile */
+        background-size: 120%;
+        padding-top: 40px;
+    }
+
+    .hero-content
+    {
+        max-width: 90%;
+    }
+
     .mainTitleHero
     {
-        font-size: 2.5rem;
-        letter-spacing: 0.3rem;
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
     }
+
     .subTitle
     {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
 /* Section Hero END*/
@@ -413,6 +402,50 @@ section .atoutsContent
     margin-bottom: 5px;
     color: var(--beige);
     font-size: 1.6rem;
+}
+
+/* ------------------- */
+/*     Responsive      */
+/* ------------------- */
+@media (max-width: 768px)
+{
+
+    .timeline
+    {
+        max-width: 100%;
+        padding-left: 30px;
+    }
+
+    .timeline::after
+    {
+        left: 20px; /* Ligne à gauche */
+        margin-left: 0;
+    }
+
+    .timeline-item
+    {
+        width: 100%; /* Full width */
+        padding-left: 50px; /* Espace pour la ligne */
+        text-align: left !important; /* Uniformise */
+        left: 0 !important; /* Enlève l'alternance */
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even)
+    {
+        text-align: left !important;
+    }
+
+    .timeline-content
+    {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .timeline-content img
+    {
+        margin: 10px 0;
+    }
 }
 /* Section : Time Line END*/
 
