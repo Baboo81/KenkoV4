@@ -43,7 +43,7 @@
             <div class="row">
                 @foreach ($homeData['cards'] as $card)
                     <div class="col-md-12 {{ $card['title'] === 'KENKO-HO' ? 'part1' : 'part2' }}">
-                        <div class="card rounded-4 {{ $card['title'] === 'KENKO-HO' ? 'bg-grey' : 'bg-blue' }} p-3"
+                        <div class="card rounded-5 {{ $card['title'] === 'KENKO-HO' ? 'bg-grey' : 'bg-blue' }} p-3"
                             style="max-width: 55rem;">
                             <div class="kenkoTitles">
                                 <h3 class="text-center my-5">{{ $card['title'] }}</h3>

@@ -73,7 +73,7 @@
                         <!-- Menu utilisateur -->
                         <ul class="navbar-nav">
                             @auth
-                                <li class="nav-item dropdown">
+                                <li class="nav-item dropdown p-2">
                                     <a href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         @if (Auth::user()->avatar)
                                             <img src="{{ asset(Auth::user()->avatar) }}" alt="Avatar" class="avatar" width="50" style="object-fit: cover;">
@@ -81,7 +81,7 @@
                                             <img src="/assets/img/nav/user-icon.svg" alt="Img user" class="rounded-circle" width="50">
                                         @endif
                                     </a>
-                                    <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="userMenu">
+                                    <ul class="dropdown-menu dropdown-menu-end rounded-5 p-3" aria-labelledby="userMenu">
                                         <p class="fs-5 text-muted my-3 text-center">Compte utilisateur</p>
                                         <li>
                                             <a class="dropdown-item {{ $currentRoute == 'settings.edit' ? 'active' : '' }}" href="{{ route('settings.edit') }}">
@@ -91,7 +91,7 @@
                                         <li>
                                             <form method="POST" action="{{ route('logout') }}">
                                                 @csrf
-                                                <button type="submit" class="dropdown-item">
+                                                <button type="submit" class="dropdown-item btn-logout">
                                                     <i class="bi bi-box-arrow-right"></i>&nbsp;Se déconnecter
                                                 </button>
                                             </form>

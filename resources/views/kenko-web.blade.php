@@ -40,7 +40,7 @@
                         {{ $kenkoWebData['purposes']['main_Title'] ?? '' }}
                     </h1>
                 </div>
-                <div class="row pictoBlocWeb justify-content-center g-5">
+                <div class="row pictoBlocWeb justify-content-center mx-3 g-5">
                     @foreach(['article1', 'article2', 'article3'] as $tempPurposes)
                         @php $articles = $kenkoWebData['purposes'][$tempPurposes] @endphp
                         <article class="col-xl-4 col-xxl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
@@ -70,8 +70,8 @@
                 </div>
                 @foreach($kenkoWebData['offers']['cards'] as $index => $offer)
                 <div class="col-xl-4 col-xxl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-5">
-                    <div class="card rounded-4">
-                        <img src="{{ asset($offer['img']) ?? '' }}" class="card-img-top rounded-top-4" alt="{{ $offer['alt'] }}">
+                    <div class="card rounded-5">
+                        <img src="{{ asset($offer['img']) ?? '' }}" class="card-img-top rounded-top-5" alt="{{ $offer['alt'] }}">
                         <div class="card-body d-flex flex-column text-center">
                             <h5 class="card-title text-center fs-3 my-3">{{ $offer['title'] }}</h5>
                             <h6 class="fontBolded fs-5 my-3">{{ $offer['price'] }}</h6>

@@ -29,6 +29,11 @@ a
     color: var(--noir);
 }
 
+.btn-logout
+{
+    font-size: 1.7rem !important;
+}
+
 nav
 {
     height: 120px;

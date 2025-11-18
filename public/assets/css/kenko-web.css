@@ -238,7 +238,7 @@ h1.mainTitleHero:after
 
 /* Section : Purposes END*/
 
-/* Section : Purposes */
+/* Section : Offers */
 .offers
 {
     min-height: 100vh;
@@ -393,7 +393,7 @@ section .atoutsContent
 {
     background: var(--grisF);
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 35px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
