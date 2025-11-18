@@ -161,7 +161,7 @@
         <div class="container my-5" id="testimonials">
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div id="testimonialCarousel" class="carousel slide rounded-5" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             @foreach ($kenkoHoData['testimonials'] as $index => $testimonial)
                                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
