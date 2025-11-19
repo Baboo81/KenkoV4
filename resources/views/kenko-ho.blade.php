@@ -95,17 +95,12 @@
 
                 <section class="my-5">
                     <div class="row justify-content-center g-3">
-                        @foreach ($kenkoHoData['presentation']['themes'] as $index => $theme)
-                            <div class="col-6 col-md-2 d-flex justify-content-center">
-                                <a href="{{ $theme['url'] }}"  class="button text-center">
+                        @foreach ($kenkoHoData['presentation']['themes'] as $theme)
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+                                <a href="{{ $theme['url'] }}" class="button text-center w-100">
                                     {{ $theme['label'] }}
                                 </a>
                             </div>
-
-                            {{-- Saut de ligne après 5 boutons --}}
-                            @if (($index + 1) % 5 == 0)
-                                <div class="w-100"></div>
-                            @endif
                         @endforeach
                     </div>
                 </section>
@@ -181,12 +176,12 @@
                             @endforeach
                         </div>
                         <div class="">
-                            <button class="carousel-control-prev custom-control" type="button" data-bs-target="#testimonialCarousel"
-                                data-bs-slide="prev">
+                            <button class="carousel-control-prev custom-control" type="button"
+                                data-bs-target="#testimonialCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             </button>
-                            <button class="carousel-control-next custom-control" type="button" data-bs-target="#testimonialCarousel"
-                                data-bs-slide="next">
+                            <button class="carousel-control-next custom-control" type="button"
+                                data-bs-target="#testimonialCarousel" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             </button>
                         </div>

@@ -28,16 +28,16 @@
                 @foreach ($dixHuilesData['huiles'] as $key => $huile)
                     <div
                         class="row d-flex align-items-center justify-content-center my-5
-            {{ $loop->iteration % 2 == 0 ? 'flex-column flex-md-row-reverse' : 'flex-column-reverse flex-md-row' }}">
+            {{ $loop->iteration % 2 == 0 ? 'flex-column flex-md-row-reverse' : 'flex-column flex-md-row' }}">
 
                         {{-- Image --}}
-                        <div class="col-md-4 text-center">
+                        <div class="col-12 col-md-12 col-sm-12 col-lg-4 text-center">
                             <img class="img-fluid rounded-5 shadow-sm" src="{{ $huile['img'] }}"
                                 alt="Image représentant {{ $huile['title'] }}">
                         </div>
 
                         {{-- Texte --}}
-                        <article class="col-md-8 p-5">
+                        <article class="col-12 col-md-12 col-sm-12 col-lg-8 p-5">
                             <div class="text-center my-5">
                                 <h3>
                                     {{ $huile['title'] }}
