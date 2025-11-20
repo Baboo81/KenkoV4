@@ -80,9 +80,9 @@ return [
             [
                 'label' => "Contactez-moi par email",
                 'type' => 'email',
-                'value' => 'chrisrodriguez@hotmail.be',
+                'value' => 'info@kenko-web.be',
                 'icon' => [
-                    'src' => '/assets/img/icons/email.svg',
+                    'src' => '/assets/img/FAQ/email.svg',
                     'alt' => 'Icône email',
                     'height' => '10rem',
                 ],
@@ -92,7 +92,7 @@ return [
                 'type' => 'phone',
                 'value' => '0470 / 35.05.87',
                 'icon' => [
-                    'src' => '/assets/img/icons/téléphone.svg',
+                    'src' => '/assets/img/FAQ/téléphone.svg',
                     'alt' => 'Icône téléphone',
                     'height' => '5rem',
                 ],
