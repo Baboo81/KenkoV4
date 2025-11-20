@@ -66,8 +66,8 @@ html, body
 {
     max-width: 800px;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-    position: relative;
-    top: -100px;
+    position: absolute;
+    top: 90px;
 }
 
 .mainTitleHeroHo

@@ -62,7 +62,7 @@
     {{-- Section : Offers  --}}
     <section class="offers">
         <div class="container">
-            <div class="row">
+            <div class="row p-4">
                 <div class="my-5">
                     <h1 class="text-center titleH1">
                         {{ $kenkoWebData['offers']['main_Title'] ?? '' }}
@@ -113,6 +113,11 @@
     <section class="skills">
         <div class="container">
             <div class="row">
+                <div class="my-5">
+                    <h1 class="text-center titleH1">
+                        {{ $kenkoWebData['skills']['main_Title'] ?? '' }}
+                    </h1>
+                </div>
                 {{-- Bloc : img --}}
                 <div class="col-md-6 d-flex align-items-center justify-content-center">
                     <img src="/assets/img/kenkoWeb/pictos/atouts.svg" class="pictoAtoutsPerso" alt="Picto représentant deux personnages tenant un panneau">
@@ -166,13 +171,13 @@
     {{-- Section : Maintenance --}}
     <section class="maintenance">
         <div class="container">
-            <div class="row">
+            <div class="row p-2">
                 <div class="text-center my-5">
                     <h1 class="titleH1">
                         {{ $kenkoWebData['maintenance']['main_Title'] ?? '' }}
                     </h1>
                 </div>
-                <div class="boxWeb rounded-5 p-5 d-flex align-center justify-items-center">
+                <div class="boxWeb rounded-5 p-5 d-flex align-items-center justify-content-center">
                     <div class="col-md-6 d-flex align-items-center justify-content-center">
                         <img
                             src="{{ $kenkoWebData['maintenance']['img'] }}"
@@ -204,7 +209,7 @@
     {{-- Section : Maintenance END--}}
     <section class="hosting">
         <div class="container">
-            <div class="row">
+            <div class="row p-2">
                 <div class="text-center my-5">
                     <h1 class="titleH1">
                         {{ $kenkoWebData['hosting']['main_Title'] ?? '' }}
@@ -249,7 +254,7 @@
     {{-- Section : Trust --}}
     <section class="trustSection">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center p-2">
                 <div class="trustBox d-flex justify-content-center align-items-center">
                     {{-- Texte à gauche --}}
                     <div class="col-md-3 d-flex flex-column align-items-start text-md-start text-center mx-5">

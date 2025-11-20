@@ -78,6 +78,7 @@ return [
         ],
     ],
     'skills' => [
+        'main_Title' => "Les atouts de votre site",
         'img_content' => "/assets/img/kenkoWeb/pictos/atouts.svg",
         'alt' => "Picto représentant deux personnages tenant un panneau",
         'article1' => [

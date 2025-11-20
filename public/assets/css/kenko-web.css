@@ -138,6 +138,8 @@ h1.mainTitleHero:after
     .hero-content
     {
         max-width: 90%;
+        top: 19%;
+        right: 19%;
     }
 
     .mainTitleHero
@@ -224,7 +226,7 @@ h1.mainTitleHero:after
     }
     .pictoBlocWeb img
     {
-        max-width: 130px;
+        max-width: 350px;
     }
     .pictoBlocWeb h4
     {
