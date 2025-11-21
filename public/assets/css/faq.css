@@ -41,6 +41,12 @@ html, body
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
+.accordion-title
+{
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+}
+
 .faq
 {
     background-color: var(--or);

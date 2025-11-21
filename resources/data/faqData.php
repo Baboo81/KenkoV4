@@ -78,7 +78,7 @@ return [
                 'text' => "Contactez-moi",
             ],
             [
-                'label' => "Contactez-moi par email",
+                'label' => "Contactez-moi par email en cliquant sur l'enveloppe ci-dessous",
                 'type' => 'email',
                 'value' => 'info@kenko-web.be',
                 'icon' => [

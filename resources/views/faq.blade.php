@@ -25,10 +25,10 @@
                         @endphp
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="{{ $headingId }}">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button collapsed accordion-title" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#{{ $collapseId }}" aria-expanded="false"
                                     aria-controls="{{ $collapseId }}">
-                                    <h4 class="m-0">{!! $item['question'] !!}</h4>
+                                    {!! $item['question'] !!}
                                 </button>
                             </h2>
                             <div id="{{ $collapseId }}" class="accordion-collapse collapse"
@@ -55,10 +55,10 @@
                         @endphp
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="{{ $headingId }}">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button collapsed accordion-title" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#{{ $collapseId }}" aria-expanded="false"
                                     aria-controls="{{ $collapseId }}">
-                                    <h4 class="m-0">{!! $item['question'] !!}</h4>
+                                    {!! $item['question'] !!}
                                 </button>
                             </h2>
                             <div id="{{ $collapseId }}" class="accordion-collapse collapse"
@@ -97,7 +97,7 @@
                                     class="button my-4">{{ $method['text'] }}</button>
                             @elseif ($method['type'] === 'email')
                                 <a href="mailto:{{ $method['value'] }}">
-                                    <img class="icons my-3" src="{{ $method['icon']['src'] }}"
+                                    <img class="icons my-1" src="{{ $method['icon']['src'] }}"
                                         alt="{{ $method['icon']['alt'] }}"
                                         style="height: {{ $method['icon']['height'] }};">
                                 </a>
