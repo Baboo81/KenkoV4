@@ -4,4 +4,3 @@
 
 ## 2. Responsive
 - [ ] Vérifier et améliorer le rendu sur tous les devices (mobile, tablette, desktop).
-
