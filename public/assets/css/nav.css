@@ -29,9 +29,21 @@ a
     color: var(--noir);
 }
 
-.btn-logout
+button.dropdown-item.btn-logout
 {
     font-size: 1.7rem !important;
+    background-color: var(--blanc) !important;
+    color: var(--noir) !important;
+    box-shadow: none !important;
+}
+
+button.dropdown-item.btn-logout:hover,
+button.dropdown-item.btn-logout:focus,
+button.dropdown-item.btn-logout:active
+{
+    background-color: var(--blanc) !important;
+    color: var(--noir) !important;
+    box-shadow: none !important;
 }
 
 nav

@@ -35,8 +35,8 @@
     <section class="purposes">
         <div class="containter">
             <div class="row">
-                <div class="my-5 p-3">
-                    <h1 class="text-center titleH1">
+                <div class="p-5">
+                    <h1 class="text-center titleH1 mt-5">
                         {{ $kenkoWebData['purposes']['main_Title'] ?? '' }}
                     </h1>
                 </div>
@@ -89,7 +89,7 @@
                                 <p class="text-start my-3">{{ $offer['popup']['intro'] }}</p>
                                 <ul class="text-start">
                                     @foreach($offer['popup']['items'] as $item)
-                                        <li class="my-2">&#9679; &nbsp;{{ $item }}</li>
+                                        <li class="my-2">&nbsp;{{ $item }}</li>
                                     @endforeach
                                 </ul>
                                 @if(!empty($offer['popup']['outro']))

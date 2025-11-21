@@ -89,7 +89,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <form method="POST" action="{{ route('logout') }}">
+                                            <form method="POST" action="{{ route('logout') }}" class="btn-logout">
                                                 @csrf
                                                 <button type="submit" class="dropdown-item btn-logout">
                                                     <i class="bi bi-box-arrow-right"></i>&nbsp;Se déconnecter
