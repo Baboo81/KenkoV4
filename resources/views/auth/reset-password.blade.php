@@ -5,6 +5,19 @@
                 <h1 class="text-center text-muted mb-5">Réinitialiser le mot de passe</h1>
 
                 <div class="col-md-8 my-5">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                    @if (session('status'))
+                        <div class="alert alert-success">{{ session('status') }}</div>
+                    @endif
                     <form class="rounded-5 p-5" method="POST" action="{{ route('password.update') }}">
                         @csrf
                         @method('PUT')
@@ -17,8 +30,7 @@
                             <label for="email" class="form-label mb-3">Adresse e-mail</label>
                             <input type="email" id="email" name="email"
                                 class="form-control @error('email') is-invalid @enderror"
-                                placeholder="Votre adresse e-mail"
-                                value="{{ request()->query('email') ?? old('email') }}" required>
+                                placeholder="Votre adresse e-mail" value="{{ $email ?? old('email') }}" required>
                             @error('email')
                                 <div class="text-danger mt-2">{{ $message }}</div>
                             @enderror

@@ -86,6 +86,6 @@ Route::get('/forgot-password', [ForgotPasswordController::class, 'show'])->name(
 Route::post('/forgot-password', [ForgotPasswordController::class, 'send'])->name('password.email');
 
 Route::get('/reset-password/{token}', [ResetPasswordController::class, 'show'])->name('password.reset');
-Route::post('/reset-password', [ResetPasswordController::class, 'update'])->name('password.update');
+Route::put('/reset-password', [ResetPasswordController::class, 'update'])->name('password.update');
 
 require __DIR__.'/auth.php';

@@ -16,10 +16,13 @@ class ResetPasswordController extends Controller
      *
      * @param string $token  Le jeton (token) envoyé dans le lien par email
      */
-    public function show($token)
+    public function show(Request $request, $token)
     {
         // On retourne la vue "reset-password" avec le token pour le formulaire
-        return view('auth.reset-password', ['token' => $token]);
+        return view('auth.reset-password', [
+            'token' => $token,
+            'email' => $request->email
+        ]);
     }
 
     /**
@@ -49,6 +52,7 @@ class ResetPasswordController extends Controller
                 ])->save(); // Enregistrement des modifications dans la base de données
             }
         );
+
 
         // Étape 4 : Gestion du retour selon le statut obtenu
         return $status === Password::PASSWORD_RESET
