@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -10,14 +9,10 @@ use App\Notifications\ResetPasswordFR;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory;
-    use Notifiable;
+    use HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
+     * Les champs pouvant être remplis en masse (mass assignable)
      */
     protected $fillable = [
         'name',
@@ -26,9 +21,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
+     * Les champs à cacher lors de la sérialisation (par ex. JSON)
      */
     protected $hidden = [
         'password',
@@ -36,18 +29,17 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * Les casts de colonnes pour que Laravel gère automatiquement leur type
      */
-    protected function casts(): array
-    {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
-    }
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed',
+        'cookie_preferences' => 'array', // <-- Permet d'accéder directement au JSON comme un tableau PHP
+    ];
 
+    /**
+     * Notification de réinitialisation du mot de passe
+     */
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new ResetPasswordFR($token));
