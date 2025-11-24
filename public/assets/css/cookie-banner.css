@@ -1,0 +1,47 @@
+html, body
+{
+    background-color: var(--beige);
+    width: 100% !important;
+    overflow-x: hidden;
+    font-family: "Bodoni Moda", serif;
+    min-height: 500px;
+    min-width: 320px;
+}
+
+#cookie-banner
+{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8f8f8 !important;
+    width: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%; /* Ajuste la largeur de la bannière */
+    z-index: 999999999 !important;
+    pointer-events: auto !important;
+}
+
+.cookie-icon-container
+{
+  position: absolute;
+}
+
+.cookie-icon
+{
+  left: -60% !important; /* Icône qui dépasse sur la gauche */
+  top: 80% !important;
+}
+
+article
+{
+  margin-left: 60px; /* Pour faire de la place pour l'icône */
+}
+
+button
+{
+  margin-top: 10px;
+}

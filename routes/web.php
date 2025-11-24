@@ -23,6 +23,8 @@ use App\Http\Middleware\CheckKenkoAccess;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\Cookies\CookiePreferencesController;
+use App\Http\Controllers\Cookies\PolitiqueCookiesController;
 use App\Http\Controllers\SettingsController;
 
 
@@ -87,5 +89,13 @@ Route::post('/forgot-password', [ForgotPasswordController::class, 'send'])->name
 
 Route::get('/reset-password/{token}', [ResetPasswordController::class, 'show'])->name('password.reset');
 Route::put('/reset-password', [ResetPasswordController::class, 'update'])->name('password.update');
+
+
+// =======================
+// Gestion des Cookies :
+// =======================
+
+Route::get('/cookie-preference', [CookiePreferencesController::class, 'show'])->name('cookies.preferences');
+Route::get('/politiques-cookies', [PolitiqueCookiesController::class, 'show'])->name('cookies.policy');
 
 require __DIR__.'/auth.php';
